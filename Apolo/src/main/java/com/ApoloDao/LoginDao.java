@@ -22,13 +22,13 @@ public class LoginDao {
 		
 		try {
 			em.getTransaction().begin();
-			User = em.createQuery("from Usuarioparcial as u where u.nombre='"+usu.getNombre()+"' and u.contrasenia='"+usu.getContrasenia()+"'").getResultList();
+			User = em.createQuery("from Usuarioshospital as u where u.usuario='"+usu.getUsuario()+"' and u.contrasena='"+usu.getContrasena()+"'").getResultList();
 			
 			em.getTransaction().commit();
 			
 			for (Usuarioshospital datosid:User) {
 
-				usu.setId(datosid.getId());
+				usu.setN_Usuario(datosid.getN_Usuario());
 				
 			}
 			
@@ -37,5 +37,9 @@ public class LoginDao {
 			System.out.println(e+"Error Dao");
 		}
 		return User;
+	
+}
+	
+	
 	
 }

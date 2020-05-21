@@ -18,16 +18,16 @@ public class Usuarioshospital implements Serializable {
 
 	private String contrasena;
 
-	private String tipo;
+	private String usuario;
 
 	//bi-directional many-to-one association to Doctore
 	@ManyToOne
-	@JoinColumn(name="Cedula")
+	@JoinColumn(name="CedulaD")
 	private Doctore doctore;
 
 	//bi-directional many-to-one association to Enfermera
 	@ManyToOne
-	@JoinColumn(name="Cedula")
+	@JoinColumn(name="CedulaE")
 	private Enfermera enfermera;
 
 	public Usuarioshospital() {
@@ -49,12 +49,12 @@ public class Usuarioshospital implements Serializable {
 		this.contrasena = contrasena;
 	}
 
-	public String getTipo() {
-		return this.tipo;
+	public String getUsuario() {
+		return this.usuario;
 	}
 
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
 	public Doctore getDoctore() {

@@ -18,7 +18,7 @@ public class Medicamento implements Serializable {
 	@Id
 	private int codigoM;
 
-	private int cantidad;
+	private double cantidad;
 
 	private String nombre;
 
@@ -43,11 +43,11 @@ public class Medicamento implements Serializable {
 		this.codigoM = codigoM;
 	}
 
-	public int getCantidad() {
+	public double getCantidad() {
 		return this.cantidad;
 	}
 
-	public void setCantidad(int cantidad) {
+	public void setCantidad(double cantidad) {
 		this.cantidad = cantidad;
 	}
 

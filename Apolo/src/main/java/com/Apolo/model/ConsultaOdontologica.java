@@ -16,7 +16,7 @@ public class ConsultaOdontologica implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	private int codigo_Consulta;
+	private int codigo_ConsultaO;
 
 	private String sintomas;
 
@@ -27,7 +27,7 @@ public class ConsultaOdontologica implements Serializable {
 
 	//bi-directional many-to-one association to Enfermedade
 	@ManyToOne
-	@JoinColumn(name="Enfermedad")
+	@JoinColumn(name="Enfermedad_Odontologica")
 	private Enfermedade enfermedade;
 
 	//bi-directional many-to-one association to Paciente
@@ -46,12 +46,12 @@ public class ConsultaOdontologica implements Serializable {
 	public ConsultaOdontologica() {
 	}
 
-	public int getCodigo_Consulta() {
-		return this.codigo_Consulta;
+	public int getCodigo_ConsultaO() {
+		return this.codigo_ConsultaO;
 	}
 
-	public void setCodigo_Consulta(int codigo_Consulta) {
-		this.codigo_Consulta = codigo_Consulta;
+	public void setCodigo_ConsultaO(int codigo_ConsultaO) {
+		this.codigo_ConsultaO = codigo_ConsultaO;
 	}
 
 	public String getSintomas() {

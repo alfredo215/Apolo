@@ -61,7 +61,7 @@ public class Paciente implements Serializable {
 
 	//bi-directional many-to-one association to ConsultaOdontologica
 	@ManyToOne
-	@JoinColumn(name="Antecedentes_Medicos")
+	@JoinColumn(name="Antecedentes_Odontologicos")
 	private ConsultaOdontologica consultaOdontologica;
 
 	//bi-directional many-to-one association to Enfermedade

@@ -21,6 +21,8 @@ public class RecetaMedica implements Serializable {
 
 	private String docis;
 
+	private int enfermedad_Odontologica;
+
 	//bi-directional many-to-one association to Consulta
 	@ManyToOne
 	@JoinColumn(name="Enfermedad")
@@ -28,7 +30,7 @@ public class RecetaMedica implements Serializable {
 
 	//bi-directional many-to-one association to ConsultaOdontologica
 	@ManyToOne
-	@JoinColumn(name="Enfermedad")
+	@JoinColumn(name="Enfermedad_Odontologica")
 	private ConsultaOdontologica consultaOdontologica;
 
 	//bi-directional many-to-one association to Medicamento
@@ -61,6 +63,14 @@ public class RecetaMedica implements Serializable {
 
 	public void setDocis(String docis) {
 		this.docis = docis;
+	}
+
+	public int getEnfermedad_Odontologica() {
+		return this.enfermedad_Odontologica;
+	}
+
+	public void setEnfermedad_Odontologica(int enfermedad_Odontologica) {
+		this.enfermedad_Odontologica = enfermedad_Odontologica;
 	}
 
 	public Consulta getConsulta() {
