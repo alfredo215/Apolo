@@ -9,6 +9,7 @@
 </head>
 <body>
 <form action="ServletLogin" method="post">
+<h2 aling="center">Doctor</h2>
 		<!-- Usuario-->
 		<label for="username">Usuario</label>
 		<input type="text" placeholder="Introdusca usuario" name="user">

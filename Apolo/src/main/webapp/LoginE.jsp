@@ -8,7 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="ServeletDatos" method="post">
+<form action="ServletLoginEnfermera" method="post">
+<h2 aling="center">Enfermera</h2>
 		<!-- Usuario-->
 		<label for="username">Usuario</label>
 		<input type="text" placeholder="Introdusca usuario" name="user">
@@ -18,7 +19,7 @@
 
 		<input type="submit" value="Entrar">
 		<br>
-		<a href="index.jsp" class = "btn btn-success">Tabla</a>
+
 
 
 	</form>
