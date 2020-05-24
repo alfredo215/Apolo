@@ -18,8 +18,8 @@
 		<input type="password" placeholder="Introdusca contraseña"  name="pass">
 
 		<input type="submit" value="Entrar">
-		<br>
 
+		<a href="IngresoEnf.jsp">No tienes una cuenta</a>
 
 
 	</form>

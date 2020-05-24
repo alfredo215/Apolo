@@ -18,6 +18,8 @@
 		<input type="password" placeholder="Introdusca contraseña"  name="pass">
 
 		<input type="submit" value="Entrar">
+		
+		<a href="IngresoDoc.jsp">No tienes una cuenta</a>
 
 
 	</form>

@@ -8,8 +8,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
 
+import com.Apolo.model.Doctore;
 import com.Apolo.model.Usuarioshospital;
+import com.ApoloDao.DoctorDao;
 import com.ApoloDao.LoginDao;
+import com.ApoloDao.UsuarioDao;
 
 
 
@@ -33,7 +36,69 @@ public class ServletLogin extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		
+		Doctore Doc = new Doctore();
+		DoctorDao DocD = new DoctorDao();
+		
+		String id=null;
+		String nomD=null;
+		String apeD=null;
+		String espe=null;
+		String tel=null;
+		
+		try {
+			id = request.getParameter("Id");
+			nomD = request.getParameter("Nunombre");
+			apeD = request.getParameter("Napellido");
+			espe = request.getParameter("Nespe");
+			tel = request.getParameter("Ntel");
+			
+			Doc.setCedula(Integer.parseInt(id));
+			Doc.setNombre_Doc(nomD);
+			Doc.setApellido(apeD);
+			Doc.setEpecialidad(espe);
+			Doc.setTelefono(Integer.parseInt(tel));
+				
+
+		} catch (Exception e) {
+		
+		}
+		String action = request.getParameter("btn");
+
+		if (action.equals("Guardar")) {
+			Doc.setCedula(Integer.parseInt(id));
+			Doc.setNombre_Doc(nomD);
+			Doc.setApellido(apeD);
+			Doc.setEpecialidad(espe);
+			Doc.setTelefono(Integer.parseInt(tel));
+
+			DocD.agregarDatos(Doc);
+			response.sendRedirect("UsuarioDoctor.jsp");
+		} else if (action.equals("Actualizar")) {
+
+			Doc.setCedula(Integer.parseInt(id));
+			Doc.setNombre_Doc(nomD);
+			Doc.setApellido(apeD);
+			Doc.setEpecialidad(espe);
+			Doc.setTelefono(Integer.parseInt(tel));
+
+			DocD.actualizarDatos(Doc);
+
+		} else if (action.equals("Eliminar")) {
+			Doc.setCedula(Integer.parseInt(id));
+			Doc.setNombre_Doc(nomD);
+			Doc.setApellido(apeD);
+			Doc.setEpecialidad(espe);
+			Doc.setTelefono(Integer.parseInt(tel));
+		}
+		
+		
+		
+		
 	}
+	
+	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -68,8 +133,65 @@ public class ServletLogin extends HttpServlet {
 					response.sendRedirect("LoginD.jsp");
 				}
 				
-				//-------------------------------
-		
+				//--------------------------------------------------------------------------------
+		// guardar doc
+				
+				Usuarioshospital Gusu = new Usuarioshospital();
+				UsuarioDao GusuD = new UsuarioDao();
+
+				
+				String id=null;
+				String ced=null;
+				String Usu=null;
+				String cont=null;
+				
+				try {
+					id = request.getParameter("Id");
+					ced = request.getParameter("Cdoctor");
+					Usu = request.getParameter("Udoctor");
+					cont = request.getParameter("Cdoctor");
+					
+					Gusu.setN_Usuario(Integer.parseInt(id));
+					int verificacion=usuDao.EntradaUsuario(ced).size();
+					Gusu.setUsuario(Usu);
+					Gusu.setContrasena(cont);
+
+						
+
+				} catch (Exception e) {
+				
+				}
+				String action = request.getParameter("btn");
+
+				if (action.equals("Guardar")) {
+					Gusu.setN_Usuario(Integer.parseInt(id));
+					//Gusu.setDoctore(tel);
+					Gusu.setUsuario(Usu);
+					Gusu.setContrasena(cont);
+
+					GusuD.agregarDatos(Gusu);
+					response.sendRedirect("UsuarioDoctor.jsp");
+				} else if (action.equals("Actualizar")) {
+
+					Gusu.setN_Usuario(Integer.parseInt(id));
+					//Gusu.setDoctore(tel);
+					Gusu.setUsuario(Usu);
+					Gusu.setContrasena(cont);
+
+					GusuD.actualizarDatos(Gusu);
+
+				} else if (action.equals("Eliminar")) {
+					Gusu.setN_Usuario(Integer.parseInt(id));
+					//Gusu.setDoctore(tel);
+					Gusu.setUsuario(Usu);
+					Gusu.setContrasena(cont);
+				}
+				
+				
+				
+				
+				
+				//------------------------------------------------------------------------------------
 		
 		//doGet(request, response);
 	}
