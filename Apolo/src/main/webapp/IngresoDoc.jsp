@@ -30,7 +30,7 @@ if(idBus==null){
 <body>
 
 
-<form action="ServletLogin">
+<form action="ServletLogin" method="post">
 <table align="center">
 	<thead>
 

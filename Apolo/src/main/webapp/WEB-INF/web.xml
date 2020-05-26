@@ -16,6 +16,12 @@
   	<description></description>
   	<servlet-class>com.ApoloServlet.ServletLoginEnfermera</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ServletGuardarUD</servlet-name>
+  	<display-name>ServletGuardarUD</display-name>
+  	<description></description>
+  	<servlet-class>com.ApoloServlet.ServletGuardarUD</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ServletLogin</servlet-name>
   	<url-pattern>/ServletLogin</url-pattern>
@@ -23,5 +29,9 @@
   <servlet-mapping>
   	<servlet-name>ServletLoginEnfermera</servlet-name>
   	<url-pattern>/ServletLoginEnfermera</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletGuardarUD</servlet-name>
+  	<url-pattern>/ServletGuardarUD</url-pattern>
   </servlet-mapping>
 </web-app>

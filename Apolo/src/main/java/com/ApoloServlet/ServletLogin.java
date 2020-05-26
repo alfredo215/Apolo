@@ -114,7 +114,6 @@ public class ServletLogin extends HttpServlet {
 				
 				
 				Usuarioshospital user = new Usuarioshospital();
-				
 				LoginDao usuDao = new LoginDao();
 				
 				user.setUsuario(usu);
@@ -134,64 +133,7 @@ public class ServletLogin extends HttpServlet {
 				}
 				
 				//--------------------------------------------------------------------------------
-		// guardar doc
-				
-				Usuarioshospital Gusu = new Usuarioshospital();
-				UsuarioDao GusuD = new UsuarioDao();
-
-				
-				String id=null;
-				String ced=null;
-				String Usu=null;
-				String cont=null;
-				
-				try {
-					id = request.getParameter("Id");
-					ced = request.getParameter("Cdoctor");
-					Usu = request.getParameter("Udoctor");
-					cont = request.getParameter("Cdoctor");
-					
-					Gusu.setN_Usuario(Integer.parseInt(id));
-					int verificacion=usuDao.EntradaUsuario(ced).size();
-					Gusu.setUsuario(Usu);
-					Gusu.setContrasena(cont);
-
-						
-
-				} catch (Exception e) {
-				
-				}
-				String action = request.getParameter("btn");
-
-				if (action.equals("Guardar")) {
-					Gusu.setN_Usuario(Integer.parseInt(id));
-					//Gusu.setDoctore(tel);
-					Gusu.setUsuario(Usu);
-					Gusu.setContrasena(cont);
-
-					GusuD.agregarDatos(Gusu);
-					response.sendRedirect("UsuarioDoctor.jsp");
-				} else if (action.equals("Actualizar")) {
-
-					Gusu.setN_Usuario(Integer.parseInt(id));
-					//Gusu.setDoctore(tel);
-					Gusu.setUsuario(Usu);
-					Gusu.setContrasena(cont);
-
-					GusuD.actualizarDatos(Gusu);
-
-				} else if (action.equals("Eliminar")) {
-					Gusu.setN_Usuario(Integer.parseInt(id));
-					//Gusu.setDoctore(tel);
-					Gusu.setUsuario(Usu);
-					Gusu.setContrasena(cont);
-				}
-				
-				
-				
-				
-				
-				//------------------------------------------------------------------------------------
+		
 		
 		//doGet(request, response);
 	}

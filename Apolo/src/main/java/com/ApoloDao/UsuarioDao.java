@@ -10,7 +10,7 @@ import javax.persistence.Persistence;
 import com.Apolo.model.Usuarioshospital;
 
 public class UsuarioDao {
-	public List<Object> UsuarioLista() {
+	public List<Object> DoctorLista() {
 		List<Object> listaDc = new ArrayList<>();
 		EntityManager em;
 		EntityManagerFactory emf;
@@ -22,7 +22,7 @@ public class UsuarioDao {
 			em.getTransaction().begin();
 			listaDc = em.createQuery("select his.n_Usuario, his.doctore.cedula, his.contrasena, his.usuario "
 					+ "usu.nombre_Doc, usu.apellido"
-					+ "from Usuarioshospital AS his"
+					+ "from Usuarioshospital "
 					+ "INNER JOIN Doctore AS usu ON usu.cedula = his.doctore.cedula ").getResultList();
 			
 			em.getTransaction().commit();
@@ -35,7 +35,7 @@ public class UsuarioDao {
 		return listaDc;
 	}
 	
-	public void agregarDatos(Usuarioshospital dc) {
+	public void agregarDatosU(Usuarioshospital dc) {
 		EntityManager em;
 		EntityManagerFactory emf;
 		
@@ -48,7 +48,7 @@ public class UsuarioDao {
 		em.getTransaction().commit();
 	};
 	
-public void actualizarDatos(Usuarioshospital dc) {
+public void actualizarDatosU(Usuarioshospital dc) {
 		
 		EntityManager em;
 		EntityManagerFactory emf;
@@ -56,8 +56,7 @@ public void actualizarDatos(Usuarioshospital dc) {
 		em=emf.createEntityManager();
 
 		dc.getN_Usuario();
-		dc.getDoctore();
-		dc.getEnfermera();
+		dc.getClass();
 		dc.getUsuario();
 		dc.getContrasena();
 		em.getTransaction().begin();
@@ -67,7 +66,7 @@ public void actualizarDatos(Usuarioshospital dc) {
 		
 	}
 	
-	public void eliminarDatos(Usuarioshospital dc) {
+	public void eliminarDatosU(Usuarioshospital dc) {
 		EntityManager em;
 		EntityManagerFactory emf;
 		
