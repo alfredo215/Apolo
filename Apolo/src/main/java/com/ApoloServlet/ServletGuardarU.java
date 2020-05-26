@@ -12,15 +12,15 @@ import com.Apolo.model.Usuarioshospital;
 import com.ApoloDao.UsuarioDao;
 
 /**
- * Servlet implementation class ServletGuardarUD
+ * Servlet implementation class ServletGuardarU
  */
-public class ServletGuardarUD extends HttpServlet {
+public class ServletGuardarU extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ServletGuardarUD() {
+    public ServletGuardarU() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,25 +30,25 @@ public class ServletGuardarUD extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		Usuarioshospital Gusu = new Usuarioshospital();
 		UsuarioDao GusuD = new UsuarioDao();
-		Doctore doc = new Doctore();
+		Enfermera enf = new Enfermera();
 		
 		String id=null;
-		String ced=null;
+		String cede=null;
 		String Usu=null;
 		String cont=null;
 		
 		try {
 			id = request.getParameter("idBus");
-			ced = request.getParameter("Cdoctor");
+			cede = request.getParameter("Cenfermera");
 			Usu = request.getParameter("User");
 			cont = request.getParameter("Contra");
 			
-			
-			doc.setCedula(Integer.parseInt(ced));
-			Gusu.setDoctore(doc);
+			enf.setCedula(Integer.parseInt(cede));
+			Gusu.setEnfermera(enf);
 			
 			Gusu.setUsuario(Usu);
 			Gusu.setContrasena(cont);
@@ -62,22 +62,21 @@ public class ServletGuardarUD extends HttpServlet {
 
 		if (action.equals("Guardar")) {
 			Gusu.setN_Usuario(Integer.parseInt(id));
-			
-			doc.setCedula(Integer.parseInt(ced));
-			Gusu.setDoctore(doc);
+
+			enf.setCedula(Integer.parseInt(cede));
+			Gusu.setEnfermera(enf);
 			
 			Gusu.setUsuario(Usu);
 			Gusu.setContrasena(cont);
 			GusuD.agregarDatosU(Gusu);
-			response.sendRedirect("LoginD.jsp");
+			response.sendRedirect("LoginE.jsp");
 		} else if (action.equals("Actualizar")) {	
 
-
-Gusu.setN_Usuario(Integer.parseInt(id));
+			Gusu.setN_Usuario(Integer.parseInt(id));
 			
-			doc.setCedula(Integer.parseInt(ced));
-			Gusu.setDoctore(doc);
-
+			enf.setCedula(Integer.parseInt(cede));
+			Gusu.setEnfermera(enf);
+			
 			Gusu.setUsuario(Usu);
 			Gusu.setContrasena(cont);
 
@@ -86,8 +85,8 @@ Gusu.setN_Usuario(Integer.parseInt(id));
 		} else if (action.equals("Eliminar")) {
 			Gusu.setN_Usuario(Integer.parseInt(id));
 			
-			doc.setCedula(Integer.parseInt(ced));
-			Gusu.setDoctore(doc);
+			enf.setCedula(Integer.parseInt(cede));
+			Gusu.setEnfermera(enf);
 			
 			Gusu.setUsuario(Usu);
 			Gusu.setContrasena(cont);
@@ -96,11 +95,10 @@ Gusu.setN_Usuario(Integer.parseInt(id));
 			GusuD.eliminarDatosU(Gusu);
 		}
 		
-		
-		
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
+		//----------------------------------------------------------
 
+		
+	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -108,8 +106,6 @@ Gusu.setN_Usuario(Integer.parseInt(id));
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		
-		//doGet(request, response);
 	}
 
 }

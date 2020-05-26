@@ -8,9 +8,9 @@
 </head>
 <%
 String idBus=request.getParameter("idBus");
-String Ced=request.getParameter("Cdoctor");
-String Usuar=request.getParameter("Udoctor");
-String Contras=request.getParameter("Cdoctor");
+String Ced=request.getParameter("Cedoctor");
+String Usuar=request.getParameter("User");
+String Contras=request.getParameter("Contra");
 
 
 
@@ -28,7 +28,7 @@ if(idBus==null){
 <body>
 
 
-<form action="ServletGuardarUD" method="post">
+<form action="ServletGuardarUD" method="get">
 <table align="center">
 	<thead>
 
@@ -37,9 +37,9 @@ if(idBus==null){
 			<tr>
 				<td>
 					<p>Id</p><input type="text" name="idBus" value="<%=idBus %>">
-					<p>CedulaD</p><input type="text" name="Nunombre" value="<%=Ced %>">
-					<p>Usuario</p><input type="text" name="Napellido" value="<%=Usuar %>">
-					<p>Contraseña</p><input type="password" name="Nespe" value="<%=Contras %>">
+					<p>CedulaD</p><input type="text" name="Cdoctor" value="<%=Ced %>">
+					<p>Usuario</p><input type="text" name="User" value="<%=Usuar %>">
+					<p>Contraseña</p><input type="password" name="Contra" value="<%=Contras %>">
 
 
 					<br>
