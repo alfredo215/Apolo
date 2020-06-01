@@ -69,10 +69,10 @@ public class Paciente implements Serializable {
 	@JoinColumn(name="EnfermedadesP")
 	private Enfermedade enfermedade;
 
-	//bi-directional many-to-one association to Medicamentosprescrito
+	//bi-directional many-to-one association to Medicamento
 	@ManyToOne
-	@JoinColumn(name="Medicamento")
-	private Medicamentosprescrito medicamentosprescrito;
+	@JoinColumn(name="MedicamentoPrescrito")
+	private Medicamento medicamento;
 
 	//bi-directional many-to-one association to ReservaCita
 	@ManyToOne
@@ -281,12 +281,12 @@ public class Paciente implements Serializable {
 		this.enfermedade = enfermedade;
 	}
 
-	public Medicamentosprescrito getMedicamentosprescrito() {
-		return this.medicamentosprescrito;
+	public Medicamento getMedicamento() {
+		return this.medicamento;
 	}
 
-	public void setMedicamentosprescrito(Medicamentosprescrito medicamentosprescrito) {
-		this.medicamentosprescrito = medicamentosprescrito;
+	public void setMedicamento(Medicamento medicamento) {
+		this.medicamento = medicamento;
 	}
 
 	public ReservaCita getReservaCita() {

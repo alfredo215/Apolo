@@ -17,7 +17,7 @@
 <label>Sitomas:</label>
 <input type="text" name="" placeholder="string">
 <label>Enfermedades</label>
-<input type="text" name="" placeholder="int traidas de la tabla enfermedades">
+<input type="text" name="" placeholder="">
 <a href="Recetar.jsp" class="btn">Recetar</a>
 <a href="Doctor.jsp" class = "btn">salir</a>
 

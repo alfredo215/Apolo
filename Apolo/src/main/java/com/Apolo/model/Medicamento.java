@@ -24,9 +24,9 @@ public class Medicamento implements Serializable {
 
 	private String tipo;
 
-	//bi-directional many-to-one association to Medicamentosprescrito
+	//bi-directional many-to-one association to Paciente
 	@OneToMany(mappedBy="medicamento")
-	private List<Medicamentosprescrito> medicamentosprescritos;
+	private List<Paciente> pacientes;
 
 	//bi-directional many-to-one association to RecetaMedica
 	@OneToMany(mappedBy="medicamentoBean")
@@ -67,26 +67,26 @@ public class Medicamento implements Serializable {
 		this.tipo = tipo;
 	}
 
-	public List<Medicamentosprescrito> getMedicamentosprescritos() {
-		return this.medicamentosprescritos;
+	public List<Paciente> getPacientes() {
+		return this.pacientes;
 	}
 
-	public void setMedicamentosprescritos(List<Medicamentosprescrito> medicamentosprescritos) {
-		this.medicamentosprescritos = medicamentosprescritos;
+	public void setPacientes(List<Paciente> pacientes) {
+		this.pacientes = pacientes;
 	}
 
-	public Medicamentosprescrito addMedicamentosprescrito(Medicamentosprescrito medicamentosprescrito) {
-		getMedicamentosprescritos().add(medicamentosprescrito);
-		medicamentosprescrito.setMedicamento(this);
+	public Paciente addPaciente(Paciente paciente) {
+		getPacientes().add(paciente);
+		paciente.setMedicamento(this);
 
-		return medicamentosprescrito;
+		return paciente;
 	}
 
-	public Medicamentosprescrito removeMedicamentosprescrito(Medicamentosprescrito medicamentosprescrito) {
-		getMedicamentosprescritos().remove(medicamentosprescrito);
-		medicamentosprescrito.setMedicamento(null);
+	public Paciente removePaciente(Paciente paciente) {
+		getPacientes().remove(paciente);
+		paciente.setMedicamento(null);
 
-		return medicamentosprescrito;
+		return paciente;
 	}
 
 	public List<RecetaMedica> getRecetaMedicas() {

@@ -8,7 +8,6 @@
 		<class>com.Apolo.model.Enfermedade</class>
 		<class>com.Apolo.model.Enfermera</class>
 		<class>com.Apolo.model.Medicamento</class>
-		<class>com.Apolo.model.Medicamentosprescrito</class>
 		<class>com.Apolo.model.Mujere</class>
 		<class>com.Apolo.model.Paciente</class>
 		<class>com.Apolo.model.RecetaMedica</class>
