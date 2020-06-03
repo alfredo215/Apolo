@@ -20,23 +20,23 @@ public class UsuarioDao {
 		
 		try {
 			em.getTransaction().begin();
-			listaDc = em.createQuery("select his.n_Usuario, his.doctore.cedula, his.contrasena, his.usuario "
-					+ "usu.nombre_Doc, usu.apellido"
-					+ "from Usuarioshospital "
-					+ "INNER JOIN Doctore AS usu ON usu.cedula = his.doctore.cedula ").getResultList();
+			listaDc = em.createQuery("SELECT his.n_Usuario, his.doctore.cedula, his.usuario, his.contrasena, "
+					+ " usu.nombre_Doc, usu.apellido"
+					+ " FROM Usuarioshospital AS his"
+					+ " INNER JOIN Doctore AS usu ON usu.cedula = his.doctore.cedula").getResultList();
 			
 			em.getTransaction().commit();
 			
 		} catch (Exception e) {
 			
-			System.out.println(e+"Error Dao");
+			System.out.println(e+"Error Dao Doctor");
 		}
 		
 		return listaDc;
 	}
 	//-----------------------------------------------------------------------------------------------
 	public List<Object> EnfermeraLista() {
-		List<Object> listaDc = new ArrayList<>();
+		List<Object> listaEn = new ArrayList<>();
 		EntityManager em;
 		EntityManagerFactory emf;
 		
@@ -45,8 +45,8 @@ public class UsuarioDao {
 		
 		try {
 			em.getTransaction().begin();
-			listaDc = em.createQuery("select his.n_Usuario, his.enfermera.cedula, his.contrasena, his.usuario "
-					+ "usu.nombre_Doc, usu.apellido"
+			listaEn = em.createQuery("select his.n_Usuario, his.enfermera.cedula, his.contrasena, his.usuario "
+					+ "usu.nombre_Doc, usu.apellido "
 					+ "from Usuarioshospital "
 					+ "INNER JOIN Enfermera AS usu ON usu.cedula = his.enfermera.cedula ").getResultList();
 			
@@ -54,10 +54,10 @@ public class UsuarioDao {
 			
 		} catch (Exception e) {
 			
-			System.out.println(e+"Error Dao");
+			System.out.println(e+"Error Dao Enfermera");
 		}
 		
-		return listaDc;
+		return listaEn;
 	}
 	//-----------------------------------------------------------------------------------------------
 	public void agregarDatosU(Usuarioshospital dc) {

@@ -27,7 +27,7 @@ if(idBus==null){
 <body>
 
 
-<form action="ServletLoginEnfermera">
+<form action="ServletLoginEnfermera" method="get">
 <table align="center">
 	<thead>
 

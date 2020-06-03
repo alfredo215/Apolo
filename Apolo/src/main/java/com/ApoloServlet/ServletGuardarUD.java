@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.Apolo.model.Doctore;
-import com.Apolo.model.Enfermera;
 import com.Apolo.model.Usuarioshospital;
 import com.ApoloDao.UsuarioDao;
+import com.google.gson.Gson;
 
 /**
  * Servlet implementation class ServletGuardarUD
@@ -107,6 +107,20 @@ Gusu.setN_Usuario(Integer.parseInt(id));
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		UsuarioDao usD = new UsuarioDao();
+		Gson json = new Gson();
+		
+		try {
+			response.getWriter().append(json.toJson(usD.DoctorLista()));
+			
+		} catch (Exception e) {
+			
+			System.out.println(e);
+		
+		
+		}
+
+		
 		
 		
 		//doGet(request, response);
