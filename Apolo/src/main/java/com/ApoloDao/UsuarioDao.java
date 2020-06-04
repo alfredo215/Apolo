@@ -45,10 +45,10 @@ public class UsuarioDao {
 		
 		try {
 			em.getTransaction().begin();
-			listaEn = em.createQuery("select his.n_Usuario, his.enfermera.cedula, his.contrasena, his.usuario "
-					+ "usu.nombre_Doc, usu.apellido "
-					+ "from Usuarioshospital "
-					+ "INNER JOIN Enfermera AS usu ON usu.cedula = his.enfermera.cedula ").getResultList();
+			listaEn = em.createQuery("SELECT his.n_Usuario, his.enfermera.cedula, his.usuario, his.contrasena, "
+					+ " usu.nombre_Enfer, usu.apellido"
+					+ " FROM Usuarioshospital AS his"
+					+ " INNER JOIN Enfermera AS usu ON usu.cedula = his.enfermera.cedula").getResultList();
 			
 			em.getTransaction().commit();
 			

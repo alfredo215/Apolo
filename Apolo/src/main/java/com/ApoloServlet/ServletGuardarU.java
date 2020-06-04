@@ -10,6 +10,7 @@ import com.Apolo.model.Doctore;
 import com.Apolo.model.Enfermera;
 import com.Apolo.model.Usuarioshospital;
 import com.ApoloDao.UsuarioDao;
+import com.google.gson.Gson;
 
 /**
  * Servlet implementation class ServletGuardarU
@@ -105,6 +106,19 @@ public class ServletGuardarU extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		UsuarioDao usE = new UsuarioDao();
+		Gson json = new Gson();
+		
+		try {
+			response.getWriter().append(json.toJson(usE.EnfermeraLista()));
+			
+		} catch (Exception e) {
+			
+			System.out.println(e);
+		
+		
+		}
+		
 		
 	}
 

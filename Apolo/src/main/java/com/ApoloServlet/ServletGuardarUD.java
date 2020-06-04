@@ -53,8 +53,6 @@ public class ServletGuardarUD extends HttpServlet {
 			Gusu.setUsuario(Usu);
 			Gusu.setContrasena(cont);
 
-				
-
 		} catch (Exception e) {
 		
 		}
