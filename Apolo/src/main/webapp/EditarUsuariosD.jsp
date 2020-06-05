@@ -12,14 +12,17 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('#carga').click(function(){
+			
+			var	caja = $('#datos').val();
 			$.post('ServletGuardarUD',{
-
+				caja
 			},function(respose){
 
 			let datos = JSON.parse(respose)
+			console.log(datos)
 
 			var tabladatos = document.getElementById('tablaDatos')
-			
+			tabladatos.innerHTML="Este usuario no se encuentra en nuestros registros.";
 			for (let item of datos) {
 
 					

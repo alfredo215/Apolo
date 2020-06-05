@@ -10,6 +10,51 @@ import javax.persistence.Persistence;
 import com.Apolo.model.Usuarioshospital;
 
 public class UsuarioDao {
+	
+	//----------------------------------------------------------------prueba de buscador
+	
+	public List<Usuarioshospital> BuscarUD(Usuarioshospital per ) {
+		List<Usuarioshospital> UsuDoc= new ArrayList<>();
+		System.out.println(per);
+		EntityManager em;
+		EntityManagerFactory emf;
+		
+		emf = Persistence.createEntityManagerFactory("Apolo");
+		em = emf.createEntityManager();
+		
+		try {
+			em.getTransaction().begin();
+			UsuDoc = em.createQuery("from Usuarioshospital AS D where D.usuario='"+per.getUsuario()+"'").getResultList();
+			
+			/*em.getTransaction().begin();
+			UsuDoc = em.createQuery("from Usuarioshospital AS D where D.doctore.cedula='"+per.getDoctore()+"'").getResultList();*/
+
+			em.getTransaction().commit();
+			
+		} catch (Exception e) {
+			
+			System.out.println(e+"Error Dao");
+		}
+		
+		
+		return UsuDoc;
+		
+	}
+	
+	//-------------------------------------------------------------------------------------------------------------------------------
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public List<Object> DoctorLista() {
 		List<Object> listaDc = new ArrayList<>();
 		EntityManager em;
@@ -20,10 +65,10 @@ public class UsuarioDao {
 		
 		try {
 			em.getTransaction().begin();
-			listaDc = em.createQuery("SELECT his.n_Usuario, his.doctore.cedula, his.usuario, his.contrasena, "
+			listaDc = em.createQuery("SELECT hos.n_Usuario, hos.doctore.cedula,where hos.usuario, hos.contrasena, "
 					+ " usu.nombre_Doc, usu.apellido"
-					+ " FROM Usuarioshospital AS his"
-					+ " INNER JOIN Doctore AS usu ON usu.cedula = his.doctore.cedula").getResultList();
+					+ " FROM Usuarioshospital AS hos"
+					+ " INNER JOIN Doctore AS usu ON usu.cedula = hos.doctore.cedula").getResultList();
 			
 			em.getTransaction().commit();
 			
@@ -45,10 +90,10 @@ public class UsuarioDao {
 		
 		try {
 			em.getTransaction().begin();
-			listaEn = em.createQuery("SELECT his.n_Usuario, his.enfermera.cedula, his.usuario, his.contrasena, "
+			listaEn = em.createQuery("SELECT hos.n_Usuario, hos.enfermera.cedula, hos.usuario, hos.contrasena, "
 					+ " usu.nombre_Enfer, usu.apellido"
-					+ " FROM Usuarioshospital AS his"
-					+ " INNER JOIN Enfermera AS usu ON usu.cedula = his.enfermera.cedula").getResultList();
+					+ " FROM Usuarioshospital AS hos"
+					+ " INNER JOIN Enfermera AS usu ON usu.cedula = hos.enfermera.cedula").getResultList();
 			
 			em.getTransaction().commit();
 			

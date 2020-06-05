@@ -5,12 +5,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 
 import com.Apolo.model.Doctore;
 import com.Apolo.model.Usuarioshospital;
 import com.ApoloDao.UsuarioDao;
 import com.google.gson.Gson;
-
 /**
  * Servlet implementation class ServletGuardarUD
  */
@@ -105,7 +105,35 @@ Gusu.setN_Usuario(Integer.parseInt(id));
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		UsuarioDao usD = new UsuarioDao();
+		
+		String capturar = request.getParameter("caja");
+		System.out.println(capturar);
+		
+		//Doctore doc = new Doctore();
+		UsuarioDao UsuD = new UsuarioDao();
+		Usuarioshospital usuDoc=new Usuarioshospital();
+		
+		usuDoc.setUsuario(capturar);
+		
+		/*doc.setCedula(Integer.parseInt(capturar));
+		GusuD.setDoctore(doc);*/
+		
+		Gson json=new Gson();
+		try {
+
+			response.getWriter().append(json.toJson(UsuD.BuscarUD(usuDoc)));
+			
+			
+		}catch (Exception e) {
+			JOptionPane.showMessageDialog(null,"Error en Gson en GardarUD post"+e );
+			
+		}
+		
+		
+		
+		
+		
+		/*UsuarioDao usD = new UsuarioDao();
 		Gson json = new Gson();
 		
 		try {
@@ -116,7 +144,7 @@ Gusu.setN_Usuario(Integer.parseInt(id));
 			System.out.println(e);
 		
 		
-		}
+		}*/
 
 		
 		
