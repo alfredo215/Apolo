@@ -13,16 +13,16 @@
 	$(document).ready(function(){
 		$('#carga').click(function(){
 			
-			var	caja = $('#caja').val();
+			var	caja = $('#datos').val();
 			$.post('ServletGuardarUD',{
 				caja
 			},function(respose){
 
-			let datos = JSON.parse(respose);
-			console.log(datos);
+			let datos = JSON.parse(respose)
+			console.log(datos)
 
-			var tabladatos = document.getElementById('tablaDatos');
-		//	tabladatos.innerHTML="Este usuario no se encuentra en nuestros registros.";
+			var tabladatos = document.getElementById('tablaDatos')
+
 			for (let item of datos) {
 
 					
@@ -32,11 +32,11 @@
 					<tr>
 					<td>${item[0]}</td>
 					<td>${item[1]}</td>
-					<td>${item[2]}</td>
-					<td>${item[3]}</td>
 					<td>${item[4]}</td>
 					<td>${item[5]}</td>
-					<td>${item[5]}</td>
+					<td>${item[2]}</td>
+					<td>${item[3]}</td>
+				
 					</tr>
 					
 				`
@@ -58,7 +58,7 @@
 
 
 <label>buscador</label>
-<input type="text" name="" placeholder="Escribe tu cedula" id="caja">
+<input type="text" name="" placeholder="Escribe tu cedula" id="datos">
 <input type="submit" name="buscar" id="carga" value="buscar">
 <br>
 <label>usuario</label>
@@ -82,9 +82,7 @@
 
 					</thead>
 					<tbody>
-					<tr id="tablaDatos">
-					</tr >
-						
+						<tr id="tablaDatos"></tr>
 
 					</tbody>
 

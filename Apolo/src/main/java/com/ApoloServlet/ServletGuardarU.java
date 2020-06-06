@@ -5,6 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 
 import com.Apolo.model.Doctore;
 import com.Apolo.model.Enfermera;
@@ -106,13 +107,36 @@ public class ServletGuardarU extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		UsuarioDao usE = new UsuarioDao();
+		
+		String capturar = request.getParameter("caja");
+		System.out.println(capturar);
+		
+		UsuarioDao UsuD = new UsuarioDao();
+		Usuarioshospital usuEnf=new Usuarioshospital();
+		
+		usuEnf.setUsuario(capturar);
+		Gson json=new Gson();
+		try {
+
+			response.getWriter().append(json.toJson(UsuD.BuscarUE(usuEnf)));
+			
+			
+		}catch (Exception e) {
+			JOptionPane.showMessageDialog(null,"Error en Gson en GardarUD post"+e );
+			
+		}
+		/*UsuarioDao usE = new UsuarioDao();
 		Gson json = new Gson();
 		
-		System.out.println("hola");
+		try {
 			response.getWriter().append(json.toJson(usE.EnfermeraLista()));
 			
+		} catch (Exception e) {
+			
+			System.out.println(e);
 		
+		
+		}*/
 		
 		
 	}

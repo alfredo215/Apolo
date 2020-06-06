@@ -24,15 +24,12 @@ public class UsuarioDao {
 		
 		try {
 			em.getTransaction().begin();
-			UsuDoc = em.createQuery("select n.n_Usuario,d.cedula,d.nombre_Doc,d.apellido,n.usuario"
-					+ "   from Usuarioshospital AS n "
-					+ " INNER JOIN "
-					+ "Doctore AS d ON "
-					+ "d.cedula  = n.doctore.cedula where n.usuario ='"+per.getUsuario()+"'").getResultList();
 			
-			/*em.getTransaction().begin();
-			UsuDoc = em.createQuery("from Usuarioshospital AS D where D.doctore.cedula='"+per.getDoctore()+"'").getResultList();*/
-
+			UsuDoc = em.createQuery("SELECT hos.n_Usuario, usu.nombre_Doc, usu.apellido, usu.cedula,hos.usuario, hos.contrasena "
+					+ " FROM Usuarioshospital AS hos"
+					+ " INNER JOIN Doctore AS usu ON "
+					+ " usu.cedula = hos.doctore.cedula where hos.usuario ='"+per.getUsuario()+"'").getResultList();					
+		
 			em.getTransaction().commit();
 			
 		} catch (Exception e) {
@@ -40,24 +37,38 @@ public class UsuarioDao {
 			System.out.println(e+"Error Dao");
 		}
 		
-		
 		return UsuDoc;
-		
 	}
-	
+	//-----------------------------------------------------------------------------------------------
+	public List<Usuarioshospital> BuscarUE(Usuarioshospital per ) {
+		List<Usuarioshospital> UsuEnf= new ArrayList<>();
+		System.out.println(per);
+		EntityManager em;
+		EntityManagerFactory emf;
+		
+		emf = Persistence.createEntityManagerFactory("Apolo");
+		em = emf.createEntityManager();
+		
+		try {
+			em.getTransaction().begin();
+			
+			UsuEnf = em.createQuery("SELECT hos.n_Usuario, usu.nombre_Enfer, usu.apellido, usu.cedula,hos.usuario, hos.contrasena "
+					+ " FROM Usuarioshospital AS hos"
+					+ " INNER JOIN Enfermera AS usu ON "
+					+ " usu.cedula = hos.enfermera.cedula where hos.usuario ='"+per.getUsuario()+"'").getResultList();					
+		
+			em.getTransaction().commit();
+			
+		} catch (Exception e) {
+			
+			System.out.println(e+"Error Dao");
+		}
+		
+		return UsuEnf;
+	}
 	//-------------------------------------------------------------------------------------------------------------------------------
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+/*	
 	
 	public List<Object> DoctorLista() {
 		List<Object> listaDc = new ArrayList<>();
@@ -82,32 +93,8 @@ public class UsuarioDao {
 		}
 		
 		return listaDc;
-	}
-	//-----------------------------------------------------------------------------------------------
-	public List<Object> EnfermeraLista() {
-		List<Object> listaEn = new ArrayList<>();
-		EntityManager em;
-		EntityManagerFactory emf;
-		
-		emf = Persistence.createEntityManagerFactory("Apolo");
-		em = emf.createEntityManager();
-		
-		try {
-			em.getTransaction().begin();
-			listaEn = em.createQuery("SELECT hos.n_Usuario, hos.enfermera.cedula, hos.usuario, hos.contrasena, "
-					+ " usu.nombre_Enfer, usu.apellido"
-					+ " FROM Usuarioshospital AS hos"
-					+ " INNER JOIN Enfermera AS usu ON usu.cedula = hos.enfermera.cedula").getResultList();
-			
-			em.getTransaction().commit();
-			
-		} catch (Exception e) {
-			
-			System.out.println(e+"Error Dao Enfermera");
-		}
-		
-		return listaEn;
-	}
+	}*/
+
 	//-----------------------------------------------------------------------------------------------
 	public void agregarDatosU(Usuarioshospital dc) {
 		EntityManager em;
