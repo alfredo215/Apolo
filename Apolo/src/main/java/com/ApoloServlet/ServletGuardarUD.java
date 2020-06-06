@@ -107,7 +107,7 @@ Gusu.setN_Usuario(Integer.parseInt(id));
 		// TODO Auto-generated method stub
 		
 		String capturar = request.getParameter("caja");
-		System.out.println(capturar);
+		System.out.println(capturar+"ver aqui");
 		
 		//Doctore doc = new Doctore();
 		UsuarioDao UsuD = new UsuarioDao();

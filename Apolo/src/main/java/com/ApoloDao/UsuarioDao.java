@@ -24,7 +24,11 @@ public class UsuarioDao {
 		
 		try {
 			em.getTransaction().begin();
-			UsuDoc = em.createQuery("from Usuarioshospital AS D where D.usuario='"+per.getUsuario()+"'").getResultList();
+			UsuDoc = em.createQuery("select n.n_Usuario,d.cedula,d.nombre_Doc,d.apellido,n.usuario"
+					+ "   from Usuarioshospital AS n "
+					+ " INNER JOIN "
+					+ "Doctore AS d ON "
+					+ "d.cedula  = n.doctore.cedula where n.usuario ='"+per.getUsuario()+"'").getResultList();
 			
 			/*em.getTransaction().begin();
 			UsuDoc = em.createQuery("from Usuarioshospital AS D where D.doctore.cedula='"+per.getDoctore()+"'").getResultList();*/

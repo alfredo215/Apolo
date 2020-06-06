@@ -109,15 +109,10 @@ public class ServletGuardarU extends HttpServlet {
 		UsuarioDao usE = new UsuarioDao();
 		Gson json = new Gson();
 		
-		try {
+		System.out.println("hola");
 			response.getWriter().append(json.toJson(usE.EnfermeraLista()));
 			
-		} catch (Exception e) {
-			
-			System.out.println(e);
 		
-		
-		}
 		
 		
 	}
