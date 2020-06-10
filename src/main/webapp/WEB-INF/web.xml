@@ -1,0 +1,67 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>ServletLogin</servlet-name>
+  	<display-name>ServletLogin</display-name>
+  	<description></description>
+  	<servlet-class>com.ApoloServlet.ServletLogin</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServletLoginEnfermera</servlet-name>
+  	<display-name>ServletLoginEnfermera</display-name>
+  	<description></description>
+  	<servlet-class>com.ApoloServlet.ServletLoginEnfermera</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServletGuardarUD</servlet-name>
+  	<display-name>ServletGuardarUD</display-name>
+  	<description></description>
+  	<servlet-class>com.ApoloServlet.ServletGuardarUD</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServletGuardarU</servlet-name>
+  	<display-name>ServletGuardarU</display-name>
+  	<description></description>
+  	<servlet-class>com.ApoloServlet.ServletGuardarU</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServeletGyAExpedientes</servlet-name>
+  	<display-name>ServeletGyAExpedientes</display-name>
+  	<description></description>
+  	<servlet-class>com.ApoloServlet.ServeletGyAExpedientes</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServeletExpedientes</servlet-name>
+  	<display-name>ServeletExpedientes</display-name>
+  	<description></description>
+  	<servlet-class>com.ApoloServlet.ServeletExpedientes</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ServletLogin</servlet-name>
+  	<url-pattern>/ServletLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletLoginEnfermera</servlet-name>
+  	<url-pattern>/ServletLoginEnfermera</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletGuardarUD</servlet-name>
+  	<url-pattern>/ServletGuardarUD</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletGuardarU</servlet-name>
+  	<url-pattern>/ServletGuardarU</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServeletGyAExpedientes</servlet-name>
+  	<url-pattern>/ServeletGyAExpedientes</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServeletExpedientes</servlet-name>
+  	<url-pattern>/ServeletExpedientes</url-pattern>
+  </servlet-mapping>
+</web-app>
