@@ -77,29 +77,18 @@ public class ServletGuardarU extends HttpServlet {
 			Gusu.setN_Usuario(Integer.parseInt(id));
 			
 			enf.setCedula(Integer.parseInt(cede));
-			Gusu.setEnfermera(enf);
-			
+			Gusu.setEnfermera(enf);	
 			Gusu.setUsuario(Usu);
 			Gusu.setContrasena(cont);
-
 			GusuD.actualizarDatosU(Gusu);
+			
 
 		} else if (action.equals("Eliminar")) {
 			Gusu.setN_Usuario(Integer.parseInt(id));
-			
-			enf.setCedula(Integer.parseInt(cede));
-			Gusu.setEnfermera(enf);
-			
-			Gusu.setUsuario(Usu);
-			Gusu.setContrasena(cont);
-			
-			
 			GusuD.eliminarDatosU(Gusu);
 		}
-		
-		//----------------------------------------------------------
+		response.sendRedirect("EdicionUsuarioE.jsp");
 
-		
 	}
 
 	/**

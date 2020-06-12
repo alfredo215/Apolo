@@ -28,6 +28,24 @@
   	<description></description>
   	<servlet-class>com.ApoloServlet.ServletGuardarU</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ServeletGyAExpedientes</servlet-name>
+  	<display-name>ServeletGyAExpedientes</display-name>
+  	<description></description>
+  	<servlet-class>com.ApoloServlet.ServeletGyAExpedientes</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServeletExpedientes</servlet-name>
+  	<display-name>ServeletExpedientes</display-name>
+  	<description></description>
+  	<servlet-class>com.ApoloServlet.ServeletExpedientes</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>gaMedicamentos</servlet-name>
+  	<display-name>gaMedicamentos</display-name>
+  	<description></description>
+  	<servlet-class>com.ApoloServlet.gaMedicamentos</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ServletLogin</servlet-name>
   	<url-pattern>/ServletLogin</url-pattern>
@@ -43,5 +61,17 @@
   <servlet-mapping>
   	<servlet-name>ServletGuardarU</servlet-name>
   	<url-pattern>/ServletGuardarU</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServeletGyAExpedientes</servlet-name>
+  	<url-pattern>/ServeletGyAExpedientes</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServeletExpedientes</servlet-name>
+  	<url-pattern>/ServeletExpedientes</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>gaMedicamentos</servlet-name>
+  	<url-pattern>/gaMedicamentos</url-pattern>
   </servlet-mapping>
 </web-app>
