@@ -11,7 +11,7 @@ import com.Apolo.model.Usuarioshospital;
 
 public class UsuarioDao {
 	
-	//----------------------------------------------------------------prueba de buscador
+	//----------------------------------------------------------------
 	
 	public List<Usuarioshospital> BuscarUD(Usuarioshospital per ) {
 		List<Usuarioshospital> UsuDoc= new ArrayList<>();
@@ -68,35 +68,7 @@ public class UsuarioDao {
 	}
 	//-------------------------------------------------------------------------------------------------------------------------------
 
-/*	
-	
-	public List<Object> DoctorLista() {
-		List<Object> listaDc = new ArrayList<>();
-		EntityManager em;
-		EntityManagerFactory emf;
-		
-		emf = Persistence.createEntityManagerFactory("Apolo");
-		em = emf.createEntityManager();
-		
-		try {
-			em.getTransaction().begin();
-			listaDc = em.createQuery("SELECT hos.n_Usuario, hos.doctore.cedula,where hos.usuario, hos.contrasena, "
-					+ " usu.nombre_Doc, usu.apellido"
-					+ " FROM Usuarioshospital AS hos"
-					+ " INNER JOIN Doctore AS usu ON usu.cedula = hos.doctore.cedula").getResultList();
-			
-			em.getTransaction().commit();
-			
-		} catch (Exception e) {
-			
-			System.out.println(e+"Error Dao Doctor");
-		}
-		
-		return listaDc;
-	}*/
-
-	//-----------------------------------------------------------------------------------------------
-	public void agregarDatosU(Usuarioshospital dc) {
+public void agregarDatosU(Usuarioshospital dc) {
 		EntityManager em;
 		EntityManagerFactory emf;
 		

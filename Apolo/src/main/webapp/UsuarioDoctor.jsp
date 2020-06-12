@@ -8,9 +8,9 @@
 </head>
 <%
 String idBus=request.getParameter("idBus");
-String Ced=request.getParameter("Cedoctor");
-String Usuar=request.getParameter("User");
-String Contras=request.getParameter("Contra");
+String Ced=request.getParameter("Ced");
+String Usuar=request.getParameter("Usuar");
+String Contras=request.getParameter("Contras");
 
 
 
@@ -50,5 +50,6 @@ if(idBus==null){
 </table>
 
 <input type="submit" class="btn btn-info" value="Guardar" name="btn">
+<input type="submit" class="btn btn-info" value="Actualizar" name="btn">
 </body>
 </html>

@@ -59,44 +59,33 @@ public class ServletGuardarUD extends HttpServlet {
 		String action = request.getParameter("btn");
 
 		if (action.equals("Guardar")) {
-			Gusu.setN_Usuario(Integer.parseInt(id));
 			
+			Gusu.setN_Usuario(Integer.parseInt(id));
 			doc.setCedula(Integer.parseInt(ced));
 			Gusu.setDoctore(doc);
-			
 			Gusu.setUsuario(Usu);
 			Gusu.setContrasena(cont);
 			GusuD.agregarDatosU(Gusu);
 			response.sendRedirect("LoginD.jsp");
+			
 		} else if (action.equals("Actualizar")) {	
 
-
-Gusu.setN_Usuario(Integer.parseInt(id));
-			
-			doc.setCedula(Integer.parseInt(ced));
-			Gusu.setDoctore(doc);
-
-			Gusu.setUsuario(Usu);
-			Gusu.setContrasena(cont);
-
-			GusuD.actualizarDatosU(Gusu);
-
-		} else if (action.equals("Eliminar")) {
 			Gusu.setN_Usuario(Integer.parseInt(id));
-			
 			doc.setCedula(Integer.parseInt(ced));
 			Gusu.setDoctore(doc);
-			
 			Gusu.setUsuario(Usu);
 			Gusu.setContrasena(cont);
 			
+			GusuD.actualizarDatosU(Gusu);
+			response.sendRedirect("EditarUsuariosD.jsp");
 			
+		} else if (action.equals("Eliminar")) {
+			
+			Gusu.setN_Usuario(Integer.parseInt(id));
 			GusuD.eliminarDatosU(Gusu);
 		}
 		
-		
-		
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.sendRedirect("EditarUsuariosD.jsp");
 	}
 
 
@@ -109,14 +98,10 @@ Gusu.setN_Usuario(Integer.parseInt(id));
 		String capturar = request.getParameter("caja");
 		System.out.println(capturar);
 		
-		//Doctore doc = new Doctore();
 		UsuarioDao UsuD = new UsuarioDao();
 		Usuarioshospital usuDoc=new Usuarioshospital();
 		
 		usuDoc.setUsuario(capturar);
-		
-		/*doc.setCedula(Integer.parseInt(capturar));
-		GusuD.setDoctore(doc);*/
 		
 		Gson json=new Gson();
 		try {
@@ -151,5 +136,9 @@ Gusu.setN_Usuario(Integer.parseInt(id));
 		
 		//doGet(request, response);
 	}
+	/*doc.setCedula(Integer.parseInt(ced));
+	Gusu.setDoctore(doc);
+	Gusu.setUsuario(Usu);
+	Gusu.setContrasena(cont);*/
 
 }
