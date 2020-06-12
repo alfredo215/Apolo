@@ -31,15 +31,12 @@ $(document).ready(function(){
 	
 				<tr>
 				<td>${item[0]}</td>
-				<td>${item[3]}</td>
 				<td>${item[1]}</td>
-				<td>${item[2]}</td>
 				<td>${item[4]}</td>
 				<td>${item[5]}</td>
+				<td>${item[2]}</td>
+				<td>${item[3]}</td>
 			
-				<td><a href="ServletGuardarU?btn=Eliminar&idBus=${item[0]}" class = "btn btn-warning">Eliminar</a>
-				<a href="UsuarioEnfermera.jsp?idBus=${item[0]}&CedE=${item[3]}&Usuar=${item[4]}&Contras=${item[5]}" class = "btn btn-danger">Modificar</a>
-				
 				</tr>
 				
 			`
@@ -54,10 +51,15 @@ $(document).ready(function(){
 	
 </script>
 <label>buscador</label>
-<input type="text" name="" placeholder="Escribe tu usuario" id="datos">
+<input type="text" name="" placeholder="Escribe tu cedula" id="datos">
 <input type="submit" name="buscar" id="carga" value="buscar">
 <br>
-	
+<label>usuario</label>
+<input type="text" name="">
+<br>
+<label>contrasenia</label>
+<input type="text" name="">
+<br>	
 	<table class="table table" id="tablaDatos">
 
 					<thead>
