@@ -17,7 +17,7 @@ public class RecetaMedica implements Serializable {
 	@Id
 	private int codigo_Res;
 
-	private int cantidad;
+	private double cantidad;
 
 	private String docis;
 
@@ -47,11 +47,11 @@ public class RecetaMedica implements Serializable {
 		this.codigo_Res = codigo_Res;
 	}
 
-	public int getCantidad() {
+	public double getCantidad() {
 		return this.cantidad;
 	}
 
-	public void setCantidad(int cantidad) {
+	public void setCantidad(double cantidad) {
 		this.cantidad = cantidad;
 	}
 

@@ -29,7 +29,7 @@ public class ServeletMedicamentos extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		Medicamento medi = new Medicamento();
 		medicamentosDao MDAO = new medicamentosDao();
@@ -66,6 +66,7 @@ public class ServeletMedicamentos extends HttpServlet {
 			
 			MDAO.agregarMe(medi);
 			response.sendRedirect("Medicamentos.jsp");
+			
 		}else if (action.equals("actualizar")) {
 			
 			medi.setCodigoM(Integer.parseInt(codigo));
@@ -77,7 +78,7 @@ public class ServeletMedicamentos extends HttpServlet {
 			response.sendRedirect("Medicamentos.jsp");
 		}
 		
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 	}
 
 	/**
@@ -85,10 +86,15 @@ public class ServeletMedicamentos extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		String capturar = request.getParameter("caja");
+		System.out.println(capturar);
+		
 		medicamentosDao medic = new medicamentosDao();
+		Medicamento med = new Medicamento();
+		med.setNombre(capturar);
 		Gson json = new Gson();
 		try {
-			response.getWriter().append(json.toJson(medic.MedicinaLista()));
+			response.getWriter().append(json.toJson(medic.MedicinaLista(med)));
 			
 		} catch (Exception e) {
 			System.out.println(e);

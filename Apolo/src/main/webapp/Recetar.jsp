@@ -8,34 +8,27 @@
 </head>
 <body>
 
-<label>Enfremedad_Odontologuica</label>
-<input type="text" name="" placeholder="tipo int">
+<label>Codigo</label>
+<input type="text" name="CodigoR" placeholder="Codigo receta">
+<br>
+<label>Consulta</label>
+<input type="text" name="Enfermedad" placeholder="Nombre Enfermedad ">
+<br>
+<label>Consulta Odontologica</label>
+<input type="text" name="EnfermedaOdon" placeholder="Enfermedad Odontologica">
+<br>
 <label>Medicamento</label>
-<input type="text" name="" placeholder="tipo int">
+<input type="text" name="Medicamento" placeholder="Medicamento">
+<br>
 <label>Cantidad</label>
-<input type="text" name="" placeholder="int">
-<label>Docis</label>
-<input type="text" name="" placeholder="string">
-<input type="submit" name="guardar" value="guardar">
+<input type="text" name="Cantidad" placeholder="Cantidad Medicamento">
+<br>
+<label>Dosis</label>
+<input type="text" name="Dosis" placeholder="Dosis Medicamento">
+<br>
+<input type="submit" name="btn" value="guardar">
 <a href="Doctor.jsp" class = "btn">salir</a>
 <br>
-    <label>buscar</label>
-	<input type="text" name="" placeholder="escriba el nombre del medicamento">
-	<table class="table table">
-
-					<thead>
-						<th>Codigo</th>
-						<th>nombre</th>
-						<th>tipo</th>
-						<th>cantidad</th>
-						
-
-					</thead>
-					<tbody>
-						
-
-					</tbody>
-
-	</table>
+    
 </body>
 </html>
