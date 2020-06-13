@@ -22,9 +22,11 @@ public class medicamentosDao {
 		try {
 			
 			em.getTransaction().begin();
-			medic = em.createQuery("FROM Medicamento").getResultList();
+			medic = em.createQuery("from Medicamento").getResultList();
 			em.getTransaction().commit();
 		} catch (Exception e) {
+			
+			System.out.println("error DAO"+e);
 			// TODO: handle exception
 		}
 		
