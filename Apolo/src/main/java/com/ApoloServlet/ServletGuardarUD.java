@@ -83,9 +83,10 @@ public class ServletGuardarUD extends HttpServlet {
 			
 			Gusu.setN_Usuario(Integer.parseInt(id));
 			GusuD.eliminarDatosU(Gusu);
+			response.sendRedirect("EditarUsuariosD.jsp");
 		}
 		
-		response.sendRedirect("EditarUsuariosD.jsp");
+		
 	}
 
 

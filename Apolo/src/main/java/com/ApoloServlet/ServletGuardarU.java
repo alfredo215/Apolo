@@ -81,13 +81,14 @@ public class ServletGuardarU extends HttpServlet {
 			Gusu.setUsuario(Usu);
 			Gusu.setContrasena(cont);
 			GusuD.actualizarDatosU(Gusu);
-			
+			response.sendRedirect("EdicionUsuarioE.jsp");
 
 		} else if (action.equals("Eliminar")) {
 			Gusu.setN_Usuario(Integer.parseInt(id));
 			GusuD.eliminarDatosU(Gusu);
+			response.sendRedirect("EdicionUsuarioE.jsp");
 		}
-		response.sendRedirect("EdicionUsuarioE.jsp");
+		
 
 	}
 

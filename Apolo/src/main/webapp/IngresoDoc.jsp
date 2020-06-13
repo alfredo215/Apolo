@@ -52,7 +52,6 @@ if(idBus==null){
 </table>
 
 <input type="submit" class="btn btn-info" value="Guardar" name="btn">
-<input type="submit" class="btn btn-info" value="Actualizar" name= "btn">
 </form>
 </body>
 </html>
