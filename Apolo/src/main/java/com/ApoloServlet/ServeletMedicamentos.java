@@ -7,20 +7,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.Apolo.model.Medicamento;
-import com.ApoloDao.GyAexpedienteDao;
 import com.ApoloDao.medicamentosDao;
 import com.google.gson.Gson;
 
 /**
- * Servlet implementation class gaMedicamentos
+ * Servlet implementation class ServeletMedicamentos
  */
-public class gaMedicamentos extends HttpServlet {
+public class ServeletMedicamentos extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public gaMedicamentos() {
+    public ServeletMedicamentos() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,7 +29,7 @@ public class gaMedicamentos extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 		
 		Medicamento medi = new Medicamento();
 		medicamentosDao MDAO = new medicamentosDao();
@@ -77,28 +76,28 @@ public class gaMedicamentos extends HttpServlet {
 			MDAO.actualizarD(medi);
 			response.sendRedirect("Medicamentos.jsp");
 		}
+		
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//doGet(request, response);
-		
-		medicamentosDao medi = new medicamentosDao();
-		
+
+		medicamentosDao medic = new medicamentosDao();
 		Gson json = new Gson();
-		
-try {
-			
-			response.getWriter().append(json.toJson(medi.mostrarMedi()));
-			
+		try {
+			response.getWriter().append(json.toJson(medic.MedicinaLista()));
 			
 		} catch (Exception e) {
-			System.out.println(e+"Error a");
+			System.out.println(e);
 		}
+		
+		
+		
+		
+		
 	}
-
 
 }

@@ -12,26 +12,27 @@ import com.Apolo.model.Medicamento;
 
 public class medicamentosDao {
 
-	public List<Medicamento> mostrarMedi() {
-		List<Medicamento> medic = new ArrayList();
+	public List<Medicamento> MedicinaLista() {
+		List<Medicamento> listaMe = new ArrayList<>();
+		
 		EntityManager em;
 		EntityManagerFactory emf;
 		
 		emf = Persistence.createEntityManagerFactory("Apolo");
 		em = emf.createEntityManager();
+		
 		try {
-			
 			em.getTransaction().begin();
-			medic = em.createQuery("from Medicamento").getResultList();
+			listaMe = em.createQuery("SELECT m.codigoM, m.nombre, tipo, m.cantidad "
+					+ " FROM Medicamento AS m").getResultList();
 			em.getTransaction().commit();
+			
 		} catch (Exception e) {
 			
-			System.out.println("error DAO"+e);
-			// TODO: handle exception
+			System.out.println(e);
 		}
 		
-		return medic ;
-		
+		return listaMe;
 	}
 	public void agregarMe(Medicamento me) {
 		EntityManager em;
@@ -43,7 +44,7 @@ public class medicamentosDao {
 		em.persist(me);
 		em.flush();
 		em.getTransaction().commit();
-	}
+	};
 	
 
 	
@@ -63,5 +64,5 @@ public void actualizarD(Medicamento me) {
 		em.merge(me);
 		em.flush();
 		em.getTransaction().commit();
-}
+};
 }

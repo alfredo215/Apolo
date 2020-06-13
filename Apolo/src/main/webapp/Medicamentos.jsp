@@ -10,44 +10,35 @@
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 
 <script type="text/javascript">
-
 $(document).ready(function(){
 	
-	
+	$.post('ServeletMedicamentos',{
 
-	var btn= $('#carga').val();
-	$.post('gaMedicamentos',{
+	},function(respose){
 
-	},function(response){
-		
-		let datos = JSON.parse(respose)
-		console.log(datos);
-	var tabladatos = document.getElementById('TablaMedi');
-	for (let item of datos){
+	let datos = JSON.parse(respose)
+	console.log(datos);
+	var tabladatos = document.getElementById('TablaMedi')
+	for (let item of datos) {
 
 		tabladatos.innerHTML +=`
-	
+
 			<tr>
-			<td>${item.codigoM}</td>
-			<td>${item.cantidad}</td>
-			<td>${item.nombre}</td>
-			<td>${item.tipo}</td>
-		 	
-		 	</tr>
-		 	
-		 	 	`
+			<td>${item[0]}</td>
+			<td>${item[1]}</td>
+			<td>${item[2]}</td>
+			<td>${item[3]}</td>
+			</tr>
+			
+		`
 
 	}
 
-
+	});
 });
-});
-
 
 </script>
-
 <body>
-
 <table class="table table-dark" id="TablaMedi">
 
 					<thead>
