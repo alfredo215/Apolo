@@ -58,11 +58,11 @@ $(document).ready(function(){
 <body>
 <br> <br>
 <label>buscador</label>
-<input type="text" name="" placeholder="Escribe tu Codigo del Medicamento" id="buscardatos">
+<input type="text" name="" placeholder="Escribe el Medicamento" id="buscardatos">
 <input type="submit" name="BUSCAR" id="cargar" value="buscar">
 <br>
 
-<a href="GuardarMedicamentos.jsp" type="submit" class="btn btn-info">Guardar</a>
+<a href="GuardarMedicamentos.jsp" type="submit" class="btn btn-info">Agregar_Medicamentos</a>
 <br>
 <table class="table table-dark" id="TablaMedi">
 

@@ -7,18 +7,66 @@
 <title>Insert title here</title>
 </head>
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+ $('#cargar').click(function(){
+	 
+	
+	
+
+	var caja= $('#buscardatos').val();
+	$.post('ServeletMedicamentos',{
+		caja
+	},function(response){
+
+	let datos = JSON.parse(response);
+	console.log(datos)
+
+
+	var tabladatos = document.getElementById('TablaMedi');
+	for (let item of datos){
+
+		tabladatos.innerHTML +=`
+	
+			<tr>
+			<td>${item[0]}</td>
+			<td>${item[1]}</td>
+			<td>${item[2]}</td>
+			<td>${item[3]}</td>
+			
+			</tr>
+		
+		
+		 	
+ 	   
+		`
+
+	}
+
+ });
+});
+});
+
+
+</script>
+
+
 <body>
-    <label>buscar</label>
-	<input type="text" name="" placeholder="escriba el nombre del medicamento">
-	<br>
-	<label>nombre</label>
-	<input type="text" name="">
-	<br>
-	<label>cantidad</label>
-	<input type="text" name="">
-	<br>
-	<input type="submit" name="" value="actualizar_Cantidad">
-	<table class="table table">
+<h1>Registro de medicametos</h1>
+<br> <br>
+<label>buscador</label>
+<input type="text" name="" placeholder="Escribe el Medicamento" id="buscardatos">
+<input type="submit" name="BUSCAR" id="cargar" value="buscar">
+<br>
+<a href="NuevoLoteMedicamentos.jsp" type="submit" class="btn btn-info">Nv_Lote_Medicamentos</a>
+<br>
+<table class="table table-dark" id="TablaMedi">
 
 					<thead>
 						<th>Codigo</th>
@@ -34,5 +82,6 @@
 					</tbody>
 
 	</table>
+
 </body>
 </html>

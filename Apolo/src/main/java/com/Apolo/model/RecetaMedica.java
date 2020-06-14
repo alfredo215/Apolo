@@ -63,7 +63,6 @@ public class RecetaMedica implements Serializable {
 		this.docis = docis;
 	}
 
-
 	public Consulta getConsulta() {
 		return this.consulta;
 	}

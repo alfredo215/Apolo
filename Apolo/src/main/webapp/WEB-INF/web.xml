@@ -58,6 +58,12 @@
   	<description></description>
   	<servlet-class>com.ApoloServlet.ServeletRecetaMedica</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ServletLoteMedi</servlet-name>
+  	<display-name>ServletLoteMedi</display-name>
+  	<description></description>
+  	<servlet-class>com.ApoloServlet.ServletLoteMedi</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ServletLogin</servlet-name>
   	<url-pattern>/ServletLogin</url-pattern>
@@ -93,5 +99,9 @@
   <servlet-mapping>
   	<servlet-name>ServeletRecetaMedica</servlet-name>
   	<url-pattern>/ServeletRecetaMedica</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletLoteMedi</servlet-name>
+  	<url-pattern>/ServletLoteMedi</url-pattern>
   </servlet-mapping>
 </web-app>
