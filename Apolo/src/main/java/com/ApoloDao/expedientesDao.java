@@ -22,7 +22,7 @@ public class expedientesDao {
 		
 		try {
 			em.getTransaction().begin();
-			pacienteD = em.createQuery("SELECT pa.codigo, pa.codigoExpediente, pa.nombre_P, pa.apellido, pa.sexo, pa.fecha_De_Nacimiento," 
+			pacienteD = em.createQuery("SELECT pa.codigo, pa.nombre_P, pa.apellido, pa.sexo, pa.fecha_De_Nacimiento," 
 					+" pa.edad, pa.departamento_Nacimiento, pa.municipo_Nacimiento, pa.peso, pa.altura, pa.vacunasUsuario.idUsuarioVacuna," 
 					+" pa.enfermedade.enfermedad, pa.alerguias, pa.medicamento.codigoM, pa.consulta.codigo_Consulta, "  
 					+ "pa.consultaOdontologica.codigo_ConsultaO, pa.reservaCita.codigo_Cita FROM Paciente AS pa "
@@ -31,7 +31,7 @@ public class expedientesDao {
 							+ "INNER JOIN Medicamento AS medi ON medi.codigoM = pa.medicamento.codigoM "
 							+ "INNER JOIN Consulta AS consul ON consul.codigo_Consulta = pa.consulta.codigo_Consulta "
 							+ "INNER JOIN ConsultaOdontologica AS consulO ON consulO.codigo_ConsultaO = pa.consultaOdontologica.codigo_ConsultaO "
-							+ "INNER JOIN ReservaCita AS reserCita ON reserCita.codigo_Cita = pa.reservaCita.codigo_Cita where pa.codigoExpediente ='"+paci.getCodigoExpediente()+"'").getResultList();
+							+ "INNER JOIN ReservaCita AS reserCita ON reserCita.codigo_Cita = pa.reservaCita.codigo_Cita where pa.codigo ='"+paci.getCodigo()+"'").getResultList();
 			em.getTransaction().commit();
 			
 		} catch (Exception e) {
@@ -53,7 +53,6 @@ public void actualizarD(Paciente pc) {
 		em=emf.createEntityManager();
 
 		pc.getCodigo();
-		pc.getCodigoExpediente();
 		pc.getNombre_P();
 		pc.getApellido();
 		pc.getSexo();

@@ -25,8 +25,6 @@ public class Paciente implements Serializable {
 
 	private String apellido;
 
-	private int codigoExpediente;
-
 	private String departamento_Nacimiento;
 
 	private byte edad;
@@ -125,14 +123,6 @@ public class Paciente implements Serializable {
 
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
-	}
-
-	public int getCodigoExpediente() {
-		return this.codigoExpediente;
-	}
-
-	public void setCodigoExpediente(int codigoExpediente) {
-		this.codigoExpediente = codigoExpediente;
 	}
 
 	public String getDepartamento_Nacimiento() {

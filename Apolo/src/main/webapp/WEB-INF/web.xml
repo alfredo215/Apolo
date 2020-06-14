@@ -64,6 +64,12 @@
   	<description></description>
   	<servlet-class>com.ApoloServlet.ServletLoteMedi</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ServletReservar</servlet-name>
+  	<display-name>ServletReservar</display-name>
+  	<description></description>
+  	<servlet-class>com.ApoloServlet.ServletReservar</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ServletLogin</servlet-name>
   	<url-pattern>/ServletLogin</url-pattern>
@@ -103,5 +109,9 @@
   <servlet-mapping>
   	<servlet-name>ServletLoteMedi</servlet-name>
   	<url-pattern>/ServletLoteMedi</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletReservar</servlet-name>
+  	<url-pattern>/ServletReservar</url-pattern>
   </servlet-mapping>
 </web-app>

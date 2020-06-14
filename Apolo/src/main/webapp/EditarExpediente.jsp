@@ -49,7 +49,6 @@ $(document).ready(function(){
 		 	<td>${item[14]} </td> 
 		 	<td>${item[15]} </td> 
 		 	<td>${item[16]} </td> 
-		 	<td>${item[17]} </td> 
 		 	<td><a href="guardarExpedientee.jsp?cod=${item[0]}&codex=${item[1]}&nom=${item[2]}&ap=${item[3]}&sex=${item[4]}&fn=${item[5]}&edad=${item[6]}&depana=${item[7]}&munina=${item[8]}&peso=${item[9]}&altura=${item[10]}&vacuna=${item[11]}&enfer=${item[12]}&aler=${item[13]}&medi=${item[14]}&anme=${item[15]}&anodo=${item[16]}&cita=${item[17]}" class="btn btn-danger"> Actualizar</a> </td> 
 		 	
  	   
@@ -77,7 +76,6 @@ $(document).ready(function(){
 					<thead>
 					
 						<th >Codigo</th>
-						<th >Codigo Expediente</th>
 						<th>Nombre Paciente</th>
 						<th>Apellido</th>
 						<th>Sexo</th>

@@ -9,7 +9,6 @@
 
 <% 
 String codigo = request.getParameter("cod");
-String codigoex = request.getParameter("codex");
 String nombre = request.getParameter("nom");
 String apellido = request.getParameter("ap");
 String sexo = request.getParameter("sex");
@@ -29,7 +28,6 @@ String cita = request.getParameter("cita");
 
 if(codigo==null){
 	codigo="";
-	codigoex="";
 	nombre="";
 	apellido="";
 	sexo="";
@@ -56,9 +54,6 @@ if(codigo==null){
 <form  action="ServeletGyAExpedientes" method="get">
 <label>Codigo</label>
 	<input type="text" name="codigo_p" value="<%=codigo %>">                                                                                           
-	<br>
-	<label>CodigoExpediente</label>
-	<input type="text" name="codigo_ex" value="<%=codigoex %>">
 	<br>
 	<label>Nombre_Paciente</label>
 	<input type="text" name="nombre_p" value="<%=nombre %>">

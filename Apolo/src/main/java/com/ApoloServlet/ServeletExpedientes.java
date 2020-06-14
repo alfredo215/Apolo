@@ -62,7 +62,7 @@ public class ServeletExpedientes extends HttpServlet {
 		expedientesDao exDao =new expedientesDao();
 		Paciente pacien = new Paciente();
 		
-		pacien.setCodigoExpediente(Integer.parseInt(capturar));
+		pacien.setCodigo(Integer.parseInt(capturar));
 		Gson json = new Gson();
 		
 		

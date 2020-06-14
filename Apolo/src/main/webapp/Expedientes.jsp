@@ -46,7 +46,6 @@ $(document).ready(function(){
 		 	<td>${item[14]} </td> 
 		 	<td>${item[15]} </td> 
 		 	<td>${item[16]} </td> 
-		 	<td>${item[17]} </td> 
 		 	
 		 	
  	   
@@ -71,7 +70,6 @@ $(document).ready(function(){
 					<thead>
 					
 						<th >Codigo</th>
-						<th >Codigo Expediente</th>
 						<th>Nombre Paciente</th>
 						<th>Apellido</th>
 						<th>Sexo</th>

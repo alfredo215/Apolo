@@ -53,7 +53,6 @@ public class ServeletGyAExpedientes extends HttpServlet {
 		
 	
 		String codigo = null;
-		String codigoexpediente = null;
 		String nombre = null;
 		String apellido = null;
 		String sexo = null;
@@ -74,7 +73,6 @@ public class ServeletGyAExpedientes extends HttpServlet {
 	
 		try {
 			codigo = request.getParameter("codigo_p");
-			codigoexpediente = request.getParameter("codigo_ex");
 			nombre = request.getParameter("nombre_p");
 			apellido = request.getParameter("apellido_p");
 			sexo = request.getParameter("sexo_p");
@@ -99,7 +97,6 @@ public class ServeletGyAExpedientes extends HttpServlet {
 			
 
 			pacte.setCodigo(Integer.parseInt(codigo));
-			pacte.setCodigoExpediente(Integer.parseInt(codigoexpediente));
 			pacte.setNombre_P(nombre);
 			pacte.setApellido(apellido);
 			pacte.setSexo(sexo);
@@ -134,7 +131,6 @@ public class ServeletGyAExpedientes extends HttpServlet {
 		if(action.equals("Guardar")) {
 			  
 			  pacte.setCodigo(Integer.parseInt(codigo));
-			  pacte.setCodigoExpediente(Integer.parseInt(codigoexpediente));
 			  pacte.setNombre_P(nombre);
 			  pacte.setApellido(apellido);
 			  pacte.setSexo(sexo);
@@ -163,7 +159,6 @@ public class ServeletGyAExpedientes extends HttpServlet {
 			  }else if (action.equals("Actualizar")) {
 				  
 			  pacte.setCodigo(Integer.parseInt(codigo));
-			  pacte.setCodigoExpediente(Integer.parseInt(codigoexpediente));
 			  pacte.setNombre_P(nombre); 
 			  pacte.setApellido(apellido); 
 			  pacte.setSexo(sexo);
