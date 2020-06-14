@@ -44,8 +44,7 @@ public class ServeletRecetaMedica extends HttpServlet {
 		
 		String codigo=null;
     	String enfermedad=null;
-		String enfermedad2=null;
-		String consultaOdon=null;
+		String enfermedadOdon=null;
 		String medicamento=null;
 		String cantidad=null;
 		String dosis=null;
@@ -53,23 +52,21 @@ public class ServeletRecetaMedica extends HttpServlet {
 		try {
 			
 			codigo = request.getParameter("CodigoR");
-			enfermedad = request.getParameter("consulta");
-			consultaOdon = request.getParameter("consultaOdon");
+			enfermedad = request.getParameter("Enfermedad");
+			enfermedadOdon = request.getParameter("EnfermedaOdon");
 			medicamento = request.getParameter("Medicamento");
 			cantidad = request.getParameter("Cantidad");
 			dosis = request.getParameter("Dosis");
 			
 			
-			reMe.setCodigo_Res(Integer.parseInt(codigo));
-	//----------------------------------------------------------------		
-			enfer.setEnfermedad(Integer.parseInt(enfermedad)); 
-			cons.setEnfermedade(enfer);
+			reMe.setCodigo_Res(Integer.parseInt(codigo)); 
+			cons.setCodigo_Consulta(Integer.parseInt(enfermedad));
 			reMe.setConsulta(cons);
-	//----------------------------------------------------------------	
-			
+			consOdon.setCodigo_ConsultaO(Integer.parseInt(enfermedadOdon));
+			reMe.setConsultaOdontologica(consOdon);		
 			md.setCodigoM(Integer.parseInt(medicamento));
 			reMe.setMedicamentoBean(md);
-			reMe.setCantidad(Integer.parseInt(cantidad));
+			reMe.setCantidad(Double.parseDouble(cantidad));
 			reMe.setDocis(dosis);
 			
 		} catch (Exception e) {
@@ -80,16 +77,16 @@ public class ServeletRecetaMedica extends HttpServlet {
 		if (action.equals("guardar")) {
 			
 			reMe.setCodigo_Res(Integer.parseInt(codigo));
-			consul.setCodigo_Consulta(Integer.parseInt(consulta));
-			reMe.setConsulta(consul);
-			conOdon.setCodigo_ConsultaO(Integer.parseInt(consultaOdon));
-			reMe.setConsultaOdontologica(conOdon);
+			cons.setCodigo_Consulta(Integer.parseInt(enfermedad));
+			reMe.setConsulta(cons);
+			consOdon.setCodigo_ConsultaO(Integer.parseInt(enfermedadOdon));
+			reMe.setConsultaOdontologica(consOdon);
 			md.setCodigoM(Integer.parseInt(medicamento));
 			reMe.setMedicamentoBean(md);
-			reMe.setCantidad(Integer.parseInt(cantidad));
+			reMe.setCantidad(Double.parseDouble(cantidad));
 			reMe.setDocis(dosis);
-			
 			reDao.agregarRe(reMe);
+			response.sendRedirect("Recetar.jsp");
 		}
 		
 		

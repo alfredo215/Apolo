@@ -6,16 +6,19 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
+<form action="ServeletRecetaMedica" method="get">
 <body>
 
 <label>Codigo</label>
 <input type="text" name="CodigoR" placeholder="Codigo receta">
 <br>
-<label>Consulta</label>
+<label>Enfermedad</label>
 <input type="text" name="Enfermedad" placeholder="Nombre Enfermedad ">
 <br>
-<label>Consulta Odontologica</label>
-<input type="text" name="EnfermedaOdon" placeholder="Enfermedad Odontologica">
+
+<label>Enfermedad Odontologica</label>
+<input type="text" name="EnfermedaOdon" placeholder="Enfermedad Odontologica"> 
+
 <br>
 <label>Medicamento</label>
 <input type="text" name="Medicamento" placeholder="Medicamento">
@@ -31,4 +34,5 @@
 <br>
     
 </body>
+</form>
 </html>
