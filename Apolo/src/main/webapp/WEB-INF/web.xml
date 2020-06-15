@@ -70,6 +70,18 @@
   	<description></description>
   	<servlet-class>com.ApoloServlet.ServletReservar</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ServeletGuardarC</servlet-name>
+  	<display-name>ServeletGuardarC</display-name>
+  	<description></description>
+  	<servlet-class>com.ApoloServlet.ServeletGuardarC</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServeletGconsultaOdon</servlet-name>
+  	<display-name>ServeletGconsultaOdon</display-name>
+  	<description></description>
+  	<servlet-class>com.ApoloServlet.ServeletGconsultaOdon</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ServletLogin</servlet-name>
   	<url-pattern>/ServletLogin</url-pattern>
@@ -113,5 +125,13 @@
   <servlet-mapping>
   	<servlet-name>ServletReservar</servlet-name>
   	<url-pattern>/ServletReservar</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServeletGuardarC</servlet-name>
+  	<url-pattern>/ServeletGuardarC</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServeletGconsultaOdon</servlet-name>
+  	<url-pattern>/ServeletGconsultaOdon</url-pattern>
   </servlet-mapping>
 </web-app>
