@@ -82,6 +82,12 @@
   	<description></description>
   	<servlet-class>com.ApoloServlet.ServeletGconsultaOdon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ServeletGyAEnfermedad</servlet-name>
+  	<display-name>ServeletGyAEnfermedad</display-name>
+  	<description></description>
+  	<servlet-class>com.ApoloServlet.ServeletGyAEnfermedad</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ServletLogin</servlet-name>
   	<url-pattern>/ServletLogin</url-pattern>
@@ -133,5 +139,9 @@
   <servlet-mapping>
   	<servlet-name>ServeletGconsultaOdon</servlet-name>
   	<url-pattern>/ServeletGconsultaOdon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServeletGyAEnfermedad</servlet-name>
+  	<url-pattern>/ServeletGyAEnfermedad</url-pattern>
   </servlet-mapping>
 </web-app>
