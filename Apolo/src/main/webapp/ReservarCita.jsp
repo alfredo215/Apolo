@@ -10,13 +10,11 @@
 <% 
 
 String codigo = request.getParameter("codigo");
-String ExpePas = request.getParameter("ExpePas");
 String HoraCita = request.getParameter("HoraCita");
 String Nfecha = request.getParameter("Nfecha");
 
 if(codigo==null){
 	codigo="";
-	ExpePas="";
 	HoraCita="";
 	Nfecha="";
 	
@@ -25,11 +23,9 @@ if(codigo==null){
 %>
 <form action="ServletReservar" method="get" >
 <body>
-    <label>Codigo</label>
+    <label>Expediente</label>
 	<input type="text" name="idReserva" value="<%=codigo %>">
 	<br>
-	<label>Codigo Expediente</label>
-	<input type="text" name="CodigoReserva" value="<%=ExpePas %>">
 	<br>
 	<label>Fecha de la cita</label>
 	<input type="text" name="fechaReserva" placeholder="yyy-mm-dd" value="<%=Nfecha %>">
