@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.Apolo.model.Enfermedade;
-import com.Apolo.model.EnfermedadesDao;
+import com.ApoloDao.EnfermedadesDao;
 import com.google.gson.Gson;
 
 /**

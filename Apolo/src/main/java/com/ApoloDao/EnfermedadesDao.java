@@ -1,10 +1,12 @@
-package com.Apolo.model;
+package com.ApoloDao;
 
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+
+import com.Apolo.model.Enfermedade;
 
 public class EnfermedadesDao {
 
