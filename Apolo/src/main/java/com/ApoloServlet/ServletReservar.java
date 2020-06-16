@@ -74,7 +74,7 @@ public class ServletReservar extends HttpServlet {
 			res.setHora_Cita(hora);
 			
 			ciDao.ApartarCita(res);
-			response.sendRedirect("LoginCita.jsp");
+			response.sendRedirect("index.jsp");
 			
 		}
 		
