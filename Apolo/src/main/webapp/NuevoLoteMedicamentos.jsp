@@ -4,7 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<title>nuevo lote</title>
 </head>
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <% 
@@ -25,23 +29,73 @@ if(codigo==null){
 %>
 <form action="ServletLoteMedi" method="get" >
 <body>
-    <label>Codigo</label>
-	<input type="text" name="idNmedic" value="<%=codigo %>">
-	<br>
-	<label>Medicamentos</label>
-	<input type="text" name="nombreNmedic" value="<%=NvMedicamentos %>">
-	<br>
-	<label>Cantidad</label>
-	<input type="text" name="CantidadNmedic" value="<%=CantidadNmedic %>">
-	<br>
-	<label>fecha</label>
-	<input type="text" name="fechaNmedic" placeholder="yyy-mm-dd" value="<%=Nfecha %>">
-	<br>
-	
-<br>
-<input type="submit" name="btn" value="Guardar">
-<br>
 
+<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+	
+			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33" style="background-image: url('images/apoloimg.jpg');">
+				<form class="login100-form validate-form flex-sb flex-w">
+					<span class="login100-form-title p-b-53 text-white">
+						Nuevo lote de Medicamento:
+
+					</span>	
+			<div class="p-t-31 p-b-9">
+						<span class="txt1">			
+        Codigo:
+        </span>
+					</div>
+				<div class="wrap-input100 validate-input" data-validate = "codigo is required">	
+				<input class="input100" type="text" placeholder="Introdusca el Codigo" name="idNmedic" value="<%=codigo %>">
+						
+						<span class="focus-input100"></span>
+					</div>
+					
+		<div class="p-t-13 p-b-9">
+						<span class="txt1">
+							Medicamentos:
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "medicamento is required">
+					<input class="input100" type="text" placeholder="Introdusca nombre Medicamento" name="nombreNmedic" value="<%=NvMedicamentos %>">
+					
+						
+						<span class="focus-input100"></span>
+					</div>
+					<div class="p-t-13 p-b-9">
+						<span class="txt1">
+							Cantidad:
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "cantidad is required">
+					<input class="input100" type="text" placeholder="Introdusca la cantidad" name="CantidadNmedic" value="<%=CantidadNmedic %>">
+					
+						
+						<span class="focus-input100"></span>
+					</div>
+					<div class="p-t-13 p-b-9">
+						<span class="txt1">
+							Fecha:
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "nombre is required">
+					<input class="input100" type="text" placeholder="Introdusca la fecha" name="fechaNmedic" placeholder="yyy-mm-dd" value="<%=Nfecha %>">
+						
+						<span class="focus-input100"></span>
+					</div>
+				
+				<div class="container-login100-form-btn m-t-17" align="center">
+				<input type="submit" class="login100-form-btn" name="btn" value="Guardar">
+
+	</div>
+	<br>
+	<a href="Medicamentos.jsp" class="btn btn-outline-danger btn-sm"><h1>Volver</h1></a>
+				
+				
+			</form>	
+			</div>
+		</div>
+		
+	</div>
 
 </body>
 </form>

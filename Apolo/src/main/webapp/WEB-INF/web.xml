@@ -88,6 +88,12 @@
   	<description></description>
   	<servlet-class>com.ApoloServlet.ServeletGyAEnfermedad</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ServletRecetaMedicaOdonto</servlet-name>
+  	<display-name>ServletRecetaMedicaOdonto</display-name>
+  	<description></description>
+  	<servlet-class>com.ApoloServlet.ServletRecetaMedicaOdonto</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ServletLogin</servlet-name>
   	<url-pattern>/ServletLogin</url-pattern>
@@ -143,5 +149,9 @@
   <servlet-mapping>
   	<servlet-name>ServeletGyAEnfermedad</servlet-name>
   	<url-pattern>/ServeletGyAEnfermedad</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletRecetaMedicaOdonto</servlet-name>
+  	<url-pattern>/ServletRecetaMedicaOdonto</url-pattern>
   </servlet-mapping>
 </web-app>

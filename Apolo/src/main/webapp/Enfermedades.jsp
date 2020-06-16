@@ -9,6 +9,9 @@
 <meta charset="ISO-8859-1">
 <title>Enfermedades</title>
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <%
@@ -26,45 +29,81 @@ if(id==null){
 %>
 
 <body>
-
-<h1 align="center">Registrar Nuevas Enfermedades:</h1>
-<br>
 <form action="ServeletGyAEnfermedad" method="get">
-<Div align="center">
-<div>
-<label>ID Enfermedad:</label>
-<br>
-<input type="text" name="nefd" value="<%=id %>" placeholder="ID de la Enfermedad">
-</div>
-<br>
-<div>
-<label>Nombre de la Enfermedad:</label>
-<br>
-<input type="text" name="nombreE" value="<%=ne %>" placeholder="Nombre Enfermedad">
-</div>
-<br>
-<div>
-<label>Tipo de Enfermedad:</label>
-<br>
-<input type="text"  name="tipoE" value="<%= te %>" placeholder="Tipo de Enfermedad">
-</div>
-<br>
-<br>
-<input type="submit" class="btn btn-info" name="btn" value="Guardar">
+<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+	
+			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33" style="background-image: url('images/apoloimg.jpg');">
+				<form class="login100-form validate-form flex-sb flex-w">
+					<span class="login100-form-title p-b-53 text-white">
+						Registrar Nuevas Enfermedades:
 
-<input type="submit" class="btn btn-info" name="btn" value="Actualizar">
+					</span>	
+
+<div class="p-t-31 p-b-9">
+
+            <label> ID Enfermedad:</label>      
+					</div>
+				<div class="wrap-input100 validate-input" data-validate = "codigo is required">	
+				<input class="input100" type="text" name="nefd" value="<%=id %>" placeholder="ID de la Enfermedad">
+						
+						<span class="focus-input100"></span>
+					</div>
+
+<div class="p-t-31 p-b-9">
+                <label>Nombre de la Enfermedad:</label>
+					</div>
+				<div class="wrap-input100 validate-input" data-validate = "codigo is required">	
+				<input class="input100" type="text" name="nombreE" value="<%=ne %>" placeholder="Nombre Enfermedad">
+						
+						<span class="focus-input100"></span>
+					</div>
+
+  <div class="p-t-31 p-b-9">
+			<label>Tipo de Enfermedad:</label>
+					</div>
+				<div class="wrap-input100 validate-input" data-validate = "codigo is required">	
+			<input class="input100" type="text"  name="tipoE" value="<%= te %>" placeholder="Tipo de Enfermedad">
+						
+						<span class="focus-input100"></span>
+					</div>
+  
+  
+				<div class="container-login100-form-btn m-t-17" align="center">
+<input type="submit" class="login100-form-btn" name="btn" value="Guardar">
+	</div>
+	
+		<div class="container-login100-form-btn m-t-17" align="center">
+<input type="submit" class="login100-form-btn" name="btn" value="Actualizar">
+	</div>
+	
+	<br>
+	<div align="center">
+	<a href="MostrarEnfd.jsp" class="btn btn-outline-danger btn-sm"><h3>Mostrar</h3> </a>
+	<a href="Doctor.jsp" class="btn btn-outline-danger btn-sm"><h3>Volver</h3></a>
+		</div>		
+	
+				
+			</form>	
+			</div>
+		</div>
+		
+	</div>
 
 
 
 
-<a href="MostrarEnfd.jsp" class="btn btn-info">Atras </a>
-</Div>
+
+
+
+
+
 </form>
 <br>
 
 
 
-<!-- <a href="#" class = "btn">salir</a> -->
+
 
 </body>
 </html>

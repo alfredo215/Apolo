@@ -37,14 +37,11 @@ public class ServeletRecetaMedica extends HttpServlet {
 		
 		RecetaMedica reMe = new RecetaMedica();
 		Consulta cons = new Consulta();
-		ConsultaOdontologica consOdon = new ConsultaOdontologica();
-		Enfermedade enfer = new Enfermedade();
 		Medicamento md = new Medicamento();
 		RecetaDao reDao = new RecetaDao();
 		
 		String codigo=null;
     	String enfermedad=null;
-		String enfermedadOdon=null;
 		String medicamento=null;
 		String cantidad=null;
 		String dosis=null;
@@ -53,7 +50,6 @@ public class ServeletRecetaMedica extends HttpServlet {
 			
 			codigo = request.getParameter("CodigoR");
 			enfermedad = request.getParameter("Enfermedad");
-			enfermedadOdon = request.getParameter("EnfermedaOdon");
 			medicamento = request.getParameter("Medicamento");
 			cantidad = request.getParameter("Cantidad");
 			dosis = request.getParameter("Dosis");
@@ -62,8 +58,6 @@ public class ServeletRecetaMedica extends HttpServlet {
 			reMe.setCodigo_Res(Integer.parseInt(codigo)); 
 			cons.setCodigo_Consulta(Integer.parseInt(enfermedad));
 			reMe.setConsulta(cons);
-			consOdon.setCodigo_ConsultaO(Integer.parseInt(enfermedadOdon));
-			reMe.setConsultaOdontologica(consOdon);		
 			md.setCodigoM(Integer.parseInt(medicamento));
 			reMe.setMedicamentoBean(md);
 			reMe.setCantidad(Double.parseDouble(cantidad));
@@ -79,14 +73,12 @@ public class ServeletRecetaMedica extends HttpServlet {
 			reMe.setCodigo_Res(Integer.parseInt(codigo));
 			cons.setCodigo_Consulta(Integer.parseInt(enfermedad));
 			reMe.setConsulta(cons);
-			consOdon.setCodigo_ConsultaO(Integer.parseInt(enfermedadOdon));
-			reMe.setConsultaOdontologica(consOdon);
 			md.setCodigoM(Integer.parseInt(medicamento));
 			reMe.setMedicamentoBean(md);
 			reMe.setCantidad(Double.parseDouble(cantidad));
 			reMe.setDocis(dosis);
 			reDao.agregarRe(reMe);
-			response.sendRedirect("Recetar.jsp");
+			response.sendRedirect("Doctor.jsp");
 		}
 		
 		

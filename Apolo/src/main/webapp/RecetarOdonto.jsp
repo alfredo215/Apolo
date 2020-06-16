@@ -4,34 +4,94 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Insert title here</title>
 </head>
-<form action="ServeletRecetaMedica" method="get">
+<form action="ServletRecetaMedicaOdonto" method="get">
 <body>
 
-<label>Codigo</label>
-<input type="text" name="CodigoR" placeholder="Codigo receta">
-<br>
-<label>Enfermedad</label>
-<input type="text" name="Enfermedad" placeholder="Nombre Enfermedad ">
-<br>
+<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+	
+			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33" style="background-image: url('images/apoloimg.jpg');">
+				<form class="login100-form validate-form flex-sb flex-w">
+					<span class="login100-form-title p-b-53 text-white">
+						Receta:
 
-<label>Enfermedad Odontologica</label>
-<input type="text" name="EnfermedaOdon" placeholder="Enfermedad Odontologica"> 
+					</span>	
+			<div class="p-t-31 p-b-9">
+						<span class="txt1">			
+        Codigo Receta:
+        </span>
+					</div>
+				<div class="wrap-input100 validate-input">	
+				<input class="input100" type="text" name="CodigoR" placeholder="Codigo receta">
+				
+						
+						<span class="focus-input100"></span>
+					</div>
+					
+		<div class="p-t-13 p-b-9">
+						<span class="txt1">
+							Enfermedad Odontologica:
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input">
+					<input class="input100" type="text" name="EnfermedaOdon" placeholder="Enfermedad Odontologica"> 
+					
+						
+						<span class="focus-input100"></span>
+					</div>
+					<div class="p-t-13 p-b-9">
+						<span class="txt1">
+							Medicamento:
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input">
+					<input class="input100" type="text" name="Medicamento" placeholder="Medicamento">
+						
+						<span class="focus-input100"></span>
+					</div>
+				<div class="p-t-13 p-b-9">
+						<span class="txt1">
+							Cantidad Medicamento:
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input">
+					<input class="input100" type="text" name="Cantidad" placeholder="Cantidad Medicamento">
+				
+						
+						<span class="focus-input100"></span>
+					</div>
+					<div class="p-t-13 p-b-9">
+						<span class="txt1">
+							Dosis Medicamento:
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input">
+					<input class="input100" type="text" name="Dosis" placeholder="Dosis Medicamento">
+					
+						
+						<span class="focus-input100"></span>
+					</div>
+					
+				<div class="container-login100-form-btn m-t-17" align="center">
+				<input type="submit" class="login100-form-btn" name="btn" value="guardar">
+				
 
-<br>
-<label>Medicamento</label>
-<input type="text" name="Medicamento" placeholder="Medicamento">
-<br>
-<label>Cantidad</label>
-<input type="text" name="Cantidad" placeholder="Cantidad Medicamento">
-<br>
-<label>Dosis</label>
-<input type="text" name="Dosis" placeholder="Dosis Medicamento">
-<br>
-<input type="submit" name="btn" value="guardar">
-<a href="Doctor.jsp" class = "btn">salir</a>
-<br>
+	</div>
+	<br>
+	<a href="Doctor.jsp" class="btn btn-outline-danger btn-sm"><h1>Volver</h1></a>
+				
+				
+			</form>	
+			</div>
+		</div>
+		
+	</div>
     
 </body>
 </form>

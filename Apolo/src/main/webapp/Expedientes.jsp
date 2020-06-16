@@ -4,7 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<title>Expedientes</title>
 </head>
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -59,11 +62,16 @@ $(document).ready(function(){
 
 
 </script>
-<body>
-	
-<br> <br>	
-<a href="guardarExpedientee.jsp" type="submit" class="btn btn-info" >Guardar</a> 
+<body style="background-image: url('images/bg-01.jpg');">
+	<div class="limiter">
+		<br>
+					<span class="login100-form-title p-b-53 text-white"	>
+					Expedientes:
+</span>
 
+	<a href="guardarExpedientee.jsp" class="btn btn-outline-danger btn-block text-white"><h2>Agregar</h2></a>	 
+<br>
+	<a href="Enfermera.jsp" class="btn btn-outline-danger btn-sm text-white"><h3>Volver</h3></a>
 
 <table border="4px" align="center" class="table table-dark" id="tablaDatos">
 
@@ -98,7 +106,8 @@ $(document).ready(function(){
 					</tbody>
 
 	</table>
-
+</div>
+</div>
 
 
 </body>

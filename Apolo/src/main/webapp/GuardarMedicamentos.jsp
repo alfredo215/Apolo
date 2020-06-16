@@ -4,6 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Insert title here</title>
 </head>
 
@@ -26,24 +30,56 @@ if(codigo==null){
 
 %>
 <form action="ServeletMedicamentos" method="get" >
+
 <body>
-    <label>Codigo</label>
-	<input type="text" name="Id" value="<%=codigo %>">
-	<br>
-	<label>nombre</label>
-	<input type="text" name="nombre" value="<%=nombre %>">
-	<br>
-	<label>tipo</label>
-	<input type="text" name="tipoM" value="<%=tipo %>">
-	<br>
-	<label>cantidad</label>
-	<input type="text" name="cantidadM" value="<%=cantidad %>">
-	<br>
+<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 	
-<br>
-<input type="submit" name="btn" value="guardar">
-<input type="submit" name="btn" value="actualizar">
-<br>
+			<div class="login100 p-l-110 p-r-110 p-t-62 p-b-33" style="background-image: url('images/apoloimg.jpg');">
+				<form class="login100-form validate-form flex-sb flex-w" >
+					<span class="login100-form-title p-b-53 text-white">
+					Guardar Medicamentos:
+					</span>	
+					
+					<label>Codigo:</label>	
+				<div class="wrap-input100 validate-input">
+				<input class="input100" type="text"  placeholder="Escribe el codigo" name="Id" value="<%=codigo %>">	
+						<span class="focus-input100"></span>
+					</div>
+				
+					<label>Nombre:</label>
+				<div class="wrap-input100 validate-input">	
+				<input class="input100" type="text" placeholder="Escribe el nombre" name="nombre" value="<%=nombre %>">
+						<span class="focus-input100"></span>
+					</div>
+						
+					<label>Tipo</label>
+				<div class="wrap-input100 validate-input">
+				<input class="input100" type="text" placeholder="Escribe el tipo " name="tipoM" value="<%=tipo %>">	
+						<span class="focus-input100"></span>
+					</div>
+
+					<label>Cantidad</label>
+				<div class="wrap-input100 validate-input" >	
+				<input class="input100" type="text" placeholder="Escribe la cantidad" name="cantidadM" value="<%=cantidad %>">
+						<span class="focus-input100"></span>
+					</div>
+					
+				<div class="container-login100-form-btn m-t-17" align="center">
+				<input type="submit" class="login100-form-btn" name="btn" value="guardar">	
+    </div>
+    <div class="container-login100-form-btn m-t-17" align="center">				
+					<input type="submit" class="login100-form-btn" name="btn" value="actualizar">
+					
+    </div>
+	<br>
+	<br>
+	<a href="Medicamentos.jsp" class="btn btn-outline-danger btn-sm"><h3>Volver</h3></a>		
+				
+			</form>	
+			</div>
+</div>
+</div>
 
 
 </body>

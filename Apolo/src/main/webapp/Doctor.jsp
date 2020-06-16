@@ -4,20 +4,36 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<title>Doctor</title>
 </head>
 <body>
-<h2>Doctor</h2>
-<br>
-<a href="Consulta.jsp" class = "btn">Consulta</a>
-<br>
-<a href="Enfermedades.jsp" class = "btn">Ingresar enfermedades</a>
-<br>
-<a href="EditarUsuariosD.jsp" class = "btn">Editar usuario</a>
-<br>
-<a href="VerExpedientes.jsp" class = "btn">Expedientes</a>
-<br>
-<a href="ConsultaOdontologica.jsp" class = "btn">Consulta odontologuica</a>
+<div class="limiter">
+	<div class="p-5 mb-2 bg-primary text-white" align="center" ><h1 class="display-2" style = "font-family:Lucida Bright">INICIO DOCTORES</h1>
+
+	</div>
+	
+	<div class="p-5 mb-2 "  >
+<div class="p-4 mb-2 text-white" align="center" >
+<a href="Consulta.jsp" class = "btn btn-outline-primary btn-lg">Consulta</a>
+
+<a href="Enfermedades.jsp" class = "btn btn-outline-primary btn-lg">Ingresar enfermedades</a>
+
+<a href="EditarUsuariosD.jsp" class = "btn btn-outline-primary btn-lg">Editar usuario</a>
+
+<a href="VerExpedientes.jsp" class = "btn btn-outline-primary btn-lg">Expedientes</a>
+
+<a href="ConsultaOdontologica.jsp" class = "btn btn-outline-primary btn-lg">Consulta odontologuica</a>
+
+<img  align="center" src="images/apoloimg.jpg">
+	</div>
+	</div>
+	
+	
+</div>
 
 
 </body>

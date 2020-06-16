@@ -1,15 +1,13 @@
 <html>
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>Enfermedades</title>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-
 <script type="text/javascript">
-
 $(document).ready(function(){
  $('#cargar').click(function(){
-	 
-	
-	
 
 	var caja= $('#buscardatos').val();
 	$.post('ServeletGyAEnfermedad',{
@@ -45,13 +43,41 @@ $(document).ready(function(){
 
 
 <body>
-<br>
-<label>Buscar Enfermedad:</label>
-<input type="text" name="" placeholder="Escribe la Enfermedad" id="buscardatos">
-<input type="submit" class="btn btn-info" name="Buscar" id="cargar" value="buscar">
+
+
+<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+	
+			<div class="login100 p-l-110 p-r-110 p-t-62 p-b-33" >
+				<div class="login100-form validate-form flex-sb flex-w">
+					<span class="login100-form-title p-b-53 text-white">
+					Buscar Enfermedad:
+
+					</span>	
+				<div class="wrap-input100 validate-input" data-validate = "Enfermedad is required">	
+				
+				<input class="input100" type="text" name="buscardatos" placeholder="Escribe la Enfermedad" id="buscardatos">
+		
+						
+						<span class="focus-input100"></span>
+					</div>
+					
+		
+				<div class="container-login100-form-btn m-t-17" align="center">
+				<input type="submit" class="login100-form-btn" name="Buscar" id="cargar" value="buscar">
+					<br>
+					
+
+	</div>
+	<br>
+	<br>
+	<a href="Enfermedades.jsp" class="btn btn-outline-danger btn-sm"><h3>Volver</h3></a>
+
+	<a href="Enfermedades.jsp" class="btn btn-outline-danger btn-sm"><h3>Agregar</h3></a>			
+				
+		</div>
 			
-			<a href="Enfermedades.jsp" class="btn btn-info">Agregar Nueva Enfermedad</a>
-			<br>
+			</div>
 
 					<table class="table table-dark" id="tablaEnfer">
 						<thead>  
@@ -65,6 +91,7 @@ $(document).ready(function(){
 							</tbody>
 
 					</table>
-
+</div>
+			</div>
 </body>
 </html>
