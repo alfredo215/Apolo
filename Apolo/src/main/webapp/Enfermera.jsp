@@ -20,7 +20,11 @@
 	
 	<div class="p-5 mb-2 "  >
 <div class="p-4 mb-2 text-white" align="center" >
-<a href="Expedientes.jsp" class = "btn btn-outline-primary btn-lg">Crear Expedient</a>
+<a href="Expedientes.jsp" class = "btn btn-outline-primary btn-lg">Crear Expediente</a>
+
+<a href="EditarExpediente.jsp" class = "btn btn-outline-primary btn-lg">Editar Expediente</a>
+
+<a href="VerExpedientes.jsp" class = "btn btn-outline-primary btn-lg">Ver Expediente</a>
 
 <a href="Medicamentos.jsp" class = "btn btn-outline-primary btn-lg">Medicamentos</a>
 

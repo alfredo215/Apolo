@@ -93,7 +93,7 @@ $(document).ready(function(){
 	</div>
 <br>
 	<br>
-	<a href="Expedientes.jsp" class="btn btn-outline-danger btn-sm"><h3>Volver</h3></a>
+	<a href="Enfermera.jsp" class="btn btn-outline-danger btn-sm"><h3>Volver</h3></a>
 	<br>
 </div>	
 			
