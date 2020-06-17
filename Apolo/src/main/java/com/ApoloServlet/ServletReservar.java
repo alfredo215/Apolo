@@ -107,6 +107,7 @@ String usu = request.getParameter("expe");
 			seccion.setAttribute("expediente",usu);
 			
 			response.sendRedirect("ReservarCita.jsp");
+			
 		}else {
 			JOptionPane.showMessageDialog(null, "Usuario o contrasenia incorrectos");
 			response.sendRedirect("LoginCita.jsp");

@@ -41,7 +41,16 @@ $(document).ready(function(){
 </script>
 
 
+<% 
+HttpSession sesion = (HttpSession) request.getSession();
+String usuSesion = (String) sesion.getAttribute("usuario");
 
+if(usuSesion==null){
+	
+	response.sendRedirect("LoginD.jsp");
+}
+
+%>
 <body>
 
 

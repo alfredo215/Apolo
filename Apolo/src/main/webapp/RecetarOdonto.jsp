@@ -10,6 +10,16 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Insert title here</title>
 </head>
+<% 
+HttpSession sesion = (HttpSession) request.getSession();
+String usuSesion = (String) sesion.getAttribute("usu");
+
+if(usuSesion==null){
+	
+	response.sendRedirect("LoginD.jsp");
+}
+
+%>
 <form action="ServletRecetaMedicaOdonto" method="get">
 <body>
 

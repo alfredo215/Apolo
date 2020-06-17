@@ -46,10 +46,10 @@
 		
 <div class="w-full text-center p-t-55">
 						<span class="txt2">
-							Nueva Cuenta?
+							
 						</span>
-		<a href="IngresoDoc.jsp" class="txt2 bo1">Crear cuenta</a>
-		</a>
+
+		
 					</div>
 				<a href="index.jsp" class="btn btn-outline-danger btn-sm"><h1>Volver</h1></a>
 			</form>	

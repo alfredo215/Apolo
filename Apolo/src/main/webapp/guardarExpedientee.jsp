@@ -10,7 +10,16 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Insert title here</title>
 </head>
+<% 
+HttpSession sesion = (HttpSession) request.getSession();
+String usuSesion = (String) sesion.getAttribute("usuario");
 
+if(usuSesion==null){
+	
+	response.sendRedirect("LoginE.jsp");
+}
+
+%>
 <% 
 String codigo = request.getParameter("cod");
 String nombre = request.getParameter("nom");
@@ -192,7 +201,7 @@ if(codigo==null){
     </div>
 	<br>
 	<br>
-	<a href="VerExpedientes.jsp" class="btn btn-outline-danger btn-sm"><h3>Volver</h3></a>		
+	<a href="Expedientes.jsp" class="btn btn-outline-danger btn-sm"><h3>Volver</h3></a>		
 				
 			</form>	
 			</div>

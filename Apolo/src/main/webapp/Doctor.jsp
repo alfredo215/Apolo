@@ -10,6 +10,16 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Doctor</title>
 </head>
+<% 
+HttpSession sesion = (HttpSession) request.getSession();
+String usuSesion = (String) sesion.getAttribute("usuario");
+
+if(usuSesion==null){
+	
+	response.sendRedirect("LoginD.jsp");
+}
+
+%>
 <body>
 <div class="limiter">
 	<div class="p-5 mb-2 bg-primary text-white" align="center" ><h1 class="display-2" style = "font-family:Lucida Bright">INICIO DOCTORES</h1>
@@ -20,13 +30,13 @@
 <div class="p-4 mb-2 text-white" align="center" >
 <a href="Consulta.jsp" class = "btn btn-outline-primary btn-lg">Consulta</a>
 
+<a href="ConsultaOdontologica.jsp" class = "btn btn-outline-primary btn-lg">Consulta odontologuica</a>
+
 <a href="Enfermedades.jsp" class = "btn btn-outline-primary btn-lg">Ingresar enfermedades</a>
 
 <a href="EditarUsuariosD.jsp" class = "btn btn-outline-primary btn-lg">Editar usuario</a>
 
-<a href="VerExpedientes.jsp" class = "btn btn-outline-primary btn-lg">Expedientes</a>
-
-<a href="ConsultaOdontologica.jsp" class = "btn btn-outline-primary btn-lg">Consulta odontologuica</a>
+<a href="VerExpedientes.jsp" class = "btn btn-outline-primary btn-lg">Ver Expedientes</a>
 
 <img  align="center" src="images/apoloimg.jpg">
 	</div>

@@ -10,6 +10,16 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Insert title here</title>
 </head>
+<% 
+HttpSession sesion = (HttpSession) request.getSession();
+String usuSesion = (String) sesion.getAttribute("usuario");
+
+if(usuSesion==null){
+	
+	response.sendRedirect("LoginD.jsp");
+}
+
+%>
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 
@@ -67,16 +77,7 @@ $(document).ready(function(){
 
 </script>
 
-<%-- <% 
-HttpSession sesion = (HttpSession) request.getSession();
-String usuSesion = (String) sesion.getAttribute("usuario");
 
-if(usuSesion==null){
-	
-	response.sendRedirect("LoginE.jsp");
-}
-
-%> --%>
 
 <body>
 <div class="limiter">
@@ -106,8 +107,8 @@ if(usuSesion==null){
 	</div>
 	<br>
 	<div align="center">
-	<a href="guardarExpedientee.jsp" class="btn btn-outline-danger btn-sm"><h3>Agregar</h3></a>	
-	<a href="Enfermera.jsp" class="btn btn-outline-danger btn-sm"><h3>Volver</h3></a>
+	
+	<a href="Doctor.jsp" class="btn btn-outline-danger btn-sm"><h3>Volver</h3></a>
 	</div>
 			
 				

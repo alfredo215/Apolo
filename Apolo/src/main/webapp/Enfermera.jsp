@@ -37,8 +37,6 @@ if(usuSesion==null){
 
 <a href="EditarExpediente.jsp" class = "btn btn-outline-primary btn-lg">Editar Expediente</a>
 
-<a href="VerExpedientes.jsp" class = "btn btn-outline-primary btn-lg">Ver Expediente</a>
-
 <a href="Medicamentos.jsp" class = "btn btn-outline-primary btn-lg">Medicamentos</a>
 
 <a href="EdicionUsuarioE.jsp" class = "btn btn-outline-primary btn-lg">Editar usuario</a>
