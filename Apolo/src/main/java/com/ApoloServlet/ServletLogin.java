@@ -105,14 +105,25 @@ public class ServletLogin extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+		//doGet(request, response);
 		//-------------------------------------------------------
 				// Loguin
 				String usu = request.getParameter("user");
 				String contra = request.getParameter("pass");
 				
 				
+				String cerrarse = request.getParameter("btnCerrar");
 				
+				if (cerrarse!=null ) {
+					
+					if (cerrarse.equals("Cerrar")) {
+						HttpSession cerrarsesion = (HttpSession)request.getSession();
+						cerrarsesion.invalidate();
+						
+						response.sendRedirect("LoginD.jsp");
+					}
+				
+				}else {
 				Usuarioshospital user = new Usuarioshospital();
 				LoginDao usuDao = new LoginDao();
 				
@@ -124,7 +135,7 @@ public class ServletLogin extends HttpServlet {
 					
 					
 					HttpSession seccion = request.getSession(true);
-					seccion.setAttribute("user",usu);
+					seccion.setAttribute("usu",usu);
 					
 					response.sendRedirect("Doctor.jsp");
 				}else {
@@ -134,8 +145,8 @@ public class ServletLogin extends HttpServlet {
 				
 				//--------------------------------------------------------------------------------
 		
+				}
 		
-		//doGet(request, response);
 	}
 
 }

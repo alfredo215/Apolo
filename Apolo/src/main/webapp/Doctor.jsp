@@ -30,6 +30,10 @@
 
 <img  align="center" src="images/apoloimg.jpg">
 	</div>
+	
+<form action="ServletLogin" method="post">
+<input type="submit" class="btn btn-outline-primary btn-lg" value="Cerrar" name="btnCerrar">
+</form>
 	</div>
 	
 	

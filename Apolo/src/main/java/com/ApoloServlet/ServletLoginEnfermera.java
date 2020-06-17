@@ -95,11 +95,21 @@ public class ServletLoginEnfermera extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+		//doGet(request, response);
 		String usu = request.getParameter("user");
 		String contra = request.getParameter("pass");
+		String cerrarse = request.getParameter("btnCerrar");
 		
-		
+		if (cerrarse!=null ) {
+			
+			if (cerrarse.equals("Cerrar")) {
+				HttpSession cerrarsesion = (HttpSession)request.getSession();
+				cerrarsesion.invalidate();
+				
+				response.sendRedirect("LoginE.jsp");
+			}
+			
+		}else {
 		
 		Usuarioshospital user = new Usuarioshospital();
 		
@@ -113,14 +123,18 @@ public class ServletLoginEnfermera extends HttpServlet {
 			
 			
 			HttpSession seccion = request.getSession(true);
-			seccion.setAttribute("user",usu);
+			seccion.setAttribute("usuario",usu);
+			
 			
 			response.sendRedirect("Enfermera.jsp");
 		}else {
-			JOptionPane.showMessageDialog(null, "Usuario o contrasenia incorrectos");
+			
 			response.sendRedirect("LoginE.jsp");
 		}
-		//doGet(request, response);
+		
+	}
+		
+		
 	}
 
 }

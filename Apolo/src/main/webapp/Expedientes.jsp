@@ -62,6 +62,18 @@ $(document).ready(function(){
 
 
 </script>
+
+<% 
+HttpSession sesion = (HttpSession) request.getSession();
+String usuSesion = (String) sesion.getAttribute("usuario");
+
+if(usuSesion==null){
+	
+	response.sendRedirect("LoginE.jsp");
+}
+
+%>
+
 <body style="background-image: url('images/bg-01.jpg');">
 	<div class="limiter">
 		<br>

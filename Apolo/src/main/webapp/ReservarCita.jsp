@@ -27,6 +27,18 @@ if(codigo==null){
 }
 
 %>
+
+<% 
+HttpSession sesion = (HttpSession) request.getSession();
+String usuSesion = (String) sesion.getAttribute("expediente");
+
+if(usuSesion==null){
+	
+	response.sendRedirect("LoginCita.jsp");
+}
+
+%>
+
 <form action="ServletReservar" method="get" >
 <body>
 <div class="limiter">
@@ -87,7 +99,7 @@ if(codigo==null){
 
 	</div>
 	<br>
-	<a href="#" class="btn btn-outline-danger btn-sm"><h1>Volver</h1></a>
+	<a href="LoginCita.jsp" class="btn btn-outline-danger btn-sm"><h1>Volver</h1></a>
 				
 				
 			</form>	

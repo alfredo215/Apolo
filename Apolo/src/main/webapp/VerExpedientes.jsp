@@ -67,6 +67,16 @@ $(document).ready(function(){
 
 </script>
 
+<%-- <% 
+HttpSession sesion = (HttpSession) request.getSession();
+String usuSesion = (String) sesion.getAttribute("usuario");
+
+if(usuSesion==null){
+	
+	response.sendRedirect("LoginE.jsp");
+}
+
+%> --%>
 
 <body>
 <div class="limiter">
@@ -97,7 +107,7 @@ $(document).ready(function(){
 	<br>
 	<div align="center">
 	<a href="guardarExpedientee.jsp" class="btn btn-outline-danger btn-sm"><h3>Agregar</h3></a>	
-	<a href="Doctor.jsp" class="btn btn-outline-danger btn-sm"><h3>Volver</h3></a>
+	<a href="Enfermera.jsp" class="btn btn-outline-danger btn-sm"><h3>Volver</h3></a>
 	</div>
 			
 				

@@ -91,7 +91,7 @@ public class ServletReservar extends HttpServlet {
 		
 String usu = request.getParameter("expe");
 
-		
+
 		expedientesDao usuDao= new expedientesDao();
 		
 		Paciente user = new Paciente();
@@ -104,7 +104,7 @@ String usu = request.getParameter("expe");
 			
 			
 			HttpSession seccion = request.getSession(true);
-			seccion.setAttribute("expe",usu);
+			seccion.setAttribute("expediente",usu);
 			
 			response.sendRedirect("ReservarCita.jsp");
 		}else {
@@ -113,5 +113,7 @@ String usu = request.getParameter("expe");
 		}
 		
 	}
+		
+	
 
 }

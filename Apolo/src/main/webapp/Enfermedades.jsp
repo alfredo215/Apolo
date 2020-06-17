@@ -28,6 +28,17 @@ if(id==null){
 
 %>
 
+
+<% 
+HttpSession sesion = (HttpSession) request.getSession();
+String usuSesion = (String) sesion.getAttribute("usu");
+
+if(usuSesion==null){
+	
+	response.sendRedirect("LoginD.jsp");
+}
+
+%>
 <body>
 <form action="ServeletGyAEnfermedad" method="get">
 <div class="limiter">

@@ -10,6 +10,18 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Enfermera</title>
 </head>
+<% 
+HttpSession sesion = (HttpSession) request.getSession();
+String usuSesion = (String) sesion.getAttribute("usuario");
+
+if(usuSesion==null){
+	
+	response.sendRedirect("LoginE.jsp");
+}
+
+%>
+
+
 <body>
 
 <div class="limiter">
@@ -20,6 +32,7 @@
 	
 	<div class="p-5 mb-2 "  >
 <div class="p-4 mb-2 text-white" align="center" >
+
 <a href="Expedientes.jsp" class = "btn btn-outline-primary btn-lg">Crear Expediente</a>
 
 <a href="EditarExpediente.jsp" class = "btn btn-outline-primary btn-lg">Editar Expediente</a>
@@ -32,8 +45,15 @@
 
 <a href="FarmaciaE.jsp" class = "btn btn-outline-primary btn-lg">Farmacia</a>
 
+
+
+
 <img  align="center" src="images/apoloimg.jpg">
 	</div>
+	
+<form action="ServletLoginEnfermera" method="post">
+<input type="submit" class="btn btn-outline-primary btn-lg" value="Cerrar" name="btnCerrar">
+</form>
 	</div>
 	
 	

@@ -10,7 +10,19 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Odontologia</title>
 </head>
+<% 
+HttpSession sesion = (HttpSession) request.getSession();
+String usuSesion = (String) sesion.getAttribute("usu");
+
+if(usuSesion==null){
+	
+	response.sendRedirect("LoginD.jsp");
+}
+
+%>
+
 <body>
+
 
 <body>
 

@@ -52,6 +52,18 @@
 		});
 		
 </script>
+
+<% 
+HttpSession sesion = (HttpSession) request.getSession();
+String usuSesion = (String) sesion.getAttribute("usu");
+
+if(usuSesion==null){
+	
+	response.sendRedirect("LoginD.jsp");
+}
+
+%>
+
 <body>
 <div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
