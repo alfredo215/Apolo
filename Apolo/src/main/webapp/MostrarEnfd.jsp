@@ -10,7 +10,7 @@ $(document).ready(function(){
  $('#cargar').click(function(){
 
 	var caja= $('#buscardatos').val();
-	$.post('ServeletGyAEnfermedad',{
+	$.get('ServeletGyAEnfermedad',{
 		caja
 	},function(response){
 
@@ -42,14 +42,14 @@ $(document).ready(function(){
 
 
 <% 
-HttpSession sesion = (HttpSession) request.getSession();
+/*HttpSession sesion = (HttpSession) request.getSession();
 String usuSesion = (String) sesion.getAttribute("usuario");
 
 if(usuSesion==null){
 	
 	response.sendRedirect("LoginD.jsp");
 }
-
+*/
 %>
 <body>
 

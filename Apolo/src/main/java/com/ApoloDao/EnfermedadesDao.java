@@ -32,6 +32,27 @@ public class EnfermedadesDao {
 		return listaEn;
 	}
 	
+	public List<Object> EnfermedadSelect(Enfermedade enfd) {
+		List<Object> listaEn = new ArrayList();
+		System.out.println(enfd);
+			
+		EntityManager em;
+		EntityManagerFactory emf;
+		emf = Persistence.createEntityManagerFactory("Apolo");
+		em = emf.createEntityManager();
+		
+		try {
+			em.getTransaction().begin();
+			listaEn = em.createQuery("SELECT enf.enfermedad, enf.nombre_E, enf.tipo FROM Enfermedade AS enf").getResultList();
+			em.getTransaction().commit();
+			
+		} catch (Exception e) {
+			
+			System.out.println(e);
+		}
+		
+		return listaEn;
+	}
 	
 	public void agregarDatos(Enfermedade ed) {
 		EntityManager em;

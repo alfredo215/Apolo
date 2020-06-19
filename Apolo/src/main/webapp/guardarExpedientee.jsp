@@ -9,15 +9,17 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Insert title here</title>
+
+
 </head>
 <% 
-HttpSession sesion = (HttpSession) request.getSession();
+/*HttpSession sesion = (HttpSession) request.getSession();
 String usuSesion = (String) sesion.getAttribute("usuario");
 
 if(usuSesion==null){
 	
 	response.sendRedirect("LoginE.jsp");
-}
+}*/
 
 %>
 <% 
@@ -61,6 +63,55 @@ if(codigo==null){
 }
 
 %>
+
+
+<!-- ---------------------------------------------------------------------------------------------------------- -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.post('ServletSelectConsulta',{
+		
+	},function(response){
+	let datos = JSON.parse(response);
+	console.log(datos)
+	var selector = document.getElementById('TipoSelect');
+	for (let item of datos){
+
+		selector.innerHTML +=`
+			<option value = "${item[0]}">${item[1]}</option>
+		`
+	}
+	document.getElementById('TipoSelect').value="<%=enfermedades%>";
+	
+});
+});
+</script>
+<!-- -------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$.post('ServletSelectMedicamentos',{
+		
+	},function(response){
+	let datos = JSON.parse(response);
+	console.log(datos)
+	var selector = document.getElementById('TipoSelectMedi');
+	for (let item of datos){
+
+		selector.innerHTML +=`
+			<option value = "${item[0]}">${item[1]}</option>
+		`
+	}
+	document.getElementById('TipoSelectMedi').value="<%=medicamento %>";
+});
+});
+</script>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
 
 
 <body>
@@ -153,7 +204,10 @@ if(codigo==null){
 	
 <label>Enfermedad del Paciente:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe la enfermedad paciente" type="text" name="enfermedades_p" value="<%=enfermedades %>">	
+				
+				<select class="input100" name="enfermedades_p"  id="TipoSelect" >
+<option selected>Elige...</option>
+</select>			
 						<span class="focus-input100"></span>
 					</div>
 
@@ -168,13 +222,19 @@ if(codigo==null){
 	
 <label>Medicamento:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe el medicamento" type="text" name="medicamento_p" value="<%=medicamento %>">	
+				
+								<select class="input100" name="medicamento_p"  id="TipoSelectMedi">
+<option selected>Elige...</option>
+</select>
+				
+				
+				
 						<span class="focus-input100"></span>
 					</div>
 	
 	 
 <label>Antecedentes Medicos:</label>	
-				<div class="wrap-input100 validate-input">
+				<div class="wrap-input100 validate-input">	
 				<input class="input100" placeholder="Escribe los antecedentes medicos" type="text" name="ante_medicos" value="<%=anteMedicos %>">	
 						<span class="focus-input100"></span>
 					</div>

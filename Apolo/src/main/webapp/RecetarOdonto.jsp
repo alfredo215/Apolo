@@ -20,6 +20,28 @@ if(usuSesion==null){
 }
 
 %>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.post('ServletSelectMedicamentos',{
+		
+	},function(response){
+	let datos = JSON.parse(response);
+	console.log(datos)
+	var selector = document.getElementById('TipoSelectMedi');
+	for (let item of datos){
+
+		selector.innerHTML +=`
+			<option value = "${item[0]}">${item[1]}</option>
+		`
+	}
+
+});
+});
+</script>
+
+
 <form action="ServletRecetaMedicaOdonto" method="get">
 <body>
 
@@ -46,11 +68,11 @@ if(usuSesion==null){
 					
 		<div class="p-t-13 p-b-9">
 						<span class="txt1">
-							Enfermedad Odontologica:
+							Consulta Odontologica:
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input">
-					<input class="input100" type="text" name="EnfermedaOdon" placeholder="Enfermedad Odontologica"> 
+					<input class="input100" type="text" name="EnfermedaOdon" placeholder="Codigo de la consulta"> 
 					
 						
 						<span class="focus-input100"></span>
@@ -61,7 +83,13 @@ if(usuSesion==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input">
-					<input class="input100" type="text" name="Medicamento" placeholder="Medicamento">
+					
+					<select class="input100" name="Medicamento"  id="TipoSelectMedi">
+			<option selected>Elige...</option>
+		</select>
+					
+					
+	
 						
 						<span class="focus-input100"></span>
 					</div>

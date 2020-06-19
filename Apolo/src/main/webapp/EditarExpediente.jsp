@@ -53,7 +53,7 @@ $(document).ready(function(){
 		 	<td>${item[14]} </td> 
 		 	<td>${item[15]} </td> 
 		 	<td>${item[16]} </td> 
-		 	<td><a href="guardarExpedientee.jsp?cod=${item[0]}&codex=${item[1]}&nom=${item[2]}&ap=${item[3]}&sex=${item[4]}&fn=${item[5]}&edad=${item[6]}&depana=${item[7]}&munina=${item[8]}&peso=${item[9]}&altura=${item[10]}&vacuna=${item[11]}&enfer=${item[12]}&aler=${item[13]}&medi=${item[14]}&anme=${item[15]}&anodo=${item[16]}&cita=${item[17]}" class="btn btn-danger"> Actualizar</a> </td> 
+		 	<td><a href="guardarExpedientee.jsp?cod=${item[0]}&nom=${item[1]}&ap=${item[2]}&sex=${item[3]}&fn=${item[4]}&edad=${item[5]}&depana=${item[6]}&munina=${item[7]}&peso=${item[8]}&altura=${item[9]}&vacuna=${item[10]}&enfer=${item[11]}&aler=${item[12]}&medi=${item[13]}&anme=${item[14]}&anodo=${item[15]}&cita=${item[16]}" class="btn btn-danger"> Actualizar</a> </td> 
 		 	
  	   
 		`
@@ -67,14 +67,14 @@ $(document).ready(function(){
 
 </script>
 
-<% 
+<% /* 
 HttpSession sesion = (HttpSession) request.getSession();
 String usuSesion = (String) sesion.getAttribute("usuario");
 
 if(usuSesion==null){
 	
 	response.sendRedirect("LoginE.jsp");
-}
+}*/
 
 %>
 <body>

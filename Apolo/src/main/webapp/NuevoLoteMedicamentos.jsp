@@ -37,6 +37,30 @@ if(codigo==null){
 }
 
 %>
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.post('ServletSelectMedicamentos',{
+		
+	},function(response){
+	let datos = JSON.parse(response);
+	console.log(datos)
+	var selector = document.getElementById('TipoSelectMedi');
+	for (let item of datos){
+
+		selector.innerHTML +=`
+			<option value = "${item[0]}">${item[1]}</option>
+		`
+	}
+	document.getElementById('TipoSelectMedi').value="<%=NvMedicamentos %>";
+});
+});
+</script>
+
+
+
 <form action="ServletLoteMedi" method="get" >
 <body>
 
@@ -66,7 +90,11 @@ if(codigo==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "medicamento is required">
-					<input class="input100" type="text" placeholder="Introdusca nombre Medicamento" name="nombreNmedic" value="<%=NvMedicamentos %>">
+					
+					<select class="input100" name="nombreNmedic"  id="TipoSelectMedi">
+<option selected>Elige...</option>
+</select>
+					
 					
 						
 						<span class="focus-input100"></span>

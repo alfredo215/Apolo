@@ -9,6 +9,28 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Consulta</title>
+
+<!-- ----------------------------------------------------------------------------------------- -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.post('ServletSelectConsulta',{
+		
+	},function(response){
+	let datos = JSON.parse(response);
+	console.log(datos)
+	var selector = document.getElementById('TipoSelect');
+	for (let item of datos){
+
+		selector.innerHTML +=`
+			<option value = "${item[0]}">${item[1]}</option>
+		`
+	}
+	
+});
+});
+</script>
+<!-- ---------------------------------------------------------- -->
 </head>
 
 <% 
@@ -56,7 +78,10 @@ if(usuSesion==null){
 					</div>
 <label>Enfermedad:</label>
 <div class="wrap-input100 validate-input" >
-<input class="input100" type="text" name="Enfermedades" placeholder="Ingrese la Enfermedades">
+
+<select class="input100" name="Enfermedades"  id="TipoSelect">
+<option selected>Elige...</option>
+</select>
 <span class="focus-input100"></span>
 					</div>
 <div class="container-login100-form-btn m-t-17" align="center">

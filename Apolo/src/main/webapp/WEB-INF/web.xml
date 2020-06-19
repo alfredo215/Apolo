@@ -94,6 +94,18 @@
   	<description></description>
   	<servlet-class>com.ApoloServlet.ServletRecetaMedicaOdonto</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ServletSelectConsulta</servlet-name>
+  	<display-name>ServletSelectConsulta</display-name>
+  	<description></description>
+  	<servlet-class>com.ApoloServlet.ServletSelectConsulta</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServletSelectMedicamentos</servlet-name>
+  	<display-name>ServletSelectMedicamentos</display-name>
+  	<description></description>
+  	<servlet-class>com.ApoloServlet.ServletSelectMedicamentos</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ServletLogin</servlet-name>
   	<url-pattern>/ServletLogin</url-pattern>
@@ -153,5 +165,13 @@
   <servlet-mapping>
   	<servlet-name>ServletRecetaMedicaOdonto</servlet-name>
   	<url-pattern>/ServletRecetaMedicaOdonto</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletSelectConsulta</servlet-name>
+  	<url-pattern>/ServletSelectConsulta</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletSelectMedicamentos</servlet-name>
+  	<url-pattern>/ServletSelectMedicamentos</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -37,6 +37,34 @@ public class medicamentosDao {
 	}
 	
 	
+	
+	public List<Medicamento> SelectMedicamentos(Medicamento me) {
+		List<Medicamento> listaMe = new ArrayList();
+		System.out.println(me);
+		
+		EntityManager em;
+		EntityManagerFactory emf;
+		
+		emf = Persistence.createEntityManagerFactory("Apolo");
+		em = emf.createEntityManager();
+		
+		try {
+			em.getTransaction().begin();
+			listaMe = em.createQuery("SELECT m.codigoM, m.nombre, tipo, m.cantidad "
+					+ " FROM Medicamento AS m").getResultList();
+			em.getTransaction().commit();
+			
+		} catch (Exception e) {
+			
+			System.out.println(e);
+		}
+		
+		return listaMe;
+	}
+	
+	
+	
+	
 	public void agregarMe(Medicamento me) {
 		EntityManager em;
 		EntityManagerFactory emf;

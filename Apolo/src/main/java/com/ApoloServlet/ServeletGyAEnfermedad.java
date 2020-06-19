@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.Apolo.model.Enfermedade;
 import com.ApoloDao.EnfermedadesDao;
+import com.ApoloDao.GyAexpedienteDao;
 import com.google.gson.Gson;
 
 /**
@@ -78,7 +79,7 @@ public class ServeletGyAEnfermedad extends HttpServlet {
 
 		} 
 		
-		
+//-----------------------------------------------------------------------------------------------		
 		
 	}
 
@@ -88,6 +89,9 @@ public class ServeletGyAEnfermedad extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	//	doGet(request, response);
+		
+		
+		
 		
 		String capturar = request.getParameter("caja");
 		
