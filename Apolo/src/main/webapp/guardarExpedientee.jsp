@@ -13,13 +13,13 @@
 
 </head>
 <% 
-/*HttpSession sesion = (HttpSession) request.getSession();
+HttpSession sesion = (HttpSession) request.getSession();
 String usuSesion = (String) sesion.getAttribute("usuario");
 
 if(usuSesion==null){
 	
 	response.sendRedirect("LoginE.jsp");
-}*/
+}
 
 %>
 <% 
@@ -127,77 +127,77 @@ $(document).ready(function(){
 					
 					<label>Codigo:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe el codigo paciente" type="text" name="codigo_p" value="<%=codigo %>">
+				<input class="input100" placeholder="Escribe el codigo paciente" type="text" name="codigo_p" value="<%=codigo %>" id="Expe" required>
 						<span class="focus-input100"></span>
 					</div>
 
 	                                                                                          
 	<label>Nombre Paciente:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe el nombre paciente" type="text" name="nombre_p" value="<%=nombre %>">	
+				<input class="input100" placeholder="Escribe el nombre paciente" type="text" name="nombre_p" value="<%=nombre %>" id="nom" required>	
 						<span class="focus-input100"></span>
 					</div>
 					
 
 	<label>Apellido:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe el apellido paciente" type="text" name="apellido_p" value="<%=apellido %>">	
+				<input class="input100" placeholder="Escribe el apellido paciente" type="text" name="apellido_p" value="<%=apellido %>" id="ape" required>	
 						<span class="focus-input100"></span>
 					</div>
 
 	
 <label>Sexo:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe el sexo paciente" type="text" name="sexo_p" value="<%=sexo %>">	
+				<input class="input100" placeholder="Escribe el sexo paciente" type="text" name="sexo_p" value="<%=sexo %>" id="sex" required>	
 						<span class="focus-input100"></span>
 					</div> 
 	
 
-<label>Fecha de Nacimiento: dd/mm/yyyy </label>	
+<label>Fecha de Nacimiento:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="dd/mm/yyyy" type="text" name="fechan_p" value="<%=fechaNa %>">
+				<input class="input100" placeholder="Escribe la fecha nacimiento" type="date" name="fechan_p" value="<%=fechaNa %>" id="fech" required>
 						<span class="focus-input100"></span>
 					</div>
 	
 	
 	<label>Edad:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe la edad paciente" type="text" name="edad_p" value="<%=edad %>">	
+				<input class="input100" placeholder="Escribe la edad paciente" type="text" name="edad_p" value="<%=edad %>" id="eda" required>	
 						<span class="focus-input100"></span>
 					</div> 
 	
 	
 <label>Departamento Nacimiento:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe el departamento de nacimiento" type="text" name="departamenton_p" value="<%=deparNa %>">	
+				<input class="input100" placeholder="Escribe el departamento de nacimiento" type="text" name="departamenton_p" value="<%=deparNa %>" id="depa" required>	
 						<span class="focus-input100"></span>
 					</div>
  
 	
 <label>Municipio Nacimento:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe el municipio de nacimiento" type="text" name="municipion_P" value="<%=muniNa %>">	
+				<input class="input100" placeholder="Escribe el municipio de nacimiento" type="text" name="municipion_P" value="<%=muniNa %>" id="muni" required>	
 						<span class="focus-input100"></span>
 					</div>
 	
 	
 <label>Peso:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe el peso paciente" type="text" name="peso_p" value="<%=peso %>">	
+				<input class="input100" placeholder="Escribe el peso paciente" type="text" name="peso_p" value="<%=peso %>" id="pes" required>	
 						<span class="focus-input100"></span>
 					</div>
  
 	
 	<label>Altura:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe la altura paciente" type="text" name="altura_p" value="<%=altura %>">
+				<input class="input100" placeholder="Escribe la altura paciente" type="text" name="altura_p" value="<%=altura %>" id="altu" required>
 						<span class="focus-input100"></span>
 					</div>
 	
 	
 <label>Vacunas:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe las vacunas paciente" type="text" name="vacuna_p" value="<%=vacunas %>">	
+				<input class="input100" placeholder="Escribe las vacunas paciente" type="text" name="vacuna_p" value="<%=vacunas %>" id="vacu" required>	
 						<span class="focus-input100"></span>
 					</div>
 	
@@ -205,8 +205,8 @@ $(document).ready(function(){
 <label>Enfermedad del Paciente:</label>	
 				<div class="wrap-input100 validate-input">
 				
-				<select class="input100" name="enfermedades_p"  id="TipoSelect" >
-<option selected>Elige...</option>
+				<select class="input100" name="enfermedades_p"  id="TipoSelect" required>
+<option value>Elige...</option>
 </select>			
 						<span class="focus-input100"></span>
 					</div>
@@ -215,7 +215,7 @@ $(document).ready(function(){
 	
 	<label>Alergias:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe las alergias paciente" type="text" name="alergia_p" value="<%=alergias %>">	
+				<input class="input100" placeholder="Escribe las alergias paciente" type="text" name="alergia_p" value="<%=alergias %>" id="aler" required>	
 						<span class="focus-input100"></span>
 					</div>
 	
@@ -223,8 +223,8 @@ $(document).ready(function(){
 <label>Medicamento:</label>	
 				<div class="wrap-input100 validate-input">
 				
-								<select class="input100" name="medicamento_p"  id="TipoSelectMedi">
-<option selected>Elige...</option>
+								<select class="input100" name="medicamento_p"  id="TipoSelectMedi" required>
+<option value>Elige...</option>
 </select>
 				
 				
@@ -235,28 +235,28 @@ $(document).ready(function(){
 	 
 <label>Antecedentes Medicos:</label>	
 				<div class="wrap-input100 validate-input">	
-				<input class="input100" placeholder="Escribe los antecedentes medicos" type="text" name="ante_medicos" value="<%=anteMedicos %>">	
+				<input class="input100" placeholder="Escribe los antecedentes medicos" type="text" name="ante_medicos" value="<%=anteMedicos %>" id="ante" required>	
 						<span class="focus-input100"></span>
 					</div>
 	 
 	
 <label>Antecedentes Odontologicos:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe los antecedentes odontologicos" type="text" name="ante_odontologicos" value="<%=anteOdon %>">	
+				<input class="input100" placeholder="Escribe los antecedentes odontologicos" type="text" name="ante_odontologicos" value="<%=anteOdon %>" id="anteo" required>	
 						<span class="focus-input100"></span>
 					</div>
 	 
 	
 <label>Cita:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe la cita medica" type="text" name="cita_p" value="<%=cita %>">	
+				<input class="input100" placeholder="Escribe la cita medica" type="text" name="cita_p" value="<%=cita %>" id="cyt" required>	
 						<span class="focus-input100"></span>
 					</div>
 	<div class="container-login100-form-btn m-t-17" align="center">
-				<input type="submit" class="login100-form-btn" name="btn" value="Guardar">	
+				<input type="submit" class="login100-form-btn" name="btn" value="Guardar" >	
     </div>
     <div class="container-login100-form-btn m-t-17" align="center">				
-					<input type="submit" class="login100-form-btn" name="btn" value="Actualizar">
+					<input type="submit" class="login100-form-btn" name="btn" value="Actualizar" >
 					
     </div>
 	<br>
@@ -269,6 +269,8 @@ $(document).ready(function(){
 
 		
 	</form>
+	
+	
 </body>
 
 </html>

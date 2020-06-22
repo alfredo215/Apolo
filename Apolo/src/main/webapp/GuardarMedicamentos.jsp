@@ -52,33 +52,33 @@ if(codigo==null){
 					
 					<label>Codigo:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" type="text"  placeholder="Escribe el codigo" name="Id" value="<%=codigo %>">	
+				<input class="input100" type="text"  placeholder="Escribe el codigo" name="Id" value="<%=codigo %>" required>	
 						<span class="focus-input100"></span>
 					</div>
 				
 					<label>Nombre:</label>
 				<div class="wrap-input100 validate-input">	
-				<input class="input100" type="text" placeholder="Escribe el nombre" name="nombre" value="<%=nombre %>">
+				<input class="input100" type="text" placeholder="Escribe el nombre" name="nombre" value="<%=nombre %>" required>
 						<span class="focus-input100"></span>
 					</div>
 						
 					<label>Tipo</label>
 				<div class="wrap-input100 validate-input">
-				<input class="input100" type="text" placeholder="Escribe el tipo " name="tipoM" value="<%=tipo %>">	
+				<input class="input100" type="text" placeholder="Escribe el tipo " name="tipoM" value="<%=tipo %>" required>	
 						<span class="focus-input100"></span>
 					</div>
 
 					<label>Cantidad</label>
 				<div class="wrap-input100 validate-input" >	
-				<input class="input100" type="text" placeholder="Escribe la cantidad" name="cantidadM" value="<%=cantidad %>">
+				<input class="input100" type="text" placeholder="Escribe la cantidad" name="cantidadM" value="<%=cantidad %>" required>
 						<span class="focus-input100"></span>
 					</div>
 					
 				<div class="container-login100-form-btn m-t-17" align="center">
-				<input type="submit" class="login100-form-btn" name="btn" value="guardar">	
+				<input type="submit" class="login100-form-btn" name="btn" value="guardar"">	
     </div>
     <div class="container-login100-form-btn m-t-17" align="center">				
-					<input type="submit" class="login100-form-btn" name="btn" value="actualizar">
+					<input type="submit" class="login100-form-btn" name="btn" value="actualizar" ">
 					
     </div>
 	<br>
@@ -89,6 +89,9 @@ if(codigo==null){
 			</div>
 </div>
 </div>
+
+
+
 
 
 </body>

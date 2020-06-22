@@ -60,7 +60,7 @@ $(document).ready(function(){
         </span>
 					</div>
 				<div class="wrap-input100 validate-input">	
-				<input class="input100" type="text" name="CodigoR" placeholder="Codigo receta">
+				<input class="input100" type="text" name="CodigoR" placeholder="Codigo receta" required>
 				
 						
 						<span class="focus-input100"></span>
@@ -72,7 +72,7 @@ $(document).ready(function(){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input">
-					<input class="input100" type="text" name="EnfermedaOdon" placeholder="Codigo de la consulta"> 
+					<input class="input100" type="text" name="EnfermedaOdon" placeholder="Codigo de la consulta" required> 
 					
 						
 						<span class="focus-input100"></span>
@@ -84,7 +84,7 @@ $(document).ready(function(){
 					</div>
 					<div class="wrap-input100 validate-input">
 					
-					<select class="input100" name="Medicamento"  id="TipoSelectMedi">
+					<select class="input100" name="Medicamento"  id="TipoSelectMedi" required>
 			<option selected>Elige...</option>
 		</select>
 					
@@ -99,7 +99,7 @@ $(document).ready(function(){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input">
-					<input class="input100" type="text" name="Cantidad" placeholder="Cantidad Medicamento">
+					<input class="input100" type="text" name="Cantidad" placeholder="Cantidad Medicamento" required>
 				
 						
 						<span class="focus-input100"></span>
@@ -110,7 +110,7 @@ $(document).ready(function(){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input">
-					<input class="input100" type="text" name="Dosis" placeholder="Dosis Medicamento">
+					<input class="input100" type="text" name="Dosis" placeholder="Dosis Medicamento" required>
 					
 						
 						<span class="focus-input100"></span>

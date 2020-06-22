@@ -48,7 +48,7 @@ if(idBus==null){
         </span>
 					</div>
 				<div class="wrap-input100 validate-input" >
-				<input class="input100" type="text" placeholder="Introdusca su ID" name="idBus" value="<%=idBus %>">
+				<input class="input100" type="text" placeholder="Introdusca su ID" name="idBus" value="<%=idBus %>" required>
 
 						
 						<span class="focus-input100"></span>
@@ -60,7 +60,7 @@ if(idBus==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-					<input class="input100" type="text" placeholder="Introdusca la Cedula Enfermera" name="Cenfermera" value="<%=CedE %>">
+					<input class="input100" type="text" placeholder="Introdusca la Cedula Enfermera" name="Cenfermera" value="<%=CedE %>" required>
 					
 						
 						<span class="focus-input100"></span>
@@ -71,7 +71,7 @@ if(idBus==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-					<input class="input100" type="text" placeholder="Introdusca su Usuario" name="User" value="<%=Usuar %>">
+					<input class="input100" type="text" placeholder="Introdusca su Usuario" name="User" value="<%=Usuar %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -81,7 +81,7 @@ if(idBus==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-					<input class="input100" type="password" placeholder="Introdusca la Contraseña" name="Contra" value="<%=Contras %>">
+					<input class="input100" type="password" placeholder="Introdusca la Contraseña" name="Contra" value="<%=Contras %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>

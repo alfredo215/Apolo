@@ -31,7 +31,7 @@
         </span>
 					</div>
 				<div class="wrap-input100 validate-input" data-validate = "Username is required">	
-		<input class="input100" type="text" placeholder="Introdusca usuario" name="user">
+		<input class="input100" type="text" placeholder="Introdusca usuario" name="user" required>
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -42,7 +42,7 @@
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-           <input class="input100" type="password" placeholder="Introdusca contraseña"  name="pass">
+           <input class="input100" type="password" placeholder="Introdusca contraseña"  name="pass" required>
 						
 						<span class="focus-input100"></span>
 					</div>

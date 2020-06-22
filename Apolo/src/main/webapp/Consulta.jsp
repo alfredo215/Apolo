@@ -9,7 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Consulta</title>
-
 <!-- ----------------------------------------------------------------------------------------- -->
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript">
@@ -58,34 +57,34 @@ if(usuSesion==null){
 					
 <label>Codigo consulta:</label>
 <div class="wrap-input100 validate-input">
-<input class="input100" type="text" name="codigoConsul" placeholder="Codigo consulta">
+<input class="input100" type="text" name="codigoConsul" placeholder="Codigo consulta"  id="CodiCon" required>
 <span class="focus-input100"></span>
 					</div>
 <label>Cedula:</label>
 <div class="wrap-input100 validate-input">
-<input class="input100" type="text" name="Cedula" placeholder="Cedula de Doctor">
+<input class="input100" type="text" name="Cedula" placeholder="Cedula de Doctor"  id="CedD" required>
 <span class="focus-input100"></span>
 					</div>
 <label>Paciente:</label>
 <div class="wrap-input100 validate-input">
-<input class="input100" type="text" name="Paciente" placeholder="Ingrese Paciente">
+<input class="input100" type="text" name="Paciente" placeholder="Ingrese Paciente"  id="Pas" required>
 <span class="focus-input100"></span>
 					</div>
 <label>Sintomas:</label>
 <div class="wrap-input100 validate-input">
-<input class="input100" type="text" name="sintomas" placeholder="Ingrese el sintoma">
+<input class="input100" type="text" name="sintomas" placeholder="Ingrese el sintoma"  id="Sinto" required>
 <span class="focus-input100"></span>
 					</div>
 <label>Enfermedad:</label>
 <div class="wrap-input100 validate-input" >
 
-<select class="input100" name="Enfermedades"  id="TipoSelect">
-<option selected>Elige...</option>
+<select class="input100" name="Enfermedades"  id="TipoSelect" required>
+<option value>Elige...</option>
 </select>
 <span class="focus-input100"></span>
 					</div>
 <div class="container-login100-form-btn m-t-17" align="center">
-<input class="login100-form-btn"  type="submit" name="btn" value="Recetar"  >
+<input class="login100-form-btn"  type="submit" name="btn" value="Recetar">
 </div>
 <br>
 <a href="Doctor.jsp" class="btn btn-outline-danger btn-lg"><h3>salir</h3></a>

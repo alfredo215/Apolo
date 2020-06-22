@@ -63,7 +63,7 @@ if(usuSesion==null){
 
 <label>Codigo consulta Odontologica:</label>
 <div class="wrap-input100 validate-input" data-validate = "cedula is required">	
-				<input class="input100" type="text" name="codigoConsulO" placeholder="Codigo consulta Odontologica">
+				<input class="input100" type="text" name="codigoConsulO" placeholder="Codigo consulta Odontologica" required id="CodiCon">
 		
 						
 						<span class="focus-input100"></span>
@@ -71,35 +71,35 @@ if(usuSesion==null){
 
 <label>Cedula:</label>
 <div class="wrap-input100 validate-input" data-validate = "cedula is required">	
-				<input class="input100" type="text" name="Cedula" placeholder="Cedula de Odontologo">
+				<input class="input100" type="text" name="Cedula" placeholder="Cedula de Odontologo" required id="CedD">
 						
 						<span class="focus-input100"></span>
 					</div>
 
 <label>Paciente</label>
 <div class="wrap-input100 validate-input" data-validate = "cedula is required">	
-				<input class="input100" type="text" name="Paciente" placeholder="Ingrese el Paciente">		
+				<input class="input100" type="text" name="Paciente" placeholder="Ingrese el Paciente" required id="Pas">		
 						<span class="focus-input100"></span>
 					</div>
 
 <label>Sintomas</label>
 <div class="wrap-input100 validate-input" data-validate = "cedula is required">	
-				<input class="input100" type="text" name="sintomas" placeholder="Ingrese el sintoma">	
+				<input class="input100" type="text" name="sintomas" placeholder="Ingrese el sintoma" required id="Sinto">	
 						<span class="focus-input100"></span>
 					</div>
 
 
 <label>Enfermedad Odontologica</label>
 <div class="wrap-input100 validate-input" data-validate = "cedula is required">	
-				<select class="input100" name="Enfermedades"  id="TipoSelect">
-<option selected>Elige...</option>
+				<select class="input100" name="Enfermedades"  id="TipoSelect" required id="TipoSelect">
+<option value>Elige...</option>
 </select>
 						<span class="focus-input100"></span>
 					</div>
 
 
 				<div class="container-login100-form-btn m-t-17" align="center">
-					<input class="login100-form-btn" type="submit" name="btn" value="Recetar">
+					<input class="login100-form-btn" type="submit" name="btn" value="Recetar" >
 
 	</div>
 
@@ -111,6 +111,7 @@ if(usuSesion==null){
 		</div>
 		
 	</div>
+
 </body>
 </form>
 </html>

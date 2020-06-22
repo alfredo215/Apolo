@@ -10,16 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Insert title here</title>
 </head>
-<% 
-HttpSession sesion = (HttpSession) request.getSession();
-String usuSesion = (String) sesion.getAttribute("usuario");
 
-if(usuSesion==null){
-	
-	response.sendRedirect("LoginD.jsp");
-}
-
-%>
 
 <%
 String idBus=request.getParameter("idBus");
@@ -61,7 +52,7 @@ if(idBus==null){
         </span>
 					</div>
 				<div class="wrap-input100 validate-input" >
-				<input class="input100" type="text" placeholder="Introdusca su ID" name="idBus" value="<%=idBus %>">	
+				<input class="input100" type="text" placeholder="Introdusca su ID" name="idBus" value="<%=idBus %>" required>	
 
 						
 						<span class="focus-input100"></span>
@@ -73,7 +64,7 @@ if(idBus==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-					<input class="input100" type="text" placeholder="Introdusca la Cedula Doc." name="Cdoctor" value="<%=Ced %>">
+					<input class="input100" type="text" placeholder="Introdusca la Cedula Doc." name="Cdoctor" value="<%=Ced %>" required>
 					
 						
 						<span class="focus-input100"></span>
@@ -84,7 +75,7 @@ if(idBus==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-					<input class="input100" type="text" placeholder="Introdusca su Usuario" name="User" value="<%=Usuar %>">
+					<input class="input100" type="text" placeholder="Introdusca su Usuario" name="User" value="<%=Usuar %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -94,7 +85,7 @@ if(idBus==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-					<input class="input100" type="password" placeholder="Introdusca la Contraseña" name="Contra" value="<%=Contras %>">
+					<input class="input100" type="password" placeholder="Introdusca la Contraseña" name="Contra" value="<%=Contras %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>

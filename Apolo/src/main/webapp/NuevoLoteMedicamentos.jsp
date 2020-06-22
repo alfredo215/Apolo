@@ -79,7 +79,7 @@ $(document).ready(function(){
         </span>
 					</div>
 				<div class="wrap-input100 validate-input" data-validate = "codigo is required">	
-				<input class="input100" type="text" placeholder="Introdusca el Codigo" name="idNmedic" value="<%=codigo %>">
+				<input class="input100" type="text" placeholder="Introdusca el Codigo" name="idNmedic" value="<%=codigo %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -91,7 +91,7 @@ $(document).ready(function(){
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "medicamento is required">
 					
-					<select class="input100" name="nombreNmedic"  id="TipoSelectMedi">
+					<select class="input100" name="nombreNmedic"  id="TipoSelectMedi" required>
 <option selected>Elige...</option>
 </select>
 					
@@ -105,7 +105,7 @@ $(document).ready(function(){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "cantidad is required">
-					<input class="input100" type="text" placeholder="Introdusca la cantidad" name="CantidadNmedic" value="<%=CantidadNmedic %>">
+					<input class="input100" type="text" placeholder="Introdusca la cantidad" name="CantidadNmedic" value="<%=CantidadNmedic %>" required>
 					
 						
 						<span class="focus-input100"></span>
@@ -116,7 +116,7 @@ $(document).ready(function(){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "nombre is required">
-					<input class="input100" type="text" placeholder="Introdusca la fecha" name="fechaNmedic" placeholder="yyy-mm-dd" value="<%=Nfecha %>">
+					<input class="input100" type="text" placeholder="Introdusca la fecha" name="fechaNmedic" placeholder="yyy-mm-dd" value="<%=Nfecha %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>

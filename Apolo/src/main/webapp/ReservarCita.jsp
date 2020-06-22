@@ -56,7 +56,7 @@ if(usuSesion==null){
         </span>
 					</div>
 				<div class="wrap-input100 validate-input" >	
-				<input class="input100" type="text" placeholder="Introdusca su codigo" name="idReserva" value="<%=codigo %>">
+				<input class="input100" type="text" placeholder="Introdusca su codigo" name="idReserva" value="<%=codigo %>" required>
 				
 		
 						
@@ -69,7 +69,7 @@ if(usuSesion==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-					<input class="input100" type="text" placeholder="Introdusca su codigo Expediente" name = "CodigoReserva" value = "<%= ExpePas %>">
+					<input class="input100" type="text" placeholder="Introdusca su codigo Expediente" name = "CodigoReserva" value = "<%= ExpePas %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -79,7 +79,7 @@ if(usuSesion==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-						<input class="input100" type="text" placeholder="Introdusca fecha" name="fechaReserva" placeholder="yyy-mm-dd" value="<%=Nfecha %>">
+						<input class="input100" type="text" placeholder="Introdusca fecha" name="fechaReserva" placeholder="yyy-mm-dd" value="<%=Nfecha %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -89,7 +89,7 @@ if(usuSesion==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-					<input class="input100" type="text" placeholder="Introdusca hora cita" name="HoraReserva" value="<%=HoraCita %>">
+					<input class="input100" type="text" placeholder="Introdusca hora cita" name="HoraReserva" value="<%=HoraCita %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>

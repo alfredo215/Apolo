@@ -18,6 +18,7 @@
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33" style="background-image: url('images/apoloimg.jpg');">
 				<form class="login100-form validate-form flex-sb flex-w">
+				
 					<span class="login100-form-title p-b-53 text-white">
 						Inicio Doctores/as:
 					</span>
@@ -29,7 +30,7 @@
         </span>
 					</div>
 				<div class="wrap-input100 validate-input" data-validate = "Username is required">	
-				<input class="input100" type="text" placeholder="Introdusca usuario" name="user">
+				<input class="input100" type="text" placeholder="Introdusca usuario" name="user" required>
 		
 						
 						<span class="focus-input100"></span>
@@ -41,7 +42,7 @@
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-					<input class="input100" type="password" placeholder="Introdusca contraseña"  name="pass">
+					<input class="input100" type="password" placeholder="Introdusca contraseña"  name="pass" required>
 						
 						<span class="focus-input100"></span>
 					</div>

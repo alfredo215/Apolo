@@ -46,7 +46,7 @@ if(idBus==null){
         </span>
 					</div>
 				<div class="wrap-input100 validate-input" data-validate = "cedula is required">	
-				<input class="input100" type="text" placeholder="Introdusca su Cedula" name="Id" value="<%=idBus %>">
+				<input class="input100" type="text" placeholder="Introdusca su Cedula" name="Id" value="<%=idBus %>" required>
 		
 						
 						<span class="focus-input100"></span>
@@ -58,7 +58,7 @@ if(idBus==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "nombre is required">
-					<input class="input100" type="text" placeholder="Introdusca su Nombre" name="Nunombre" value="<%=Nom %>">
+					<input class="input100" type="text" placeholder="Introdusca su Nombre" name="Nunombre" value="<%=Nom %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -68,7 +68,7 @@ if(idBus==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "apellido is required">
-					<input class="input100" type="text" placeholder="Introdusca su Apellido" name="Napellido" value="<%=Ape %>">
+					<input class="input100" type="text" placeholder="Introdusca su Apellido" name="Napellido" value="<%=Ape %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -78,7 +78,7 @@ if(idBus==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "nombre is required">
-					<input class="input100" type="text" placeholder="Introdusca su Especialidad" name="Nespe" value="<%=Espe %>">
+					<input class="input100" type="text" placeholder="Introdusca su Especialidad" name="Nespe" value="<%=Espe %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>

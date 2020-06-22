@@ -108,44 +108,43 @@ public class ServletLogin extends HttpServlet {
 		//doGet(request, response);
 		//-------------------------------------------------------
 				// Loguin
-				String usu = request.getParameter("user");
-				String contra = request.getParameter("pass");
-				
-				
-				String cerrarse = request.getParameter("btnCerrar");
-				
-				if (cerrarse!=null ) {
-					
-					if (cerrarse.equals("Cerrar")) {
-						HttpSession cerrarsesion = (HttpSession)request.getSession();
-						cerrarsesion.invalidate();
-						
-						response.sendRedirect("LoginD.jsp");
-					}
-				
-				}else {
-				Usuarioshospital user = new Usuarioshospital();
-				LoginDao usuDao = new LoginDao();
-				
-				user.setUsuario(usu);
-				user.setContrasena(contra);
-				
-				int verificacion=usuDao.EntradaUsuario(user).size();
-				if(verificacion==1) {
-					
-					
-					HttpSession seccion = request.getSession(true);
-					seccion.setAttribute("usu",usu);
-					
-					response.sendRedirect("Doctor.jsp");
-				}else {
-					JOptionPane.showMessageDialog(null, "Usuario o contrasenia incorrectos");
-					response.sendRedirect("LoginD.jsp");
-				}
-				
-				//--------------------------------------------------------------------------------
+		String usu = request.getParameter("user");
+		String contra = request.getParameter("pass");
+		String cerrarse = request.getParameter("btnCerrar");
 		
-				}
+		if (cerrarse!=null ) {
+			
+			if (cerrarse.equals("Cerrar")) {
+				HttpSession cerrarsesion = (HttpSession)request.getSession();
+				cerrarsesion.invalidate();
+				
+				response.sendRedirect("LoginD.jsp");
+			}
+			
+		}else {
+		
+		Usuarioshospital user = new Usuarioshospital();
+		
+		LoginDao usuDao = new LoginDao();
+		
+		user.setUsuario(usu);
+		user.setContrasena(contra);
+		
+		int verificacion=usuDao.EntradaUsuario(user).size();
+		if(verificacion==1) {
+			
+			
+			HttpSession seccion = request.getSession(true);
+			seccion.setAttribute("usuario",usu);
+			
+			
+			response.sendRedirect("Doctor.jsp");
+		}else {
+			
+			response.sendRedirect("LoginD.jsp");
+		}
+		
+	}
 		
 	}
 
