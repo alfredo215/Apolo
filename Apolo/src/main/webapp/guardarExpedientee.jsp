@@ -153,9 +153,9 @@ $(document).ready(function(){
 					</div> 
 	
 
-<label>Fecha de Nacimiento:</label>	
+<label>Fecha de Nacimiento: dd/mm/yyyy </label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe la fecha nacimiento" type="date" name="fechan_p" value="<%=fechaNa %>">
+				<input class="input100" placeholder="dd/mm/yyyy" type="text" name="fechan_p" value="<%=fechaNa %>">
 						<span class="focus-input100"></span>
 					</div>
 	
