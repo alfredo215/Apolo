@@ -51,7 +51,7 @@ $(function () {
 $("#CodiCon").maxLength(5);	
 $("#CedD").maxLength(5);	
 $("#Pas").maxLength(5);	
-$("#Sinto").maxLength(71);	
+$("#Sinto").maxLength(61);	
 
 });
 </script>
@@ -117,8 +117,8 @@ function soloNumeros(e) {
 
 <label>Paciente</label>
 <div class="wrap-input100 validate-input" data-validate = "cedula is required">	
-				<input class="input100" type="text" name="Paciente" placeholder="Ingrese el Paciente" required id="Pas">		
-						<span class="focus-input100"></span>
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" type="text" name="Paciente" placeholder="Ingrese el Paciente" required id="Pas">		
+<span class="focus-input100"></span>
 					</div>
 
 <label>Sintomas</label>

@@ -69,6 +69,46 @@ if(usuSesion==null){
 
 %>
 
+
+<script src="maxLength/maxLength.js"></script>
+<script type="text/javascript">
+$(function () {
+$("#buscardatos").maxLength(5);	
+
+});
+</script>
+
+<script type="text/javascript">
+
+function soloNumeros(e) {
+	key=e.keyCode || e.which;
+	
+	teclado=String.fromCharCode(key);
+	
+	numeros="0123456789";
+	
+	especiales="8-37-38-46";
+	
+	teclado_especial=false;
+	
+	for (var i in especiales) {
+		if (key==especiales[i]) {
+			teclado_especial=true;
+			
+		}
+		
+	}
+	
+	if (numeros.indexOf(teclado)==-1 && !teclado_especial) {
+		return false;
+		
+	}
+	
+	  
+	
+}
+</script>
+
 <body>
 <div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
@@ -80,7 +120,7 @@ if(usuSesion==null){
 
 					</span>	
 				<div class="wrap-input100 validate-input" data-validate = "medicamento is required">	
-				<input class="input100" type="text" name="" placeholder="Escribe el Medicamento" id="buscardatos">
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" type="text" name="" placeholder="Escribe el Medicamento" id="buscardatos">
 		
 						
 						<span class="focus-input100"></span>

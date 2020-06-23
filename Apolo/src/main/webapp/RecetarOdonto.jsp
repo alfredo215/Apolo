@@ -12,13 +12,12 @@
 </head>
 <% 
 HttpSession sesion = (HttpSession) request.getSession();
-String usuSesion = (String) sesion.getAttribute("usuario");
+String usuSesion = (String) sesion.getAttribute("usu");
 
 if(usuSesion==null){
 	
 	response.sendRedirect("LoginD.jsp");
 }
-
 
 %>
 

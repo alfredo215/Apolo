@@ -41,6 +41,36 @@ $("#espe").maxLength(71);
 });
 </script>
 
+<script type="text/javascript">
+
+function soloNumeros(e) {
+	key=e.keyCode || e.which;
+	
+	teclado=String.fromCharCode(key);
+	
+	numeros="0123456789";
+	
+	especiales="8-37-38-46";
+	
+	teclado_especial=false;
+	
+	for (var i in especiales) {
+		if (key==especiales[i]) {
+			teclado_especial=true;
+			
+		}
+		
+	}
+	
+	if (numeros.indexOf(teclado)==-1 && !teclado_especial) {
+		return false;
+		
+	}
+	
+	  
+	
+}
+</script>
 
 
 <body>
@@ -61,7 +91,8 @@ $("#espe").maxLength(71);
         </span>
 					</div>
 				<div class="wrap-input100 validate-input" data-validate = "cedula is required">	
-				<input class="input100" type="text" placeholder="Introdusca su Cedula" name="Id" value="<%=idBus %>" id="idcedu" required>
+<input class="input100" 
+onkeypress="return soloNumeros(event)" onpaste="return false" type="text" placeholder="Introdusca su Cedula" name="Id" value="<%=idBus %>" id="idcedu" required>
 		
 						
 						<span class="focus-input100"></span>

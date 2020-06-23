@@ -124,7 +124,7 @@ $("#muni").maxLength(71);
 $("#pes").maxLength(7);	
 $("#altu").maxLength(7);	
 $("#vacu").maxLength(5);	
-$("#aler").maxLength(5);	
+$("#aler").maxLength(61);	
 $("#ante").maxLength(5);	
 $("#anteo").maxLength(5);	
 $("#cyt").maxLength(5);	
@@ -140,7 +140,7 @@ function soloNumeros(e) {
 	
 	teclado=String.fromCharCode(key);
 	
-	numeros="0123456789.";
+	numeros="0123456789./";
 	
 	especiales="8-37-38-46";
 	
@@ -203,9 +203,9 @@ function soloNumeros(e) {
 					</div> 
 	
 
-<label>Fecha de Nacimiento:</label>	
-				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe la fecha nacimiento" type="date" name="fechan_p" value="<%=fechaNa %>" id="fech" required>
+<label>Fecha de Nacimiento: dd/mm/yyyy</label>	
+			<div class="wrap-input100 validate-input">
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" placeholder="dd/mm/yyyy" type="text" name="fechan_p" value="<%=fechaNa %>" id="fech" required>
 						<span class="focus-input100"></span>
 					</div>
 	
@@ -247,8 +247,8 @@ function soloNumeros(e) {
 	
 <label>Vacunas:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe las vacunas paciente" type="text" name="vacuna_p" value="<%=vacunas %>" id="vacu" required>	
-						<span class="focus-input100"></span>
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" placeholder="Escribe las vacunas paciente" type="text" name="vacuna_p" value="<%=vacunas %>" id="vacu" required>	
+<span class="focus-input100"></span>
 					</div>
 	
 	
@@ -264,8 +264,8 @@ function soloNumeros(e) {
 	
 	
 	<label>Alergias:</label>	
-				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe las alergias paciente" type="text" name="alergia_p" value="<%=alergias %>" id="aler" required>	
+<div class="wrap-input100 validate-input">
+<input class="input100" placeholder="Escribe las alergias paciente" type="text" name="alergia_p" value="<%=alergias %>" id="aler" required>	
 						<span class="focus-input100"></span>
 					</div>
 	
@@ -273,7 +273,7 @@ function soloNumeros(e) {
 <label>Medicamento:</label>	
 				<div class="wrap-input100 validate-input">
 				
-								<select class="input100" name="medicamento_p"  id="TipoSelectMedi" required>
+<select class="input100" name="medicamento_p"  id="TipoSelectMedi" required>
 <option value>Elige...</option>
 </select>
 				
@@ -284,24 +284,24 @@ function soloNumeros(e) {
 	
 	 
 <label>Antecedentes Medicos:</label>	
-				<div class="wrap-input100 validate-input">	
-				<input class="input100" placeholder="Escribe los antecedentes medicos" type="text" name="ante_medicos" value="<%=anteMedicos %>" id="ante" required>	
-						<span class="focus-input100"></span>
+<div class="wrap-input100 validate-input">	
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" placeholder="Escribe los antecedentes medicos" type="text" name="ante_medicos" value="<%=anteMedicos %>" id="ante" required>	
+<span class="focus-input100"></span>
 					</div>
 	 
 	
 <label>Antecedentes Odontologicos:</label>	
-				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe los antecedentes odontologicos" type="text" name="ante_odontologicos" value="<%=anteOdon %>" id="anteo" required>	
+<div class="wrap-input100 validate-input">
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" placeholder="Escribe los antecedentes odontologicos" type="text" name="ante_odontologicos" value="<%=anteOdon %>" id="anteo" required>	
 						<span class="focus-input100"></span>
 					</div>
 	 
 	
 <label>Cita:</label>	
-				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe la cita medica" type="text" name="cita_p" value="<%=cita %>" id="cyt" required>	
-						<span class="focus-input100"></span>
-					</div>
+<div class="wrap-input100 validate-input">
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" placeholder="Escribe la cita medica" type="text" name="cita_p" value="<%=cita %>" id="cyt" required>	
+<span class="focus-input100"></span>
+</div>
 	<div class="container-login100-form-btn m-t-17" align="center">
 				<input type="submit" class="login100-form-btn" name="btn" value="Guardar" >	
     </div>

@@ -31,6 +31,53 @@ if(idBus==null){
 
 %>
 
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="maxLength/maxLength.js"></script>
+<script type="text/javascript">
+$(function () {
+$("#Iddoc").maxLength(5);	
+$("#cedoc").maxLength(5);	
+$("#usua").maxLength(61);	
+$("#contrasenia").maxLength(61);	
+
+});
+</script>
+
+
+<script type="text/javascript">
+
+function soloNumeros(e) {
+	key=e.keyCode || e.which;
+	
+	teclado=String.fromCharCode(key);
+	
+	numeros="0123456789";
+	
+	especiales="8-37-38-46";
+	
+	teclado_especial=false;
+	
+	for (var i in especiales) {
+		if (key==especiales[i]) {
+			teclado_especial=true;
+			
+		}
+		
+	}
+	
+	if (numeros.indexOf(teclado)==-1 && !teclado_especial) {
+		return false;
+		
+	}
+	
+	  
+	
+}
+</script>
+
+
+
+
 <body>
 
 
@@ -52,7 +99,8 @@ if(idBus==null){
         </span>
 					</div>
 				<div class="wrap-input100 validate-input" >
-				<input class="input100" type="text" placeholder="Introdusca su ID" name="idBus" value="<%=idBus %>" required>	
+<input class="input100" id="Iddoc" onkeypress="return soloNumeros(event)" onpaste="return false" type="text" 
+placeholder="Introdusca su ID" name="idBus" value="<%=idBus %>" required>	
 
 						
 						<span class="focus-input100"></span>
@@ -64,7 +112,8 @@ if(idBus==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-					<input class="input100" type="text" placeholder="Introdusca la Cedula Doc." name="Cdoctor" value="<%=Ced %>" required>
+<input class="input100" id="cedoc" onkeypress="return soloNumeros(event)" onpaste="return false" type="text"
+ placeholder="Introdusca la Cedula Doc." name="Cdoctor" value="<%=Ced %>" required>
 					
 						
 						<span class="focus-input100"></span>
@@ -75,7 +124,7 @@ if(idBus==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-					<input class="input100" type="text" placeholder="Introdusca su Usuario" name="User" value="<%=Usuar %>" required>
+<input class="input100" id="usua"  type="text" placeholder="Introdusca su Usuario" name="User" value="<%=Usuar %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -85,7 +134,7 @@ if(idBus==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-					<input class="input100" type="password" placeholder="Introdusca la Contraseña" name="Contra" value="<%=Contras %>" required>
+<input class="input100" id="contrasenia" type="password" placeholder="Introdusca la Contraseña" name="Contra" value="<%=Contras %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>

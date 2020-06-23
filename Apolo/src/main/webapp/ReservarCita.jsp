@@ -59,7 +59,7 @@ function soloNumeros(e) {
 	
 	teclado=String.fromCharCode(key);
 	
-	numeros="0123456789";
+	numeros="0123456789/:";
 	
 	especiales="8-37-38-46";
 	
@@ -124,7 +124,7 @@ function soloNumeros(e) {
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-						<input class="input100" type="text" id="fecha" placeholder="Introdusca fecha" name="fechaReserva" placeholder="yyy-mm-dd" value="<%=Nfecha %>" required>
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" type="text" id="fecha" placeholder="Introdusca fecha" name="fechaReserva" placeholder="yyy-mm-dd" value="<%=Nfecha %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -133,8 +133,8 @@ function soloNumeros(e) {
 							Hora de su cita:
 						</span>
 					</div>
-					<div class="wrap-input100 validate-input" >
-					<input class="input100" type="text" id="hora" placeholder="Introdusca hora cita" name="HoraReserva" value="<%=HoraCita %>" required>
+<div class="wrap-input100 validate-input" >
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" type="text" id="hora" placeholder="Introdusca hora cita" name="HoraReserva" value="<%=HoraCita %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>

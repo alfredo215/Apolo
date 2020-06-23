@@ -50,7 +50,7 @@ $(function () {
 $("#CodiCon").maxLength(5);	
 $("#CedD").maxLength(5);	
 $("#Pas").maxLength(5);	
-$("#Sinto").maxLength(71);	
+$("#Sinto").maxLength(61);	
 
 
 });
@@ -112,7 +112,7 @@ function soloNumeros(e) {
 					</div>
 <label>Paciente:</label>
 <div class="wrap-input100 validate-input">
-<input class="input100" type="text" name="Paciente" placeholder="Ingrese Paciente"  id="Pas" required>
+<input class="input100" type="text" onkeypress="return soloNumeros(event)" onpaste="return false" name="Paciente" placeholder="Ingrese Paciente"  id="Pas" required>
 <span class="focus-input100"></span>
 					</div>
 <label>Sintomas:</label>

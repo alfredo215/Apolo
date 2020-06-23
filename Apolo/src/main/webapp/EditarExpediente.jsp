@@ -19,6 +19,9 @@
 $(document).ready(function(){
  $('#cargar').click(function(){
 	 
+	
+	
+
 	var caja= $('#buscardatos').val();
 	$.post('ServeletExpedientes',{
 		caja
@@ -64,16 +67,48 @@ $(document).ready(function(){
 
 </script>
 
-<% /*
-HttpSession sesion = (HttpSession) request.getSession();
-String usuSesion = (String) sesion.getAttribute("usuario");
+<script src="maxLength/maxLength.js"></script>
+<script type="text/javascript">
+$(function () {
+$("#buscardatos").maxLength(5);	
 
-if(usuSesion==null){
+});
+</script>
+
+
+
+<script type="text/javascript">
+
+function soloNumeros(e) {
+	key=e.keyCode || e.which;
 	
-	response.sendRedirect("LoginE.jsp");
+	teclado=String.fromCharCode(key);
+	
+	numeros="0123456789";
+	
+	especiales="8-37-38-46";
+	
+	teclado_especial=false;
+	
+	for (var i in especiales) {
+		if (key==especiales[i]) {
+			teclado_especial=true;
+			
+		}
+		
+	}
+	
+	if (numeros.indexOf(teclado)==-1 && !teclado_especial) {
+		return false;
+		
+	}
+	
+	  
+	
 }
-*/
-%>
+</script>
+
+
 <body>
 <div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
@@ -88,7 +123,7 @@ if(usuSesion==null){
 <br> <br>
 <label>buscador</label>
 <div class="wrap-input100 validate-input" data-validate = "Enfermedad is required">	
-				<input class="input100" type="text" name="" placeholder="Escribe tu Codigo del expediente" id="buscardatos">
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" type="text" name="" placeholder="Escribe tu Codigo del expediente" id="buscardatos">
 		
 						
 						<span class="focus-input100"></span>

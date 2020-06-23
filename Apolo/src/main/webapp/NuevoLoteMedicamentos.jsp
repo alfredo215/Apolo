@@ -80,7 +80,7 @@ function soloNumeros(e) {
 	
 	teclado=String.fromCharCode(key);
 	
-	numeros="0123456789";
+	numeros="0123456789/";
 	
 	especiales="8-37-38-46";
 	
@@ -136,7 +136,7 @@ function soloNumeros(e) {
 					<div class="wrap-input100 validate-input" data-validate = "medicamento is required">
 					
 					<select class="input100" name="nombreNmedic"  id="TipoSelectMedi" required>
-<option value>Elige...</option>
+<option selected>Elige...</option>
 </select>
 					
 					
@@ -156,11 +156,12 @@ function soloNumeros(e) {
 					</div>
 					<div class="p-t-13 p-b-9">
 						<span class="txt1">
-							Fecha:
+							Fecha: dd/mm/yyyy
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "nombre is required">
-			<input class="input100" id="fecha" type="text" placeholder="Introdusca la fecha" name="fechaNmedic" placeholder="yyy-mm-dd" value="<%=Nfecha %>" required>
+<input class="input100" 
+onkeypress="return soloNumeros(event)" onpaste="return false" id="fecha" type="text" placeholder="dd/mm/yyyy" name="fechaNmedic" placeholder="yyy-mm-dd" value="<%=Nfecha %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>

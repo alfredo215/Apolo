@@ -83,7 +83,7 @@ public class ServeletGconsultaOdon extends HttpServlet {
 			conOdon.setEnfermedade(enf);
 			
 			cOdonDao.agregarConsultaOdon(conOdon);
-			response.sendRedirect("RecetarOdonto.jsp");
+			response.sendRedirect("ConsultaOdontologica.jsp");
 		}
 		
 		

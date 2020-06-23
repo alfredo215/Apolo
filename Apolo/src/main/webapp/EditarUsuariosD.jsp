@@ -64,7 +64,13 @@ if(usuSesion==null){
 
 %>
 
+<script src="maxLength/maxLength.js"></script>
+<script type="text/javascript">
+$(function () {
+$("#datos").maxLength(61);	
 
+});
+</script>
 
 <body>
 <div class="limiter">
@@ -88,7 +94,7 @@ if(usuSesion==null){
 					
 		
 				<div class="container-login100-form-btn m-t-17" align="center">
-				<input type="submit" class="login100-form-btn" name="BUSCAR" id="carga" value="buscar">
+				<input type="submit" class="login100-form-btn" name="buscar" id="carga" value="buscar">
 					<br>
 					
 

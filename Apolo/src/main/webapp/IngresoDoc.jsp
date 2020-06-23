@@ -44,6 +44,38 @@ $("#tel").maxLength(9);
 });
 </script>
 
+<script type="text/javascript">
+
+function soloNumeros(e) {
+	key=e.keyCode || e.which;
+	
+	teclado=String.fromCharCode(key);
+	
+	numeros="0123456789";
+	
+	especiales="8-37-38-46";
+	
+	teclado_especial=false;
+	
+	for (var i in especiales) {
+		if (key==especiales[i]) {
+			teclado_especial=true;
+			
+		}
+		
+	}
+	
+	if (numeros.indexOf(teclado)==-1 && !teclado_especial) {
+		return false;
+		
+	}
+	
+	  
+	
+}
+</script>
+
+
 <body>
 
 
@@ -52,9 +84,9 @@ $("#tel").maxLength(9);
 <div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 	
-			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33" style="background-image: url('images/apoloimg.jpg');">
-				<form class="login100-form validate-form flex-sb flex-w">
-					<span class="login100-form-title p-b-53 text-white">
+<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33" style="background-image: url('images/apoloimg.jpg');">
+<form class="login100-form validate-form flex-sb flex-w">
+<span class="login100-form-title p-b-53 text-white">
 						Registro Doctor/ra:
 
 					</span>	
@@ -62,9 +94,9 @@ $("#tel").maxLength(9);
 						<span class="txt1">			
         Cedula:
         </span>
-					</div>
-				<div class="wrap-input100 validate-input" data-validate = "cedula is required">	
-				<input class="input100" type="text" placeholder="Introdusca su Cedula" name="Id" value="<%=idBus %>" id="Id" required>
+</div>
+<div class="wrap-input100 validate-input" data-validate = "cedula is required">	
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" type="text" placeholder="Introdusca su Cedula" name="Id" value="<%=idBus %>" id="Id" required>
 		
 						
 						<span class="focus-input100"></span>
@@ -106,9 +138,9 @@ $("#tel").maxLength(9);
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "nombre is required">
-						<input class="input100" type="text" placeholder="Introdusca su Telefono" name="Ntel" value="<%=Tel %>" id="tel" required>
-						<span class="focus-input100"></span>
-					</div>
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" type="text" placeholder="Introdusca su Telefono" name="Ntel" value="<%=Tel %>" id="tel" required>
+<span class="focus-input100"></span>
+				</div>
 				<div class="container-login100-form-btn m-t-17" align="center">
 					<input type="submit" class="login100-form-btn" value="Guardar" name="btn">
 
