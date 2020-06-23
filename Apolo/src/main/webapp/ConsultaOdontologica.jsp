@@ -35,7 +35,7 @@ $(document).ready(function(){
 </head>
 <% 
 HttpSession sesion = (HttpSession) request.getSession();
-String usuSesion = (String) sesion.getAttribute("usu");
+String usuSesion = (String) sesion.getAttribute("usuario");
 
 if(usuSesion==null){
 	
@@ -44,10 +44,49 @@ if(usuSesion==null){
 
 %>
 
-<body>
 
+<script src="maxLength/maxLength.js"></script>
+<script type="text/javascript">
+$(function () {
+$("#CodiCon").maxLength(5);	
+$("#CedD").maxLength(5);	
+$("#Pas").maxLength(5);	
+$("#Sinto").maxLength(71);	
 
-<body>
+});
+</script>
+
+<script type="text/javascript">
+
+function soloNumeros(e) {
+	key=e.keyCode || e.which;
+	
+	teclado=String.fromCharCode(key);
+	
+	numeros="0123456789";
+	
+	especiales="8-37-38-46";
+	
+	teclado_especial=false;
+	
+	for (var i in especiales) {
+		if (key==especiales[i]) {
+			teclado_especial=true;
+			
+		}
+		
+	}
+	
+	if (numeros.indexOf(teclado)==-1 && !teclado_especial) {
+		return false;
+		
+	}
+	
+	  
+	
+}
+</script>
+
 
 <form action="ServeletGconsultaOdon" method="get">
 <body>
@@ -63,7 +102,7 @@ if(usuSesion==null){
 
 <label>Codigo consulta Odontologica:</label>
 <div class="wrap-input100 validate-input" data-validate = "cedula is required">	
-				<input class="input100" type="text" name="codigoConsulO" placeholder="Codigo consulta Odontologica" required id="CodiCon">
+<input class="input100" type="text" name="codigoConsulO" onkeypress="return soloNumeros(event)" onpaste="return false" placeholder="Codigo consulta Odontologica"  required id="CodiCon">
 		
 						
 						<span class="focus-input100"></span>
@@ -71,7 +110,7 @@ if(usuSesion==null){
 
 <label>Cedula:</label>
 <div class="wrap-input100 validate-input" data-validate = "cedula is required">	
-				<input class="input100" type="text" name="Cedula" placeholder="Cedula de Odontologo" required id="CedD">
+	<input class="input100" type="text" name="Cedula" onkeypress="return soloNumeros(event)" onpaste="return false" placeholder="Cedula de Odontologo" required id="CedD">
 						
 						<span class="focus-input100"></span>
 					</div>

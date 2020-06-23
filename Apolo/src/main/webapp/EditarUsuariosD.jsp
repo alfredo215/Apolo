@@ -55,7 +55,7 @@
 
 <% 
 HttpSession sesion = (HttpSession) request.getSession();
-String usuSesion = (String) sesion.getAttribute("usu");
+String usuSesion = (String) sesion.getAttribute("usuario");
 
 if(usuSesion==null){
 	
@@ -63,6 +63,8 @@ if(usuSesion==null){
 }
 
 %>
+
+
 
 <body>
 <div class="limiter">

@@ -59,6 +59,50 @@ $(document).ready(function(){
 });
 </script>
 
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="maxLength/maxLength.js"></script>
+<script type="text/javascript">
+$(function () {
+$("#cod").maxLength(5);	
+$("#canti").maxLength(6);	
+$("#fecha").maxLength(11);	
+
+
+
+});
+</script>
+
+
+<script type="text/javascript">
+
+function soloNumeros(e) {
+	key=e.keyCode || e.which;
+	
+	teclado=String.fromCharCode(key);
+	
+	numeros="0123456789";
+	
+	especiales="8-37-38-46";
+	
+	teclado_especial=false;
+	
+	for (var i in especiales) {
+		if (key==especiales[i]) {
+			teclado_especial=true;
+			
+		}
+		
+	}
+	
+	if (numeros.indexOf(teclado)==-1 && !teclado_especial) {
+		return false;
+		
+	}
+	
+	  
+	
+}
+</script>
 
 
 <form action="ServletLoteMedi" method="get" >
@@ -79,7 +123,7 @@ $(document).ready(function(){
         </span>
 					</div>
 				<div class="wrap-input100 validate-input" data-validate = "codigo is required">	
-				<input class="input100" type="text" placeholder="Introdusca el Codigo" name="idNmedic" value="<%=codigo %>" required>
+	<input class="input100" type="text" id="cod" onkeypress="return soloNumeros(event)" onpaste="return false" placeholder="Introdusca el Codigo" name="idNmedic" value="<%=codigo %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -105,8 +149,8 @@ $(document).ready(function(){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "cantidad is required">
-					<input class="input100" type="text" placeholder="Introdusca la cantidad" name="CantidadNmedic" value="<%=CantidadNmedic %>" required>
-					
+	<input class="input100" type="text" id="canti" onkeypress="return soloNumeros(event)" onpaste="return false" placeholder="Introdusca la cantidad" name="CantidadNmedic" value="<%=CantidadNmedic %>" required>
+				
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -116,7 +160,7 @@ $(document).ready(function(){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "nombre is required">
-					<input class="input100" type="text" placeholder="Introdusca la fecha" name="fechaNmedic" placeholder="yyy-mm-dd" value="<%=Nfecha %>" required>
+			<input class="input100" id="fecha" type="text" placeholder="Introdusca la fecha" name="fechaNmedic" placeholder="yyy-mm-dd" value="<%=Nfecha %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>

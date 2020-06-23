@@ -11,6 +11,50 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="maxLength/maxLength.js"></script>
+<script type="text/javascript">
+$(function () {
+$("#idexpe").maxLength(5);	
+
+});
+</script>
+
+<script type="text/javascript">
+
+function soloNumeros(e) {
+	key=e.keyCode || e.which;
+	
+	teclado=String.fromCharCode(key);
+	
+	numeros="0123456789";
+	
+	especiales="8-37-38-46";
+	
+	teclado_especial=false;
+	
+	for (var i in especiales) {
+		if (key==especiales[i]) {
+			teclado_especial=true;
+			
+		}
+		
+	}
+	
+	if (numeros.indexOf(teclado)==-1 && !teclado_especial) {
+		return false;
+		
+	}
+	
+	  
+	
+}
+</script>
+
+
+
 <body>
 				<form action="ServletReservar" method="post">
 	
@@ -32,7 +76,9 @@
         </span>
 					</div>
 				<div class="wrap-input100 validate-input" data-validate = "Username is required">	
-				<input class="input100" type="text" placeholder="Introdusca Expediente" name="expe">
+				<input class="input100" type="text" 
+
+onkeypress="return soloNumeros(event)" onpaste="return false" placeholder="Introdusca Expediente" name="expe" id="idexpe">
 				
 		
 						

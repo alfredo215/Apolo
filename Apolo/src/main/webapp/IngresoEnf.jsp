@@ -28,6 +28,21 @@ if(idBus==null){
 
 %>
 
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="maxLength/maxLength.js"></script>
+<script type="text/javascript">
+$(function () {
+$("#idcedu").maxLength(5);	
+$("#nom").maxLength(71);	
+$("#ape").maxLength(71);	
+$("#espe").maxLength(71);	
+
+});
+</script>
+
+
+
 <body>
 
 
@@ -46,7 +61,7 @@ if(idBus==null){
         </span>
 					</div>
 				<div class="wrap-input100 validate-input" data-validate = "cedula is required">	
-				<input class="input100" type="text" placeholder="Introdusca su Cedula" name="Id" value="<%=idBus %>" required>
+				<input class="input100" type="text" placeholder="Introdusca su Cedula" name="Id" value="<%=idBus %>" id="idcedu" required>
 		
 						
 						<span class="focus-input100"></span>
@@ -58,7 +73,7 @@ if(idBus==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "nombre is required">
-					<input class="input100" type="text" placeholder="Introdusca su Nombre" name="Nunombre" value="<%=Nom %>" required>
+					<input class="input100" type="text" placeholder="Introdusca su Nombre" name="Nunombre" value="<%=Nom %>" id="nom" required>
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -68,7 +83,7 @@ if(idBus==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "apellido is required">
-					<input class="input100" type="text" placeholder="Introdusca su Apellido" name="Napellido" value="<%=Ape %>" required>
+					<input class="input100" type="text" placeholder="Introdusca su Apellido" name="Napellido" value="<%=Ape %>" id="ape" required>
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -78,7 +93,7 @@ if(idBus==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "nombre is required">
-					<input class="input100" type="text" placeholder="Introdusca su Especialidad" name="Nespe" value="<%=Espe %>" required>
+					<input class="input100" type="text" placeholder="Introdusca su Especialidad" name="Nespe" value="<%=Espe %>" id="espe" required>
 						
 						<span class="focus-input100"></span>
 					</div>

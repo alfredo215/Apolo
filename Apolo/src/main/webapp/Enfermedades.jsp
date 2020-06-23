@@ -31,7 +31,7 @@ if(id==null){
 
 <% 
 HttpSession sesion = (HttpSession) request.getSession();
-String usuSesion = (String) sesion.getAttribute("usu");
+String usuSesion = (String) sesion.getAttribute("usuario");
 
 if(usuSesion==null){
 	
@@ -39,6 +39,50 @@ if(usuSesion==null){
 }
 
 %>
+
+
+<script src="maxLength/maxLength.js"></script>
+<script type="text/javascript">
+$(function () {
+$("#Idenfer").maxLength(5);	
+$("#nomenfer").maxLength(71);	
+$("#tipoenfer").maxLength(51);	
+
+
+});
+</script>
+
+<script type="text/javascript">
+
+function soloNumeros(e) {
+	key=e.keyCode || e.which;
+	
+	teclado=String.fromCharCode(key);
+	
+	numeros="0123456789";
+	
+	especiales="8-37-38-46";
+	
+	teclado_especial=false;
+	
+	for (var i in especiales) {
+		if (key==especiales[i]) {
+			teclado_especial=true;
+			
+		}
+		
+	}
+	
+	if (numeros.indexOf(teclado)==-1 && !teclado_especial) {
+		return false;
+		
+	}
+	
+	  
+	
+}
+</script>
+
 <body>
 <form action="ServeletGyAEnfermedad" method="get">
 <div class="limiter">
@@ -56,7 +100,7 @@ if(usuSesion==null){
             <label> ID Enfermedad:</label>      
 					</div>
 				<div class="wrap-input100 validate-input" data-validate = "codigo is required">	
-				<input class="input100" type="text" name="nefd" value="<%=id %>" placeholder="ID de la Enfermedad">
+<input class="input100" type="text" onkeypress="return soloNumeros(event)" onpaste="return false" name="nefd" value="<%=id %>" id="Idenfer" placeholder="ID de la Enfermedad">
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -65,7 +109,7 @@ if(usuSesion==null){
                 <label>Nombre de la Enfermedad:</label>
 					</div>
 				<div class="wrap-input100 validate-input" data-validate = "codigo is required">	
-				<input class="input100" type="text" name="nombreE" value="<%=ne %>" placeholder="Nombre Enfermedad">
+				<input class="input100" type="text" name="nombreE" value="<%=ne %>" id="nomenfer" placeholder="Nombre Enfermedad">
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -74,7 +118,7 @@ if(usuSesion==null){
 			<label>Tipo de Enfermedad:</label>
 					</div>
 				<div class="wrap-input100 validate-input" data-validate = "codigo is required">	
-			<input class="input100" type="text"  name="tipoE" value="<%= te %>" placeholder="Tipo de Enfermedad">
+			<input class="input100" type="text"  name="tipoE" value="<%= te %>" id="tipoenfer" placeholder="Tipo de Enfermedad">
 						
 						<span class="focus-input100"></span>
 					</div>

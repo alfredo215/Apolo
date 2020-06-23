@@ -109,10 +109,60 @@ $(document).ready(function(){
 </script>
 
 
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
+<script src="maxLength/maxLength.js"></script>
+<script type="text/javascript">
+$(function () {
+$("#Expe").maxLength(5);	
+$("#nom").maxLength(71);	
+$("#ape").maxLength(71);	
+$("#sex").maxLength(2);	
+$("#eda").maxLength(4);	
+$("#depa").maxLength(71);	
+$("#muni").maxLength(71);	
+$("#pes").maxLength(7);	
+$("#altu").maxLength(7);	
+$("#vacu").maxLength(5);	
+$("#aler").maxLength(5);	
+$("#ante").maxLength(5);	
+$("#anteo").maxLength(5);	
+$("#cyt").maxLength(5);	
+
+});
+</script>
 <!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
 
+<script type="text/javascript">
 
-
+function soloNumeros(e) {
+	key=e.keyCode || e.which;
+	
+	teclado=String.fromCharCode(key);
+	
+	numeros="0123456789.";
+	
+	especiales="8-37-38-46";
+	
+	teclado_especial=false;
+	
+	for (var i in especiales) {
+		if (key==especiales[i]) {
+			teclado_especial=true;
+			
+		}
+		
+	}
+	
+	if (numeros.indexOf(teclado)==-1 && !teclado_especial) {
+		return false;
+		
+	}
+	
+	  
+	
+}
+</script>
 
 <body>
 <form  action="ServeletGyAExpedientes" method="get">
@@ -125,9 +175,9 @@ $(document).ready(function(){
 					Guardar Expedientes:
 					</span>	
 					
-					<label>Codigo:</label>	
-				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe el codigo paciente" type="text" name="codigo_p" value="<%=codigo %>" id="Expe" required>
+		<label>Codigo:</label>	
+	<div class="wrap-input100 validate-input">
+<input class="input100" placeholder="Escribe el codigo paciente" type="text" name="codigo_p" onkeypress="return soloNumeros(event)" onpaste="return false"  value="<%=codigo %>" id="Expe" required>
 						<span class="focus-input100"></span>
 					</div>
 
@@ -162,7 +212,7 @@ $(document).ready(function(){
 	
 	<label>Edad:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe la edad paciente" type="text" name="edad_p" value="<%=edad %>" id="eda" required>	
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" placeholder="Escribe la edad paciente" type="text" name="edad_p" value="<%=edad %>" id="eda" required>	
 						<span class="focus-input100"></span>
 					</div> 
 	
@@ -183,14 +233,14 @@ $(document).ready(function(){
 	
 <label>Peso:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe el peso paciente" type="text" name="peso_p" value="<%=peso %>" id="pes" required>	
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" placeholder="Escribe el peso paciente" type="text" name="peso_p" value="<%=peso %>" id="pes" required>	
 						<span class="focus-input100"></span>
 					</div>
  
 	
 	<label>Altura:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" placeholder="Escribe la altura paciente" type="text" name="altura_p" value="<%=altura %>" id="altu" required>
+	<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" placeholder="Escribe la altura paciente" type="text" name="altura_p" value="<%=altura %>" id="altu" required>
 						<span class="focus-input100"></span>
 					</div>
 	

@@ -38,6 +38,52 @@ if(codigo==null){
 
 
 %>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="maxLength/maxLength.js"></script>
+<script type="text/javascript">
+$(function () {
+$("#Idme").maxLength(5);	
+$("#nomme").maxLength(71);	
+$("#tipome").maxLength(71);	
+$("#canme").maxLength(6);	
+
+
+});
+</script>
+
+
+<script type="text/javascript">
+
+function soloNumeros(e) {
+	key=e.keyCode || e.which;
+	
+	teclado=String.fromCharCode(key);
+	
+	numeros="0123456789";
+	
+	especiales="8-37-38-46";
+	
+	teclado_especial=false;
+	
+	for (var i in especiales) {
+		if (key==especiales[i]) {
+			teclado_especial=true;
+			
+		}
+		
+	}
+	
+	if (numeros.indexOf(teclado)==-1 && !teclado_especial) {
+		return false;
+		
+	}
+	
+	  
+	
+}
+</script>
+
 <form action="ServeletMedicamentos" method="get" >
 
 <body>
@@ -52,25 +98,25 @@ if(codigo==null){
 					
 					<label>Codigo:</label>	
 				<div class="wrap-input100 validate-input">
-				<input class="input100" type="text"  placeholder="Escribe el codigo" name="Id" value="<%=codigo %>" required>	
+<input class="input100" type="text" onkeypress="return soloNumeros(event)" onpaste="return false" placeholder="Escribe el codigo" id="Idme" name="Id" value="<%=codigo %>" required>	
 						<span class="focus-input100"></span>
 					</div>
 				
 					<label>Nombre:</label>
 				<div class="wrap-input100 validate-input">	
-				<input class="input100" type="text" placeholder="Escribe el nombre" name="nombre" value="<%=nombre %>" required>
+				<input class="input100" type="text" placeholder="Escribe el nombre" name="nombre" id="nomme" value="<%=nombre %>" required>
 						<span class="focus-input100"></span>
 					</div>
 						
 					<label>Tipo</label>
 				<div class="wrap-input100 validate-input">
-				<input class="input100" type="text" placeholder="Escribe el tipo " name="tipoM" value="<%=tipo %>" required>	
+				<input class="input100" type="text" placeholder="Escribe el tipo " name="tipoM" id="tipome" value="<%=tipo %>" required>	
 						<span class="focus-input100"></span>
 					</div>
 
 					<label>Cantidad</label>
 				<div class="wrap-input100 validate-input" >	
-				<input class="input100" type="text" placeholder="Escribe la cantidad" name="cantidadM" value="<%=cantidad %>" required>
+<input class="input100" type="text" onkeypress="return soloNumeros(event)" onpaste="return false" placeholder="Escribe la cantidad" id="canme" name="cantidadM" value="<%=cantidad %>" required>
 						<span class="focus-input100"></span>
 					</div>
 					

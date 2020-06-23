@@ -34,7 +34,7 @@ $(document).ready(function(){
 
 <% 
 HttpSession sesion = (HttpSession) request.getSession();
-String usuSesion = (String) sesion.getAttribute("usu");
+String usuSesion = (String) sesion.getAttribute("usuario");
 
 if(usuSesion==null){
 	
@@ -42,6 +42,51 @@ if(usuSesion==null){
 }
 
 %>
+
+
+<script src="maxLength/maxLength.js"></script>
+<script type="text/javascript">
+$(function () {
+$("#CodiCon").maxLength(5);	
+$("#CedD").maxLength(5);	
+$("#Pas").maxLength(5);	
+$("#Sinto").maxLength(71);	
+
+
+});
+</script>
+
+<script type="text/javascript">
+
+function soloNumeros(e) {
+	key=e.keyCode || e.which;
+	
+	teclado=String.fromCharCode(key);
+	
+	numeros="0123456789";
+	
+	especiales="8-37-38-46";
+	
+	teclado_especial=false;
+	
+	for (var i in especiales) {
+		if (key==especiales[i]) {
+			teclado_especial=true;
+			
+		}
+		
+	}
+	
+	if (numeros.indexOf(teclado)==-1 && !teclado_especial) {
+		return false;
+		
+	}
+	
+	  
+	
+}
+</script>
+
 
 <form action="ServeletGuardarC" method="get">
 <body>
@@ -57,12 +102,12 @@ if(usuSesion==null){
 					
 <label>Codigo consulta:</label>
 <div class="wrap-input100 validate-input">
-<input class="input100" type="text" name="codigoConsul" placeholder="Codigo consulta"  id="CodiCon" required>
+<input class="input100" type="text" name="codigoConsul" placeholder="Codigo consulta" onkeypress="return soloNumeros(event)" onpaste="return false" id="CodiCon" required>
 <span class="focus-input100"></span>
 					</div>
 <label>Cedula:</label>
 <div class="wrap-input100 validate-input">
-<input class="input100" type="text" name="Cedula" placeholder="Cedula de Doctor"  id="CedD" required>
+<input class="input100" type="text" name="Cedula" placeholder="Cedula de Doctor" onkeypress="return soloNumeros(event)" onpaste="return false" id="CedD" required>
 <span class="focus-input100"></span>
 					</div>
 <label>Paciente:</label>

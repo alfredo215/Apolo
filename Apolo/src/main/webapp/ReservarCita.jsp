@@ -39,6 +39,51 @@ if(usuSesion==null){
 
 %>
 
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="maxLength/maxLength.js"></script>
+<script type="text/javascript">
+$(function () {
+$("#cod").maxLength(5);	
+$("#codex").maxLength(5);	
+$("#fecha").maxLength(11);	
+$("#hora").maxLength(6);	
+
+});
+</script>
+
+
+<script type="text/javascript">
+
+function soloNumeros(e) {
+	key=e.keyCode || e.which;
+	
+	teclado=String.fromCharCode(key);
+	
+	numeros="0123456789";
+	
+	especiales="8-37-38-46";
+	
+	teclado_especial=false;
+	
+	for (var i in especiales) {
+		if (key==especiales[i]) {
+			teclado_especial=true;
+			
+		}
+		
+	}
+	
+	if (numeros.indexOf(teclado)==-1 && !teclado_especial) {
+		return false;
+		
+	}
+	
+	  
+	
+}
+</script>
+
+
 <form action="ServletReservar" method="get" >
 <body>
 <div class="limiter">
@@ -56,7 +101,7 @@ if(usuSesion==null){
         </span>
 					</div>
 				<div class="wrap-input100 validate-input" >	
-				<input class="input100" type="text" placeholder="Introdusca su codigo" name="idReserva" value="<%=codigo %>" required>
+	<input class="input100" type="text" id="cod" onkeypress="return soloNumeros(event)" onpaste="return false" placeholder="Introdusca su codigo" name="idReserva" value="<%=codigo %>" required>
 				
 		
 						
@@ -69,7 +114,7 @@ if(usuSesion==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-					<input class="input100" type="text" placeholder="Introdusca su codigo Expediente" name = "CodigoReserva" value = "<%= ExpePas %>" required>
+	<input class="input100" type="text" onkeypress="return soloNumeros(event)" onpaste="return false"  id="codex" placeholder="Introdusca su codigo Expediente" name = "CodigoReserva" value = "<%= ExpePas %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -79,7 +124,7 @@ if(usuSesion==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-						<input class="input100" type="text" placeholder="Introdusca fecha" name="fechaReserva" placeholder="yyy-mm-dd" value="<%=Nfecha %>" required>
+						<input class="input100" type="text" id="fecha" placeholder="Introdusca fecha" name="fechaReserva" placeholder="yyy-mm-dd" value="<%=Nfecha %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -89,7 +134,7 @@ if(usuSesion==null){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-					<input class="input100" type="text" placeholder="Introdusca hora cita" name="HoraReserva" value="<%=HoraCita %>" required>
+					<input class="input100" type="text" id="hora" placeholder="Introdusca hora cita" name="HoraReserva" value="<%=HoraCita %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>
