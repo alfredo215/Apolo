@@ -10,14 +10,15 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Insert title here</title>
 </head>
-<% 
+<%
 HttpSession sesion = (HttpSession) request.getSession();
-String usuSesion = (String) sesion.getAttribute("usu");
+String usuSesion = (String) sesion.getAttribute("usuario");
 
 if(usuSesion==null){
 	
 	response.sendRedirect("LoginD.jsp");
 }
+
 
 %>
 

@@ -88,7 +88,7 @@ if(usuSesion==null){
 					
 		
 				<div class="container-login100-form-btn m-t-17" align="center">
-				<input type="submit" class="login100-form-btn" name="buscar" id="carga" value="buscar">
+				<input type="submit" class="login100-form-btn" name="BUSCAR" id="carga" value="buscar">
 					<br>
 					
 

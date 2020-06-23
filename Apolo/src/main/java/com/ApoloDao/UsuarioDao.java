@@ -25,8 +25,8 @@ public class UsuarioDao {
 		try {
 			em.getTransaction().begin();
 			
-			UsuDoc = em.createQuery("SELECT hos.n_Usuario, usu.nombre_Doc, usu.apellido, usu.cedula,hos.usuario, hos.contrasena "
-					+ " FROM Usuarioshospital AS hos"
+			UsuDoc = em.createQuery("SELECT hos.n_Usuario, usu.nombre_Doc, usu.apellido, usu.cedula, hos.usuario, hos.contrasena "
+					+ " FROM Usuarioshospital AS hos "
 					+ " INNER JOIN Doctore AS usu ON "
 					+ " usu.cedula = hos.doctore.cedula where hos.usuario ='"+per.getUsuario()+"'").getResultList();					
 		
@@ -52,8 +52,8 @@ public class UsuarioDao {
 		try {
 			em.getTransaction().begin();
 			
-			UsuEnf = em.createQuery("SELECT hos.n_Usuario, usu.nombre_Enfer, usu.apellido, usu.cedula,hos.usuario, hos.contrasena "
-					+ " FROM Usuarioshospital AS hos"
+			UsuEnf = em.createQuery("SELECT hos.n_Usuario, usu.nombre_Enfer, usu.apellido, usu.cedula, hos.usuario, hos.contrasena "
+					+ " FROM Usuarioshospital AS hos "
 					+ " INNER JOIN Enfermera AS usu ON "
 					+ " usu.cedula = hos.enfermera.cedula where hos.usuario ='"+per.getUsuario()+"'").getResultList();					
 		

@@ -103,7 +103,6 @@ public class ServletGuardarUD extends HttpServlet {
 		Usuarioshospital usuDoc=new Usuarioshospital();
 		
 		usuDoc.setUsuario(capturar);
-		
 		Gson json=new Gson();
 		try {
 
@@ -115,31 +114,6 @@ public class ServletGuardarUD extends HttpServlet {
 			
 		}
 		
-		
-		
-		
-		
-		/*UsuarioDao usD = new UsuarioDao();
-		Gson json = new Gson();
-		
-		try {
-			response.getWriter().append(json.toJson(usD.DoctorLista()));
-			
-		} catch (Exception e) {
-			
-			System.out.println(e);
-		
-		
-		}*/
-
-		
-		
-		
-		//doGet(request, response);
 	}
-	/*doc.setCedula(Integer.parseInt(ced));
-	Gusu.setDoctore(doc);
-	Gusu.setUsuario(Usu);
-	Gusu.setContrasena(cont);*/
-
+	
 }

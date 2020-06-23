@@ -136,7 +136,7 @@ function soloNumeros(e) {
 					<div class="wrap-input100 validate-input" data-validate = "medicamento is required">
 					
 					<select class="input100" name="nombreNmedic"  id="TipoSelectMedi" required>
-<option selected>Elige...</option>
+<option value>Elige...</option>
 </select>
 					
 					

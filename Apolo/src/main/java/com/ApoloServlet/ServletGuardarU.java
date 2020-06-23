@@ -115,19 +115,6 @@ public class ServletGuardarU extends HttpServlet {
 			JOptionPane.showMessageDialog(null,"Error en Gson en GardarUD post"+e );
 			
 		}
-		/*UsuarioDao usE = new UsuarioDao();
-		Gson json = new Gson();
-		
-		try {
-			response.getWriter().append(json.toJson(usE.EnfermeraLista()));
-			
-		} catch (Exception e) {
-			
-			System.out.println(e);
-		
-		
-		}*/
-		
 		
 	}
 

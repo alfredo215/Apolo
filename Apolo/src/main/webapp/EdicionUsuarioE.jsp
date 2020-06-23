@@ -11,35 +11,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-<script src="http://code.jquery.com/jquery-latest.js">
-</script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
 <script type="text/javascript">
+
 $(document).ready(function(){
-	$('#carga').click(function(){
-		
-		var	caja = $('#datos').val();
-		$.post('ServletGuardarU',{
-			caja
-		},function(respose){
+ $('#carga').click(function(){
+	 
+	var caja= $('#datos').val();
+	$.post('ServletGuardarU',{
+		caja
+	},function(response){
 
-		let datos = JSON.parse(respose)
-		console.log(datos)
+	let datos = JSON.parse(response);
+	console.log(datos)
 
-		var tabladatos = document.getElementById('tablaDatos')
 
-		for (let item of datos) {
+	var tabladatos = document.getElementById('tablaDatos');
+	for (let item of datos){
 
-				
-			
-			tabladatos.innerHTML +=`
+		tabladatos.innerHTML +=`
 	
-				<tr>
-				<td>${item[0]}</td>
-				<td>${item[3]}</td>
-				<td>${item[1]}</td>
-				<td>${item[2]}</td>
-				<td>${item[4]}</td>
-				<td>${item[5]}</td>
+			<td>${item[0]}</td>
+		 	<td>${item[3]}</td>
+		 	<td>${item[1]}</td>
+		 	<td>${item[2]}</td>
+		 	<td>${item[4]}</td> 
+		 	<td>${item[5]}</td> 
+		 	
 			
 				<td><a href="ServletGuardarU?btn=Eliminar&idBus=${item[0]}" class = "btn btn-warning">Eliminar</a>
 				<a href="UsuarioEnfermera.jsp?idBus=${item[0]}&CedE=${item[3]}&Usuar=${item[4]}&Contras=${item[5]}" class = "btn btn-danger">Modificar</a>
@@ -58,7 +57,7 @@ $(document).ready(function(){
 	
 </script>
 
-<% 
+<% /*
 HttpSession sesion = (HttpSession) request.getSession();
 String usuSesion = (String) sesion.getAttribute("usuario");
 
@@ -66,7 +65,7 @@ if(usuSesion==null){
 	
 	response.sendRedirect("LoginE.jsp");
 }
-
+*/
 %>
 
 <body>
@@ -89,7 +88,7 @@ if(usuSesion==null){
 						<span class="focus-input100"></span>
 					</div>
 					<div class="container-login100-form-btn m-t-17" align="center">
-				<input class="login100-form-btn" type="submit" name="buscar" id="carga" value="buscar">
+				<input class="login100-form-btn" type="submit" name="BUSCAR" id="carga" value="buscar">
 					<br>
 					
 
@@ -114,7 +113,7 @@ if(usuSesion==null){
 
 					</thead>
 					<tbody>
-						<tr id="tablaDatos"></tr>
+
 
 					</tbody>
 
