@@ -22,15 +22,11 @@ if(usuSesion==null){
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-
 <script type="text/javascript">
 
 $(document).ready(function(){
  $('#cargar').click(function(){
-	 
-	
-	
-
+	 		
 	var caja= $('#buscardatos').val();
 	$.post('ServeletExpedientes',{
 		caja

@@ -14,7 +14,7 @@ public class UsuarioDao {
 	//----------------------------------------------------------------
 	
 	public List<Usuarioshospital> BuscarUD(Usuarioshospital per ) {
-		List<Usuarioshospital> UsuDoc= new ArrayList<>();
+		List<Usuarioshospital> UsuDoc= new ArrayList();
 		System.out.println(per);
 		EntityManager em;
 		EntityManagerFactory emf;
@@ -41,7 +41,7 @@ public class UsuarioDao {
 	}
 	//-----------------------------------------------------------------------------------------------
 	public List<Usuarioshospital> BuscarUE(Usuarioshospital per ) {
-		List<Usuarioshospital> UsuEnf= new ArrayList<>();
+		List<Usuarioshospital> UsuEnf= new ArrayList();
 		System.out.println(per);
 		EntityManager em;
 		EntityManagerFactory emf;

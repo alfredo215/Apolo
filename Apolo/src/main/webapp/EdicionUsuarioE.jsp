@@ -82,7 +82,7 @@ $("#datos").maxLength(61);
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 	
 			<div class=" p-l-110 p-r-110 p-t-62 p-b-33">
-				<form class="login100-form validate-form flex-sb flex-w">
+				<div class="login100-form validate-form flex-sb flex-w">
 					<span class="login100-form-title p-b-53 text-white">
 						Editar Usuario Enfermera/o:
 
@@ -106,7 +106,7 @@ $("#datos").maxLength(61);
 	<br>
 	<a href="Enfermera.jsp" class="btn btn-outline-danger btn-sm"><h3>Volver</h3></a>
 	<br>
-</form>	
+</div>	
 			</div>
 	<table class="table table-dark" id="tablaDatos">
 

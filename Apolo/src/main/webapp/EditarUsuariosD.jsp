@@ -10,8 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-<script src="http://code.jquery.com/jquery-latest.js">
-</script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('#carga').click(function(){
@@ -77,9 +76,9 @@ $("#datos").maxLength(61);
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 	
 			<div class=" p-l-110 p-r-110 p-t-62 p-b-33">
-				<form class="login100-form validate-form flex-sb flex-w">
+				<div class="login100-form validate-form flex-sb flex-w">
 					<span class="login100-form-title p-b-53 text-white">
-						Usuarios:
+						Editar Usuario Doctor/a:
 
 					</span>	
 
@@ -104,7 +103,7 @@ $("#datos").maxLength(61);
 	<a href="Doctor.jsp" class="btn btn-outline-danger btn-sm"><h3>Volver</h3></a>
 	<br>		
 				
-			</form>	
+			</div>	
 			
 			</div>
 
