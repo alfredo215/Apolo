@@ -82,7 +82,7 @@ public class ServeletGuardarC extends HttpServlet {
 			con.setEnfermedade(enf);
 			
 			conDao.agregarConsulta(con);
-			response.sendRedirect("Consulta.jsp");
+			response.sendRedirect("Recetar.jsp");
 		}
 		
 		
