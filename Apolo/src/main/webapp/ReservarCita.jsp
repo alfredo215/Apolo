@@ -120,11 +120,11 @@ function soloNumeros(e) {
 					</div>
 					<div class="p-t-13 p-b-9">
 						<span class="txt1">
-							Fecha de la cita:
+							Fecha de la cita: yyyy-mm-dd
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" type="text" id="fecha" placeholder="Introdusca fecha" name="fechaReserva" placeholder="yyy-mm-dd" value="<%=Nfecha %>" required>
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" type="text" id="fecha" placeholder="yyyy-mm-dd " name="fechaReserva" placeholder="yyy-mm-dd" value="<%=Nfecha %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>

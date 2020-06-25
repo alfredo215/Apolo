@@ -68,7 +68,7 @@ public class ServeletRecetaMedica extends HttpServlet {
 		}
 		
 		String action = request.getParameter("btn");
-		if (action.equals("guardar")) {
+		if (action.equals("Recetar")) {
 			
 			reMe.setCodigo_Res(Integer.parseInt(codigo));
 			cons.setCodigo_Consulta(Integer.parseInt(enfermedad));

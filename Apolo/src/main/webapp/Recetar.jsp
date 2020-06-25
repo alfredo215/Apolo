@@ -117,7 +117,7 @@ $(document).ready(function(){
 					</div>
 					
 				<div class="container-login100-form-btn m-t-17" align="center">
-				<input type="submit" class="login100-form-btn" name="btn" value="guardar">
+				<input type="submit" class="login100-form-btn" name="btn" value="Recetar">
 				
 
 	</div>

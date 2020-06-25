@@ -138,7 +138,7 @@ function soloNumeros(e) {
 
 
 				<div class="container-login100-form-btn m-t-17" align="center">
-					<input class="login100-form-btn" type="submit" name="btn" value="Recetar" >
+					<input class="login100-form-btn" type="submit" name="btn" value="Guardar" >
 
 	</div>
 

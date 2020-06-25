@@ -78,7 +78,7 @@ public class ServeletGyAExpedientes extends HttpServlet {
 			sexo = request.getParameter("sexo_p");
 
 			fechaNa = request.getParameter("fechan_p");
-			SimpleDateFormat date = new SimpleDateFormat("dd/mm/yyyy");
+			SimpleDateFormat date = new SimpleDateFormat("yyyy-mm-dd");
 			 fecha = date.parse(fechaNa);
 
 			edad = request.getParameter("edad_p");

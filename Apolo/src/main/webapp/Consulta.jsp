@@ -129,7 +129,7 @@ function soloNumeros(e) {
 <span class="focus-input100"></span>
 					</div>
 <div class="container-login100-form-btn m-t-17" align="center">
-<input class="login100-form-btn"  type="submit" name="btn" value="Recetar">
+<input class="login100-form-btn"  type="submit" name="btn" value="Guardar">
 </div>
 <br>
 <a href="Doctor.jsp" class="btn btn-outline-danger btn-lg"><h3>salir</h3></a>

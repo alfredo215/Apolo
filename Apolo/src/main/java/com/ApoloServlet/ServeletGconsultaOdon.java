@@ -71,7 +71,7 @@ public class ServeletGconsultaOdon extends HttpServlet {
 		
 		String acction = request.getParameter("btn");
 		
-		if(acction.equals("Recetar")) {
+		if(acction.equals("Guardar")) {
 			
 			conOdon.setCodigo_ConsultaO(Integer.parseInt(codigo_consulOdon));
 			doc.setCedula(Integer.parseInt(CedulaOdon));

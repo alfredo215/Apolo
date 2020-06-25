@@ -70,7 +70,7 @@ public class ServeletGuardarC extends HttpServlet {
 		
 		String acction = request.getParameter("btn");
 		
-		if(acction.equals("Recetar")) {
+		if(acction.equals("Guardar")) {
 			
 			con.setCodigo_Consulta(Integer.parseInt(codigo_consul));
 		    doc.setCedula(Integer.parseInt(CedulaD));
