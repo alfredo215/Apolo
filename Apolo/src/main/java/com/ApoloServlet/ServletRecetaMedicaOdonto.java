@@ -65,7 +65,7 @@ public class ServletRecetaMedicaOdonto extends HttpServlet {
 		}
 		
 		String action = request.getParameter("btn");
-		if (action.equals("Recetar")) {
+		if (action.equals("guardar")) {
 			
 			reMe.setCodigo_Res(Integer.parseInt(codigo));
 			consOdon.setCodigo_ConsultaO(Integer.parseInt(enfermedadOdon));

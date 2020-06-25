@@ -73,7 +73,7 @@ if(usuSesion==null){
 <script src="maxLength/maxLength.js"></script>
 <script type="text/javascript">
 $(function () {
-$("#buscardatos").maxLength(61);	
+$("#buscardatos").maxLength(5);	
 
 });
 </script>
@@ -120,7 +120,7 @@ function soloNumeros(e) {
 
 					</span>	
 				<div class="wrap-input100 validate-input" data-validate = "medicamento is required">	
-<input class="input100"  type="text" name="" placeholder="Escribe el Medicamento" id="buscardatos" required>
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" type="text" name="" placeholder="Escribe el Medicamento" id="buscardatos" required>
 		
 						
 						<span class="focus-input100"></span>

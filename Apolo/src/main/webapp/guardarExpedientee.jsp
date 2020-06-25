@@ -203,9 +203,9 @@ function soloNumeros(e) {
 					</div> 
 	
 
-<label>Fecha de Nacimiento: yyyy-mm-dd</label>	
+<label>Fecha de Nacimiento: dd/mm/yyyy</label>	
 			<div class="wrap-input100 validate-input">
-<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" placeholder="yyyy-mm-dd" type="text" name="fechan_p" value="<%=fechaNa %>" id="fech" required>
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" placeholder="dd/mm/yyyy" type="text" name="fechan_p" value="<%=fechaNa %>" id="fech" required>
 						<span class="focus-input100"></span>
 					</div>
 	
