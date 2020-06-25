@@ -140,7 +140,7 @@ function soloNumeros(e) {
 	
 	teclado=String.fromCharCode(key);
 	
-	numeros="0123456789./";
+	numeros="0123456789.-";
 	
 	especiales="8-37-38-46";
 	

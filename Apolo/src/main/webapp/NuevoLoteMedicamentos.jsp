@@ -80,7 +80,7 @@ function soloNumeros(e) {
 	
 	teclado=String.fromCharCode(key);
 	
-	numeros="0123456789/";
+	numeros="0123456789-";
 	
 	especiales="8-37-38-46";
 	
@@ -171,7 +171,7 @@ onkeypress="return soloNumeros(event)" onpaste="return false" id="fecha" type="t
 
 	</div>
 	<br>
-	<a href="Medicamentos.jsp" class="btn btn-outline-danger btn-sm"><h1>Volver</h1></a>
+	<a href="FarmaciaE.jsp" class="btn btn-outline-danger btn-sm"><h1>Volver</h1></a>
 				
 				
 			</div>	
