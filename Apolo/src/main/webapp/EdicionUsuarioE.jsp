@@ -91,7 +91,7 @@ $("#datos").maxLength(61);
 <br> <br>
 <label>buscador</label>
 <div class="wrap-input100 validate-input" data-validate = "Enfermedad is required">	
-				<input class="input100" type="text" name="" placeholder="Escribe tu usuario" id="datos">
+				<input class="input100" type="text" name="" placeholder="Escribe tu usuario" id="datos" required>
 		
 						
 						<span class="focus-input100"></span>

@@ -62,7 +62,7 @@ $(document).ready(function(){
 		 	<td>${item[14]} </td> 
 		 	<td>${item[15]} </td> 
 		 	<td>${item[16]} </td> 
-		 	<td>${item[17]} </td> 
+		 	
 		 	
 		 	
  	   
@@ -133,7 +133,7 @@ function soloNumeros(e) {
 					</span>	
 					<label>buscador</label>
 <div class="wrap-input100 validate-input" data-validate = "codigo is required">	
-<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" type="text" name="" placeholder="Escribe tu Codigo del expediente" id="buscardatos">
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" type="text" name="" placeholder="Escribe tu Codigo del expediente" id="buscardatos" required>
 				
 		
 						
@@ -162,7 +162,6 @@ function soloNumeros(e) {
 					<thead>
 					
 						<th >Codigo</th>
-						<th >Codigo Expediente</th>
 						<th>Nombre Paciente</th>
 						<th>Apellido</th>
 						<th>Sexo</th>

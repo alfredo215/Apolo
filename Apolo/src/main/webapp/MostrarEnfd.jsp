@@ -10,7 +10,7 @@ $(document).ready(function(){
  $('#cargar').click(function(){
 
 	var caja= $('#buscardatos').val();
-	$.get('ServeletGyAEnfermedad',{
+	$.post('ServeletGyAEnfermedad',{
 		caja
 	},function(response){
 
@@ -65,7 +65,7 @@ if(usuSesion==null){
 					</span>	
 				<div class="wrap-input100 validate-input" data-validate = "Enfermedad is required">	
 				
-				<input class="input100" type="text" name="buscardatos" placeholder="Escribe la Enfermedad" id="buscardatos">
+				<input class="input100" type="text" name="buscardatos" placeholder="Escribe la Enfermedad" id="buscardatos" required>
 		
 						
 						<span class="focus-input100"></span>

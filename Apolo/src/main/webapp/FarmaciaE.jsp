@@ -83,7 +83,7 @@ if(usuSesion==null){
 					</span>	
 					<label>buscador</label>
 				<div class="wrap-input100 validate-input" data-validate = "codigo is required">	
-			<input type="text" class="input100" name="" placeholder="Escribe el Medicamento" id="buscardatos">
+			<input type="text" class="input100" name="" placeholder="Escribe el Medicamento" id="buscardatos" required>
 				
 		
 						

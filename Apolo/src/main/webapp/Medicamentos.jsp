@@ -120,7 +120,7 @@ function soloNumeros(e) {
 
 					</span>	
 				<div class="wrap-input100 validate-input" data-validate = "medicamento is required">	
-<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" type="text" name="" placeholder="Escribe el Medicamento" id="buscardatos">
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" type="text" name="" placeholder="Escribe el Medicamento" id="buscardatos" required>
 		
 						
 						<span class="focus-input100"></span>

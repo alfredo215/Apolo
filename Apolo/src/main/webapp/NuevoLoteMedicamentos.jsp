@@ -112,7 +112,7 @@ function soloNumeros(e) {
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 	
 			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33" style="background-image: url('images/apoloimg.jpg');">
-				<form class="login100-form validate-form flex-sb flex-w">
+				<div class="login100-form validate-form flex-sb flex-w">
 					<span class="login100-form-title p-b-53 text-white">
 						Nuevo lote de Medicamento:
 
@@ -136,7 +136,7 @@ function soloNumeros(e) {
 					<div class="wrap-input100 validate-input" data-validate = "medicamento is required">
 					
 					<select class="input100" name="nombreNmedic"  id="TipoSelectMedi" required>
-<option selected>Elige...</option>
+<option value>Elige...</option>
 </select>
 					
 					
@@ -174,7 +174,7 @@ onkeypress="return soloNumeros(event)" onpaste="return false" id="fecha" type="t
 	<a href="Medicamentos.jsp" class="btn btn-outline-danger btn-sm"><h1>Volver</h1></a>
 				
 				
-			</form>	
+			</div>	
 			</div>
 		</div>
 		

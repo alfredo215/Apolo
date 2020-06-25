@@ -29,7 +29,7 @@ if(id==null){
 %>
 
 
-<% 
+<% /*
 HttpSession sesion = (HttpSession) request.getSession();
 String usuSesion = (String) sesion.getAttribute("usuario");
 
@@ -37,7 +37,7 @@ if(usuSesion==null){
 	
 	response.sendRedirect("LoginD.jsp");
 }
-
+*/
 %>
 
 
@@ -89,7 +89,7 @@ function soloNumeros(e) {
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 	
 			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33" style="background-image: url('images/apoloimg.jpg');">
-				<form class="login100-form validate-form flex-sb flex-w">
+				<div class="login100-form validate-form flex-sb flex-w">
 					<span class="login100-form-title p-b-53 text-white">
 						Registrar Nuevas Enfermedades:
 
@@ -100,7 +100,7 @@ function soloNumeros(e) {
             <label> ID Enfermedad:</label>      
 					</div>
 				<div class="wrap-input100 validate-input" data-validate = "codigo is required">	
-<input class="input100" type="text" onkeypress="return soloNumeros(event)" onpaste="return false" name="nefd" value="<%=id %>" id="Idenfer" placeholder="ID de la Enfermedad">
+<input class="input100" type="text" onkeypress="return soloNumeros(event)" onpaste="return false" name="nefd" value="<%=id %>" id="Idenfer" placeholder="ID de la Enfermedad" required>
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -109,7 +109,7 @@ function soloNumeros(e) {
                 <label>Nombre de la Enfermedad:</label>
 					</div>
 				<div class="wrap-input100 validate-input" data-validate = "codigo is required">	
-				<input class="input100" type="text" name="nombreE" value="<%=ne %>" id="nomenfer" placeholder="Nombre Enfermedad">
+				<input class="input100" type="text" name="nombreE" value="<%=ne %>" id="nomenfer" placeholder="Nombre Enfermedad" required>
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -118,7 +118,7 @@ function soloNumeros(e) {
 			<label>Tipo de Enfermedad:</label>
 					</div>
 				<div class="wrap-input100 validate-input" data-validate = "codigo is required">	
-			<input class="input100" type="text"  name="tipoE" value="<%= te %>" id="tipoenfer" placeholder="Tipo de Enfermedad">
+			<input class="input100" type="text"  name="tipoE" value="<%= te %>" id="tipoenfer" placeholder="Tipo de Enfermedad" required>
 						
 						<span class="focus-input100"></span>
 					</div>
@@ -139,7 +139,7 @@ function soloNumeros(e) {
 		</div>		
 	
 				
-			</form>	
+			</div>	
 			</div>
 		</div>
 		

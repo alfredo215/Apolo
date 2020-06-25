@@ -128,7 +128,7 @@ function soloNumeros(e) {
 <br> <br>
 <label>buscador</label>
 <div class="wrap-input100 validate-input" data-validate = "Enfermedad is required">	
-<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" type="text" name="" placeholder="Escribe tu Codigo del expediente" id="buscardatos">
+<input class="input100" onkeypress="return soloNumeros(event)" onpaste="return false" type="text" name="" placeholder="Escribe tu Codigo del expediente" id="buscardatos" required>
 		
 						
 						<span class="focus-input100"></span>
