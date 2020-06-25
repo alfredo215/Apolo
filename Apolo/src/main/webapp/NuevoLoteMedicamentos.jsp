@@ -156,12 +156,12 @@ function soloNumeros(e) {
 					</div>
 					<div class="p-t-13 p-b-9">
 						<span class="txt1">
-							Fecha: dd/mm/yyyy
+							Fecha: yyyy-mm-dd
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "nombre is required">
 <input class="input100" 
-onkeypress="return soloNumeros(event)" onpaste="return false" id="fecha" type="text" placeholder="dd/mm/yyyy" name="fechaNmedic" placeholder="yyy-mm-dd" value="<%=Nfecha %>" required>
+onkeypress="return soloNumeros(event)" onpaste="return false" id="fecha" type="text" placeholder="yyyy-mm-dd" name="fechaNmedic" placeholder="yyy-mm-dd" value="<%=Nfecha %>" required>
 						
 						<span class="focus-input100"></span>
 					</div>
